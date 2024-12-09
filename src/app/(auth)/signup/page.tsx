@@ -18,16 +18,21 @@ export default function Page() {
       <div className="flex h-full max-h-[40rem] w-full max-w-[64rem] overflow-hidden rounded-2xl bg-card shadow-2xl">
         <div className="w-full space-y-10 overflow-y-auto p-10 md:w-1/2">
           <div className="space-y-1 text-center">
-            <h1 className="text-3xl font-bold">Sign up to bugbook</h1>
+            <h1 className="text-3xl font-bold">Müşterisi Burada  </h1>
+            
+            
+
+            <br></br>
+            <h5 className="text-3xl font-bold">Üye Ol </h5>
+
             <p className="text-muted-foreground">
-              A place where even <span className="italic">you</span> can find a
-              friend.
+              İş ilanları  <span className="italic">ve </span> Alım-Satım adresi
             </p>
           </div>
           <div className="space-y-5">
             <SignUpForm />
             <Link href="/login" className="block text-center hover:underline">
-              Already have an account? Log in
+             Zaten hesabın var mı? Giriş Yap
             </Link>
           </div>
         </div>

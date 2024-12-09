@@ -47,7 +47,7 @@ export default function LoginForm() {
           name="username"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>Kullanıcı Adı</FormLabel>
               <FormControl>
                 <Input placeholder="Username" {...field} />
               </FormControl>
@@ -60,7 +60,7 @@ export default function LoginForm() {
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Password</FormLabel>
+              <FormLabel>Şifre</FormLabel>
               <FormControl>
                 <PasswordInput placeholder="Password" {...field} />
               </FormControl>
@@ -69,7 +69,7 @@ export default function LoginForm() {
           )}
         />
         <LoadingButton loading={isPending} type="submit" className="w-full">
-          Log in
+          Giriş Yapın
         </LoadingButton>
       </form>
     </Form>

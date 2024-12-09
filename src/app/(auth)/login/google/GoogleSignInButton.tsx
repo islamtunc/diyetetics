@@ -1,3 +1,7 @@
+
+
+
+
 import { Button } from "@/components/ui/button";
 
 export default function GoogleSignInButton() {
@@ -9,7 +13,8 @@ export default function GoogleSignInButton() {
     >
       <a href="/login/google" className="flex w-full items-center gap-2">
         <GoogleIcon />
-        Sign in with Google
+    
+        Google ile giriş yapın
       </a>
     </Button>
   );
