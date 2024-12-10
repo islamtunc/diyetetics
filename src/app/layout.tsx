@@ -1,3 +1,7 @@
+// Bismillahirahmanirahim
+
+
+
 import { Toaster } from "@/components/ui/toaster";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import type { Metadata } from "next";
@@ -19,10 +23,10 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | bugbook",
-    default: "bugbook",
+    template: "%s | Müşterisi Burada",
+    default: "Müşterisi Burada",
   },
-  description: "The social media app for powernerds",
+  description: "İnşaat ve diğer iş ilanları",
 };
 
 export default function RootLayout({

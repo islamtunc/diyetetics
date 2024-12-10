@@ -1,3 +1,5 @@
+// Bismillahirahmanirahim
+
 "use client";
 
 import { SearchIcon } from "lucide-react";

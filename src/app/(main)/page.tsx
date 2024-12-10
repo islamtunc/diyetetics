@@ -1,28 +1,61 @@
-import PostEditor from "@/components/posts/editor/PostEditor";
-import TrendsSidebar from "@/components/TrendsSidebar";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import FollowingFeed from "./FollowingFeed";
-import ForYouFeed from "./ForYouFeed";
 
-export default function Home() {
+
+"use client"
+
+import Mwene from '@/components/wene';
+import React from 'react';
+import {Row,Col, Container}from 'react-bootstrap'
+const Page: React.FC = () => {
   return (
-    <main className="flex w-full min-w-0 gap-5">
-      <div className="w-full min-w-0 space-y-5">
-        <PostEditor />
-        <Tabs defaultValue="for-you">
-          <TabsList>
-            <TabsTrigger value="for-you">For you</TabsTrigger>
-            <TabsTrigger value="following">Following</TabsTrigger>
-          </TabsList>
-          <TabsContent value="for-you">
-            <ForYouFeed />
-          </TabsContent>
-          <TabsContent value="following">
-            <FollowingFeed />
-          </TabsContent>
-        </Tabs>
-      </div>
-      <TrendsSidebar />
-    </main>
+    <Container>
+      <Row>
+
+
+
+      <Col>
+
+
+
+<Mwene nav={'EMLAK'} wene={"https://www.aladaginsaatkibris.com/tema/genel/uploads/haberler/emlak-nedir-aladag-insaat.jpg"} />
+
+<Mwene nav={'EMLAK'} wene={"https://www.aladaginsaatkibris.com/tema/genel/uploads/haberler/emlak-nedir-aladag-insaat.jpg"} />
+
+</Col>
+        <Col>
+        
+        
+        
+        <Mwene nav={'EMLAK'} wene={"https://www.aladaginsaatkibris.com/tema/genel/uploads/haberler/emlak-nedir-aladag-insaat.jpg"} />
+
+        <Mwene nav={'EMLAK'} wene={"https://www.aladaginsaatkibris.com/tema/genel/uploads/haberler/emlak-nedir-aladag-insaat.jpg"} />
+
+        </Col>
+      </Row>
+      <Row>
+
+      <Col>
+
+
+
+<Mwene nav={'EMLAK'} wene={"https://www.aladaginsaatkibris.com/tema/genel/uploads/haberler/emlak-nedir-aladag-insaat.jpg"} />
+
+<Mwene nav={'EMLAK'} wene={"https://www.aladaginsaatkibris.com/tema/genel/uploads/haberler/emlak-nedir-aladag-insaat.jpg"} />
+
+</Col>
+
+<Col>
+
+
+
+<Mwene nav={'EMLAK'} wene={"https://www.aladaginsaatkibris.com/tema/genel/uploads/haberler/emlak-nedir-aladag-insaat.jpg"} />
+
+<Mwene nav={'EMLAK'} wene={"https://www.aladaginsaatkibris.com/tema/genel/uploads/haberler/emlak-nedir-aladag-insaat.jpg"} />
+
+</Col>
+</Row>
+    </Container>
   );
-}
+};
+
+export default Page;
+
