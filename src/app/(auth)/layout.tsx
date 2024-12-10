@@ -1,6 +1,6 @@
-
-
-
+// Bismillahirahmanirahim
+//Elhamdulillahirabbulalemin
+// Es-selatu vesselamu ala rasulina Muhammedin ve ala ali seyyidina Muhammedin
 
 import { validateRequest } from "@/auth";
 import { redirect } from "next/navigation";
