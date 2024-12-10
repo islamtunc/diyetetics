@@ -1,3 +1,7 @@
+// Bismillahirahmanirahim
+
+
+
 import kyInstance from "@/lib/ky";
 import { BookmarkInfo } from "@/lib/types";
 import { cn } from "@/lib/utils";
@@ -8,8 +12,7 @@ import {
   useQueryClient,
 } from "@tanstack/react-query";
 import { Bookmark } from "lucide-react";
-import { useToast } from "../ui/use-toast";
-
+import { useToast } from "@/components/ui/use-toast";
 interface BookmarkButtonProps {
   postId: string;
   initialState: BookmarkInfo;
