@@ -1,6 +1,12 @@
+// Bismillahirahmanirahim
+
+
+
 import { PostData } from "@/lib/types";
-import LoadingButton from "../LoadingButton";
-import { Button } from "../ui/button";
+
+import LoadingButton from "@/components/LoadingButton";
+
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -8,7 +14,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "../ui/dialog";
+} from "@/components/ui/dialog";
 import { useDeletePostMutation } from "./mutations";
 
 interface DeletePostDialogProps {

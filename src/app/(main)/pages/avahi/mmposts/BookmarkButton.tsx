@@ -13,6 +13,7 @@ import {
 } from "@tanstack/react-query";
 import { Bookmark } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
+
 interface BookmarkButtonProps {
   postId: string;
   initialState: BookmarkInfo;

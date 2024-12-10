@@ -1,5 +1,8 @@
-import { Skeleton } from "../ui/skeleton";
+// Bismillahirahmanirahim
 
+
+
+import { Skeleton } from "@/components/ui/skeleton";
 export default function PostsLoadingSkeleton() {
   return (
     <div className="space-y-5">
