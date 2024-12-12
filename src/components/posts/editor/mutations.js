@@ -32,7 +32,7 @@ export function useSubmitPostMutation() {
               query.queryKey.includes(user.id))
           );
         },
-      } satisfies QueryFilters;
+      } 
 
       await queryClient.cancelQueries(queryFilter);
 
@@ -54,14 +54,14 @@ export function useSubmitPostMutation() {
             };
           }
         },
-      );
+      
 
       queryClient.invalidateQueries({
         queryKey: queryFilter.queryKey,
         predicate(query) {
           return queryFilter.predicate(query) && !query.state.data;
         },
-      });
+      }));
 
       toast({
         description: "Post created",
