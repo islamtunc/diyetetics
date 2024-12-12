@@ -1,7 +1,6 @@
 // Bismillahirahmanirahim
 
 
-// Bismillahirahmanirahim
 
 import avatarPlaceholder from "@/assets/avatar-placeholder.png";
 import CropImageDialog from "@/components/CropImageDialog";
@@ -28,6 +27,12 @@ import { useUpdateProfileMutation } from "./mutations";
 import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import Resizer from "react-image-file-resizer";
+
+import Image from "next/image";
+
+
+
+import { Camera } from "lucide-react";
 
 export default function EditProfileDialog({
   user,
