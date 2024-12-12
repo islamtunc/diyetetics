@@ -7,6 +7,8 @@
 generator client {
   provider        = "prisma-client-js"
   previewFeatures = ["fullTextSearch"]
+
+  referentialIntegrity = "prisma"
 }
 
 datasource db {
