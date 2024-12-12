@@ -1,6 +1,7 @@
 // Bismillahirahmanirahim
 
 
+// Bismillahirahmanirahim
 
 import avatarPlaceholder from "@/assets/avatar-placeholder.png";
 import CropImageDialog from "@/components/CropImageDialog";
@@ -23,32 +24,17 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { UserData } from "@/lib/types";
-import {
-  updateUserProfileSchema,
-  UpdateUserProfileValues,
-} from "@/lib/validation";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { Camera } from "lucide-react";
-import Image, { StaticImageData } from "next/image";
+import { useUpdateProfileMutation } from "./mutations";
 import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import Resizer from "react-image-file-resizer";
-import { useUpdateProfileMutation } from "./mutations";
-
-interface EditProfileDialogProps {
-  user: UserData;
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-}
 
 export default function EditProfileDialog({
   user,
   open,
   onOpenChange,
-}: EditProfileDialogProps) {
-  const form = useForm<UpdateUserProfileValues>({
-    resolver: zodResolver(updateUserProfileSchema),
+}) {
+  const form = useForm({
     defaultValues: {
       displayName: user.displayName,
       bio: user.bio || "",
@@ -57,21 +43,17 @@ export default function EditProfileDialog({
 
   const mutation = useUpdateProfileMutation();
 
-  const [croppedAvatar, setCroppedAvatar] = useState<Blob | null>(null);
+  const [croppedAvatar, setCroppedAvatar] = useState(null);
 
-  async function onSubmit(values: UpdateUserProfileValues) {
+  async function onSubmit(values) {
     const newAvatarFile = croppedAvatar
       ? new File([croppedAvatar], `avatar_${user.id}.webp`)
       : undefined;
 
-    mutation.mutate(
-      {
-        values,
-        avatar: newAvatarFile,
-      },
-      
-      
-    );
+    mutation.mutate({
+      values,
+      avatar: newAvatarFile,
+    });
   }
 
   return (
@@ -135,17 +117,13 @@ export default function EditProfileDialog({
   );
 }
 
-interface AvatarInputProps {
-  src: string | StaticImageData;
-  onImageCropped: (blob: Blob | null) => void;
-}
 
-function AvatarInput({ src, onImageCropped }: AvatarInputProps) {
-  const [imageToCrop, setImageToCrop] = useState<File>();
+function AvatarInput({ src, onImageCropped }) {
+  const [imageToCrop, setImageToCrop] = useState();
 
-  const fileInputRef = useRef<HTMLInputElement>(null);
+  const fileInputRef = useRef(null);
 
-  function onImageSelected(image: File | undefined) {
+  function onImageSelected(image) {
     if (!image) return;
 
     Resizer.imageFileResizer(
@@ -155,7 +133,7 @@ function AvatarInput({ src, onImageCropped }: AvatarInputProps) {
       "WEBP",
       100,
       0,
-      (uri) => setImageToCrop(uri as File),
+      (uri) => setImageToCrop(uri),
       "file",
     );
   }
@@ -201,3 +179,4 @@ function AvatarInput({ src, onImageCropped }: AvatarInputProps) {
     </>
   );
 }
+
