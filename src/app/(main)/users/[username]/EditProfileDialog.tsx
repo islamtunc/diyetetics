@@ -69,12 +69,8 @@ export default function EditProfileDialog({
         values,
         avatar: newAvatarFile,
       },
-      {
-        onSuccess: () => {
-          setCroppedAvatar(null);
-          onOpenChange(false);
-        },
-      },
+      
+      
     );
   }
 
