@@ -2,7 +2,6 @@
 
 
 
-import TrendsSidebar from "@/components/TrendsSidebar";
 import { Metadata } from "next";
 import SearchResults from "./SearchResults";
 
@@ -27,7 +26,6 @@ export default function Page({ searchParams: { q } }: PageProps) {
         </div>
         <SearchResults query={q} />
       </div>
-      <TrendsSidebar />
     </main>
   );
 }
