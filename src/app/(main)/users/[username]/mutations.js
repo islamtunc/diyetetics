@@ -28,9 +28,6 @@ export function useUpdateProfileMutation() {
     mutationFn: async ({
       values,
       avatar,
-    }: {
-      values: UpdateUserProfileValues;
-      avatar?: File;
     }) => {
       return Promise.all([
         updateUserProfile(values),
@@ -40,7 +37,7 @@ export function useUpdateProfileMutation() {
     onSuccess: async ([updatedUser, uploadResult]) => {
       const newAvatarUrl = uploadResult?.[0].serverData.avatarUrl;
 
-      const queryFilter: QueryFilters = {
+      const queryFilter = {
         queryKey: ["post-feed"],
       };
 
@@ -70,7 +67,7 @@ export function useUpdateProfileMutation() {
             })),
           };
         },
-      );
+      )
 
       router.refresh();
 
