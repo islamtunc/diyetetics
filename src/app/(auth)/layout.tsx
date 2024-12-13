@@ -12,7 +12,7 @@ export default async function Layout({
 }) {
   const { user } = await validateRequest();
 
-  if (user) redirect("/");
+ // if (user) redirect("/");
 
   return <>{children}</>;
 }
