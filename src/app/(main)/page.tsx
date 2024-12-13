@@ -16,18 +16,18 @@ const Page: React.FC = () => {
 
 
 
-<Mwene nav={'EMLAK'} wene={"https://www.aladaginsaatkibris.com/tema/genel/uploads/haberler/emlak-nedir-aladag-insaat.jpg"} />
+<Mwene nav={'EMLAK'} wene={"https://www.aladaginsaatkibris.com/tema/genel/uploads/haberler/emlak-nedir-aladag-insaat.jpg"} mmcih='/pages/mmavahi'/>
 
-<Mwene nav={'EMLAK'} wene={"https://www.aladaginsaatkibris.com/tema/genel/uploads/haberler/emlak-nedir-aladag-insaat.jpg"} />
+<Mwene nav={'Arabalar'} wene={"https://www.aladaginsaatkibris.com/tema/genel/uploads/haberler/emlak-nedir-aladag-insaat.jpg"} mmcih='pages/mmwesayit'/>
 
 </Col>
         <Col>
         
         
         
-        <Mwene nav={'EMLAK'} wene={"https://www.aladaginsaatkibris.com/tema/genel/uploads/haberler/emlak-nedir-aladag-insaat.jpg"} />
+        <Mwene nav={'İnşaaT iŞ İlanları'} wene={"https://www.aladaginsaatkibris.com/tema/genel/uploads/haberler/emlak-nedir-aladag-insaat.jpg"} mmcih='pages/mmkedkar'/>
 
-        <Mwene nav={'EMLAK'} wene={"https://www.aladaginsaatkibris.com/tema/genel/uploads/haberler/emlak-nedir-aladag-insaat.jpg"} />
+        <Mwene nav={'EMLAK'} wene={"https://www.aladaginsaatkibris.com/tema/genel/uploads/haberler/emlak-nedir-aladag-insaat.jpg"} mmcih='pages/mmkinc'/>
 
         </Col>
       </Row>
@@ -37,21 +37,14 @@ const Page: React.FC = () => {
 
 
 
-<Mwene nav={'EMLAK'} wene={"https://www.aladaginsaatkibris.com/tema/genel/uploads/haberler/emlak-nedir-aladag-insaat.jpg"} />
-
-<Mwene nav={'EMLAK'} wene={"https://www.aladaginsaatkibris.com/tema/genel/uploads/haberler/emlak-nedir-aladag-insaat.jpg"} />
-
-</Col>
-
-<Col>
+<Mwene nav={'EMLAK'} wene={"https://www.aladaginsaatkibris.com/tema/genel/uploads/haberler/emlak-nedir-aladag-insaat.jpg"} mmcih='pages/mmkinc' />
 
 
-
-<Mwene nav={'EMLAK'} wene={"https://www.aladaginsaatkibris.com/tema/genel/uploads/haberler/emlak-nedir-aladag-insaat.jpg"} />
-
-<Mwene nav={'EMLAK'} wene={"https://www.aladaginsaatkibris.com/tema/genel/uploads/haberler/emlak-nedir-aladag-insaat.jpg"} />
+<Mwene nav={'EMLAK'} wene={"https://www.aladaginsaatkibris.com/tema/genel/uploads/haberler/emlak-nedir-aladag-insaat.jpg"} mmcih='pages/mmhuner'/>
 
 </Col>
+
+
 </Row>
     </Container>
   );

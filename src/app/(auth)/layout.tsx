@@ -14,5 +14,8 @@ export default async function Layout({
 
   if (user) redirect("/");
 
-  return <>{children}</>;
+  return <>
+  
+  <button ref="/pages">Anasayfa</button>
+  {children}</>;
 }
