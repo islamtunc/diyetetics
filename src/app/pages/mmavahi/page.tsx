@@ -1,13 +1,25 @@
 // Bismillahirahmanirahim
 
+"use client"
 
+import Nav from 'react-bootstrap/Nav';
 
-import React from 'react'
-
-function page() {
+function TabsExample() {
   return (
-    <div>page</div>
-  )
+    <Nav variant="tabs" defaultActiveKey="/home">
+      <Nav.Item>
+        <Nav.Link href="/home">İlanlar</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="link-1">Kategoride ara</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link >
+          Yeni ilan ver
+        </Nav.Link>
+      </Nav.Item>
+    </Nav>
+  );
 }
 
-export default page
+export default TabsExample;
