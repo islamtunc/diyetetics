@@ -1,3 +1,7 @@
+// Bismillahirahmanirahim
+
+
+
 import { validateRequest } from "@/auth";
 import prisma from "@/lib/prisma";
 import { getPostDataInclude, PostsPage } from "@/lib/types";
@@ -15,20 +19,11 @@ export async function GET(req: NextRequest) {
       return Response.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const posts = await prisma.post.findMany({
-      where: {
-        user: {
-          followers: {
-            some: {
-              followerId: user.id,
-            },
-          },
-        },
-      },
+    const posts = await prisma.mmhuner.findMany({
+      include: getPostDataInclude(user.id),
       orderBy: { createdAt: "desc" },
       take: pageSize + 1,
       cursor: cursor ? { id: cursor } : undefined,
-      include: getPostDataInclude(user.id),
     });
 
     const nextCursor = posts.length > pageSize ? posts[pageSize].id : null;
