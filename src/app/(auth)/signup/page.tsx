@@ -1,16 +1,14 @@
 // Bismillahirahmanirahim
 
 // Elhamdullillahirabbulalemin
-
+"use client"
 import signupImage from "@/assets/signup-image.jpg";
-import { Metadata } from "next";
+
 import Image from "next/image";
 import Link from "next/link";
 import SignUpForm from "./SignUpForm";
 
-export const metadata: Metadata = {
-  title: "Sign Up",
-};
+
 
 export default function Page() {
   return (
