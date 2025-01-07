@@ -16,13 +16,13 @@ export default async function Layout({
   const session = await validateRequest();
 
 
-//  if (!session.user) redirect("/login");
+if (!session.user) redirect("/login");
 
   return (<>
-    {
-      //<SessionProvider value={session}>
+    
+      <SessionProvider value={session}>
 
-          }   
+             
 
              <div className="flex min-h-screen ">
         <Navbar />
@@ -34,8 +34,8 @@ export default async function Layout({
       </div>
    
    
-   { 
-    //   </SessionProvider>
-   }</>
+   
+    </SessionProvider>
+   </>
   );
 }
