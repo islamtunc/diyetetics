@@ -17,23 +17,15 @@ export default function Home() {
        <Alert></Alert>
         <Tabs defaultValue="mm">
           <TabsList>
-            <TabsTrigger value="for-you">Beslenme Programları </TabsTrigger>
+            <TabsTrigger value="mm">Beslenme Programları </TabsTrigger>
           
           </TabsList>
-          <TabsContent value="for-you">
+          <TabsContent value="mm">
 
             <ForYouFeed/>
           </TabsContent>
           <TabsContent value="following">
 
-          </TabsContent>
-    
-
-
-
-
-
-        <TabsContent value="mm">
 
     </TabsContent>
     </Tabs>

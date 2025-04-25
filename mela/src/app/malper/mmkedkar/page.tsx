@@ -14,20 +14,15 @@ export default function Home() {
       <div className="w-full min-w-0 space-y-5">
 
 
-<Alert style={{textAlign:"center", fontSize:"55px", background:"green",color:"white"}}> Mobile Apps</Alert>
+<Alert > </Alert>
 
         <Tabs defaultValue="mm">
           <TabsList>
-          <TabsTrigger value="for-you">Android Apps</TabsTrigger>
-
-            <TabsTrigger value="for-you">Ios Apps</TabsTrigger>
-            <TabsTrigger value="mm">Cross Platform Apps</TabsTrigger>
-            <TabsTrigger value="following">Web Apps</TabsTrigger>
+          <TabsTrigger value="mm">Yararlı Kaynaklar</TabsTrigger>
 
           </TabsList>
 
           <TabsContent value="for-you">
-            <ForYouFeed />
           </TabsContent>
           <TabsContent value="following">
 
@@ -39,6 +34,7 @@ export default function Home() {
 
 
         <TabsContent value="mm">
+        <ForYouFeed />
 
     </TabsContent>
     </Tabs>
