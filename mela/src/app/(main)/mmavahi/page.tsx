@@ -18,7 +18,6 @@ export default function Home() {
         <Tabs defaultValue="mm">
           <TabsList>
             <TabsTrigger value="for-you">Parvekirin</TabsTrigger>
-            <TabsTrigger value="following">Kategoride Ara</TabsTrigger>
             <TabsTrigger value="mm">Parve Bike</TabsTrigger>
 
           </TabsList>

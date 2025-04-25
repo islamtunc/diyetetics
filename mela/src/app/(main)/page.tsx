@@ -25,25 +25,22 @@ Be namaye nameye kemi wi Wallah
 
 <Alert>
 
-<Alert>     <a href='/mmavahi'>Web Sites</a> 
+<Alert>     <a href='/mmavahi'>Anasayfa</a> 
 </Alert>
 
-<Alert>     <a href='/mmavahi'>Mobile Apps</a> 
+<Alert>     <a href='/mmkinc'>Hakkımızda</a> 
 </Alert>
 
-<Alert>     <a href='/mmavahi'>Artificial Intelligence</a> 
-</Alert>
-
-
-<Alert>     <a href='/mmavahi'>Desktop</a> 
-</Alert>
-
-<Alert>     <a href='/mmavahi'>Courses</a> 
+<Alert>     <a href='/mmkargeh'>Beslenme Programları</a> 
 </Alert>
 
 
-<Alert>     <a href='/mmavahi'>References</a> 
+<Alert>     <a href='/mmwesayit'>Programlar</a> 
 </Alert>
+
+<Alert>     <a href='/mmkedkar'>Blog Yazılarım</a> 
+</Alert>
+
 
 </Alert>
 

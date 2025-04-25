@@ -16,101 +16,17 @@ function Mmmnavbar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/malper">Anasayfa</Nav.Link>
-            <NavDropdown title="Products" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/malper/mmavahi">Web Sites</NavDropdown.Item>
-              <NavDropdown.Item href="/malper/mmkinc">
-                
-             Mobile Apps
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/malper/mmkargeh">Desktop Apps</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="/malper/mmkedkar">
-                
-                Artificial Intelligence
-              </NavDropdown.Item>
+            <Nav.Link href="/malper/mmavahi">Beslenme Programlarım</Nav.Link>
 
+            <Nav.Link href="/malper/mmkargeh">Blog Yazıları</Nav.Link>
 
+            <Nav.Link href="/malper/mmhewcedari">Programlar</Nav.Link>
 
+            <Nav.Link href="/malper/mmwesayit">Hakkımızda </Nav.Link>
 
+<Nav.Link href="/malper/mmkedkar">Yararlı Kaynaklar</Nav.Link>
 
-              <NavDropdown.Item href="/malper/mmwesayit">
-                Health/Repairing
-              </NavDropdown.Item>
-            </NavDropdown>
-
-
-
-
-            <NavDropdown title="Courses" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/malper/mmperwerdehi">Web</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                
-                
-Mobile
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Machine Learning</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                
-                Cross Platform Apps
-              </NavDropdown.Item>
-            </NavDropdown>
-
-
-
-            <NavDropdown title="Services " id="basic-nav-dropdown">
-              <NavDropdown.Item href="/malper/mmkarubar">Windows Apps</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-
-
-
-
-
-
-
-
-
-
-
-
-          
-
-
-            <NavDropdown title="References" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/malper/mm">NLP</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                
-                Object Detection
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Image Processing</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Advanced
-              </NavDropdown.Item>
-            </NavDropdown>
-
-
-            <NavDropdown title="For Developers" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/mmmmm">Courses</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Documantations
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Contribute</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Join to Yekazad
-              </NavDropdown.Item>
-            </NavDropdown>
-
-            <Nav.Link href="#link">About Us</Nav.Link>
+<Nav.Link href="/malper/mmkinc">Galeri</Nav.Link>
 
           </Nav>
         </Navbar.Collapse>
