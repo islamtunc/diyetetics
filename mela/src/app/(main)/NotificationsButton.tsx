@@ -42,7 +42,7 @@ export default function NotificationsButton({
             </span>
           )}
         </div>
-        <span className="hidden lg:inline">Agahdarî</span>
+        <span className="hidden lg:inline">Bildirimler</span>
       </Link>
     </Button>
   );
