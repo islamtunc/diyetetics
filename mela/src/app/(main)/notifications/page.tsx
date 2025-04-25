@@ -6,7 +6,7 @@ import { Metadata } from "next";
 import Notifications from "./Notifications";
 
 export const metadata: Metadata = {
-  title: "Agahdarî",
+  title: "Agahdarî",  
 };
 
 export default function Page() {

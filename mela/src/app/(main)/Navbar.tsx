@@ -14,7 +14,6 @@ export default function Navbar() {
 
  Yekazad Yazılım
         </Link>
-        <SearchField />
         <UserButton className="sm:ms-auto" />
       </div>
     </header>
