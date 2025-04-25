@@ -22,7 +22,7 @@ export default async function Layout({
 <Mmmnavbar/>
 
 {children}
-
+<Footer/>
 </div>
   );
 }
