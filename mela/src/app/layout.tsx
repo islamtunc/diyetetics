@@ -51,10 +51,12 @@ export default function RootLayout({
 
 
               {children}
+
           </ThemeProvider>
         </ReactQueryProvider>
         <Toaster />
       </body>
+      
     </html>
   );
 }
