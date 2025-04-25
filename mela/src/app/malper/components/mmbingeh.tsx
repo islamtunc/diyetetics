@@ -9,7 +9,7 @@ const Footer = () => <footer className="page-footer font-small blue pt-4" >
         <div className="row">
             <div className="col-md-6 mt-md-0 mt-3">
                 <h5 className="text-uppercase"> </h5>
-                <p>Contact Us</p>
+                <p>Bize Ulaşın</p>
             </div>
 
             <hr className="clearfix w-100 d-md-none pb-0"/>
@@ -37,12 +37,13 @@ const Footer = () => <footer className="page-footer font-small blue pt-4" >
     </div>
 
     <div className="footer-copyright text-center py-3">© 2020 Copyright:
-        <a href="https://mdbootstrap.com/"> Yekazad</a>
+        <a href="https://yekazad.vercel.app/"> Yekazad</a>
+        <br></br><br></br>
+<a href="/login">...</a>
     </div>
 
 
 
-<a href="/login">...</a>
 </footer>
 
 export default Footer
