@@ -14,11 +14,11 @@ export default function Home() {
     <main className="flex w-full min-w-0 gap-5">
       <div className="w-full min-w-0 space-y-5">
 
-        <h1 className="text-3xl font-semibold">Malper</h1>
+        <h1 className="text-3xl font-semibold">Site Anasayfası</h1>
         <Tabs defaultValue="mm">
           <TabsList>
-            <TabsTrigger value="for-you">Parvekirin</TabsTrigger>
-            <TabsTrigger value="mm">Parve Bike</TabsTrigger>
+            <TabsTrigger value="for-you">Paylaşılanlar</TabsTrigger>
+            <TabsTrigger value="mm">Yeni Gönderi Paylaş</TabsTrigger>
 
           </TabsList>
           <TabsContent value="for-you">
