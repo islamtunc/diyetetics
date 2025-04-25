@@ -1,5 +1,6 @@
 // Bismillahirahmanirahim 
-
+// Elhamdulillahirabbulalemin
+// Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain.
 "use client";
 
 import { useSession } from "@/app/(main)/SessionProvider";
@@ -13,10 +14,11 @@ import StarterKit from "@tiptap/starter-kit";
 import { useDropzone } from "@uploadthing/react";
 import { ImageIcon, Loader2, X } from "lucide-react";
 import Image from "next/image";
-import { ClipboardEvent, useRef } from "react";
+import { ClipboardEvent, useRef, useState } from "react";
 import { useSubmitPostMutation } from "./mutations";
 import "./styles.css";
 import useMediaUpload, { Attachment } from "./useMediaUpload";
+import { Input } from "@/components/ui/input";
 
 export default function PostEditor() {
   const { user } = useSession();
@@ -50,16 +52,16 @@ export default function PostEditor() {
     ],
   });
 
-  const input =
-    editor?.getText({
-      blockSeparator: "\n",
-    }) || "";
+
+
+  const [selectedOption, setSelectedOption] = useState("mmal");
 
   function onSubmit() {
     mutation.mutate(
       {
-        content: input,
+        content: selectedOption,
         mediaIds: attachments.map((a) => a.mediaId).filter(Boolean) as string[],
+       
       },
       {
         onSuccess: () => {
@@ -82,17 +84,57 @@ export default function PostEditor() {
       <div className="flex gap-5">
         <UserAvatar avatarUrl={user.avatarUrl} className="hidden sm:inline" />
         <div {...rootProps} className="w-full">
-          <EditorContent
-            editor={editor}
-            className={cn(
-              "max-h-[20rem] w-full overflow-y-auto rounded-2xl bg-background px-5 py-3",
-              isDragActive && "outline-dashed",
-            )}
-            onPaste={onPaste}
-          />
-          <input {...getInputProps()} />
+       <h5> Yeni Gönderi</h5>
+
+
+
+
+
+
+
+
+
+
+       <div style={{display:"flex",flexDirection:"column"}}>
+
+
+
+
+
+
+
+
+           <Input placeholder="Başlık"/>
+
+           <Input placeholder="Alt Başlık"/>
+
+
+
+          
+
+
+    
+           </div>
+        
+        
+    
         </div>
+        
       </div>
+
+
+    
+
+          
+          <Input placeholder="Açıklaması"/>
+
+
+
+
+
+          <Input placeholder="Açıklama"/>
+
+<Input placeholder="Kaynakça"/>
       {!!attachments.length && (
         <AttachmentPreviews
           attachments={attachments}
@@ -113,7 +155,6 @@ export default function PostEditor() {
         <LoadingButton
           onClick={onSubmit}
           loading={mutation.isPending}
-          disabled={!input.trim() || isUploading}
           className="min-w-20"
         >
           Parve bikin
