@@ -1,6 +1,6 @@
 // Bismillahirrahmanirrahim 
-
-
+// Elhamdulillahirabbulalemin
+// Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
 
 import { Metadata } from "next";
 import Notifications from "./Notifications";
