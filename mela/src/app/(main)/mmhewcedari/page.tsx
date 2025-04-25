@@ -8,18 +8,18 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ForYouFeed from "./ForYouFeed";
 
 import SearchField from "@/components/SearchField";
+import { Alert } from "react-bootstrap";
 
 export default function Home() {
   return (
     <main className="flex w-full min-w-0 gap-5">
       <div className="w-full min-w-0 space-y-5">
 
-        <h1 className="text-3xl font-semibold">Ev Araçları</h1>
+      <Alert>Hakkımızda Sayfası</Alert>
         <Tabs defaultValue="for-you">
           <TabsList>
-            <TabsTrigger value="for-you">İlanlar</TabsTrigger>
-            <TabsTrigger value="following">Kategoride Ara</TabsTrigger>
-            <TabsTrigger value="mm">Yeni ilan Ver</TabsTrigger>
+            <TabsTrigger value="for-you">Paylaşılanlar</TabsTrigger>
+            <TabsTrigger value="mm">Yeni Gönderi Yayınla</TabsTrigger>
 
           </TabsList>
           <TabsContent value="for-you">
