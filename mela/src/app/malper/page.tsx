@@ -13,9 +13,9 @@ export default function Page() {
 
 
 <br></br><br></br><br></br><br></br>
-<SearchField/>
+
+Amade dibe...
 <br></br>
-<UncontrolledExample/>
 
     </div>
   );

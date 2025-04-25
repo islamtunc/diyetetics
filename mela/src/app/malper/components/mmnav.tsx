@@ -11,11 +11,11 @@ function Mmmnavbar() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="/malper">Yekazad Software Center</Navbar.Brand>
+        <Navbar.Brand href="/malper">DİYETİSYEN ROJDA MUSA</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/malper">Home</Nav.Link>
+            <Nav.Link href="/malper">Anasayfa</Nav.Link>
             <NavDropdown title="Products" id="basic-nav-dropdown">
               <NavDropdown.Item href="/malper/mmavahi">Web Sites</NavDropdown.Item>
               <NavDropdown.Item href="/malper/mmkinc">
