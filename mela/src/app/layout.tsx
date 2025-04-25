@@ -24,8 +24,8 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Yekazad Software Center",
-    default: " Yekazad Software Center",
+    template: "%s | DİYETİSYEN ROJDA MUSA",
+    default: " DİYETİSYEN ROJDA MUSA",
   },
   description: " Software Development",
 };
