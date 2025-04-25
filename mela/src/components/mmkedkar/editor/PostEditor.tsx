@@ -95,7 +95,6 @@ export default function PostEditor() {
 
 
        <div style={{display:"flex",flexDirection:"column"}}>
-           <Input placeholder="Başlık"/>
 
 
 
@@ -110,9 +109,7 @@ export default function PostEditor() {
 
 
 
-           <Input placeholder="Açıklama"/>
-
-           <Input placeholder="Kaynakça"/>
+          
 
 
     
@@ -125,13 +122,18 @@ export default function PostEditor() {
       </div>
 
 
-      
-      <Input placeholder="ilan fiyatı"/>
-          <Input placeholder="Alan(metrekare)"/>
+    
 
           
           <Input placeholder="Açıklaması"/>
 
+
+
+
+
+          <Input placeholder="Açıklama"/>
+
+<Input placeholder="Kaynakça"/>
       {!!attachments.length && (
         <AttachmentPreviews
           attachments={attachments}
