@@ -38,12 +38,15 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-      <body style={{background:"purple"}} className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body  style={{
+    background: "#0f2027", // Koyu mavi ton
+    color: "#ffffff", // Yazı rengini beyaz yapın
+  }} className={`${geistSans.variable} ${geistMono.variable}`}>
         <NextSSRPlugin routerConfig={extractRouterConfig(fileRouter)} />
         <ReactQueryProvider>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
           >
