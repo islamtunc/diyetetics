@@ -33,8 +33,10 @@ function ContainerFluidExample() {
             <Card.Body>
               <Card.Title>Başka ...</Card.Title>
               <Card.Text>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam rerum laborum deserunt eveniet rem, doloribus tempore, molestias dolorum numquam voluptate magni commodi ab. Ad porro, culpa repellat voluptas repudiandae quos?
-           
+
+<p>              Merhaba Ben diyetisyen rojda Musa sitemizin amacı sizlere güvenilir bilgi ve hizmet vermektir sağlıklı kilo alma,kilo verme ve birçok hastalık konusunda beslenme danışmanlığı hizmeti verme ve sağlıklı beslenmeyi bir yaşam tarzı haline getirmektir.           
+</p>
+             <br></br> <p>Sitemizde alternatif tarifler,beslenme programları ve diyet seçenekleri detaylı bir şekilde size sunulacaktır sizlere en uygun diyet programını oluşturmak için lütfen iletişim seçeneklerinden bizimle iletişime geçiniz</p>
               </Card.Text>
             </Card.Body>
           </Card>
