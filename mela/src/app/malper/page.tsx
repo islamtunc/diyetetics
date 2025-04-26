@@ -23,7 +23,10 @@ function ContainerFluidExample() {
               </Card.Text>
             </Card.Body>
           </Card></Col>
-        <Col>      <Image src={mm.src} alt="..." fluid />
+        <Col>      <Image src={mm.src}     style={{
+      border: "5px solid white", // Beyaz çerçeve
+      borderRadius: "10px", // Köşeleri yuvarlatmak için
+    }} alt="ROJDA MUSA" fluid />
         </Col>
         <Col>
         <Card style={{ width: '25rem' }}>

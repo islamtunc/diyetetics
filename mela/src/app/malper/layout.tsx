@@ -2,10 +2,10 @@
 // Elhamdulillahirabbulalemin
 // Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
 "use client";
-import { Alert, Row ,Col} from "react-bootstrap";
+import { Alert, Row, Col } from "react-bootstrap";
 import Mmmnavbar from "./components/mmnav";
 
-import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap/dist/css/bootstrap.css";
 import Footer from "./components/mmbingeh";
 import { Phone, MessageCircle } from "lucide-react"; // Telefon ve WhatsApp ikonları için lucide-react kullanımı
 
@@ -18,27 +18,85 @@ export default async function Layout({
     <div>
       <Mmmnavbar />
       {children}
-      <br/> 
+      <br />
       <Row>
-        <Col><Alert variant="primary">Sağlıklı Beslenme</Alert></Col>
-        <Col><Alert variant="secondary">Spor</Alert></Col>
-        <Col><Alert variant="success">Beslenme ve Diyetetik</Alert></Col>
-   
-        <Col><Alert variant="success">Kilo Verme</Alert></Col>
-
-     </Row>   
+        <Col>
+          <Alert
+            variant="info"
+            style={{ backgroundColor: "#17a2b8", color: "white" }}
+          >
+            Sağlıklı Beslenme
+          </Alert>
+        </Col>
+        <Col>
+          <Alert
+            variant="warning"
+            style={{ backgroundColor: "#ffc107", color: "black" }}
+          >
+            Spor
+          </Alert>
+        </Col>
+        <Col>
+          <Alert
+            variant="success"
+            style={{ backgroundColor: "#28a745", color: "white" }}
+          >
+            Beslenme ve Diyetetik
+          </Alert>
+        </Col>
+        <Col>
+          <Alert
+            variant="danger"
+            style={{ backgroundColor: "#dc3545", color: "white" }}
+          >
+            Kilo Verme
+          </Alert>
+        </Col>
+      </Row>
       <Row>
-      <Col><Alert variant="primary">.....</Alert></Col>
-        <Col><Alert variant="secondary">Mela Malperi</Alert></Col>
-        <Col><Alert variant="success">Mela Malperi</Alert></Col>
-    
-    </Row>
-
-    <Row>
-      <Col><Alert variant="primary">.....</Alert></Col>
-        <Col><Alert variant="secondary">Mela Malperi</Alert></Col>
-    
-    </Row>
+        <Col>
+          <Alert
+            variant="primary"
+            style={{ backgroundColor: "#007bff", color: "white" }}
+          >
+            ...
+          </Alert>
+        </Col>
+        <Col>
+          <Alert
+            variant="secondary"
+            style={{ backgroundColor: "#6c757d", color: "white" }}
+          >
+            Mela Malperi
+          </Alert>
+        </Col>
+        <Col>
+          <Alert
+            variant="dark"
+            style={{ backgroundColor: "#343a40", color: "white" }}
+          >
+            Mela Malperi
+          </Alert>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Alert
+            variant="light"
+            style={{ backgroundColor: "#f8f9fa", color: "black" }}
+          >
+            Beden Kitle İndeksi
+          </Alert>
+        </Col>
+        <Col>
+          <Alert
+            variant="dark"
+            style={{ backgroundColor: "#343a40", color: "white" }}
+          >
+            Besinler
+          </Alert>
+        </Col>
+      </Row>
       <Footer />
       {/* Sabit Telefon İkonu */}
       <div

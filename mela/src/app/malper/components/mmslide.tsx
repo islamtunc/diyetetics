@@ -16,7 +16,9 @@ function BasicExample(props:any) {
         
         {props.nivis}
         </Card.Text>
-        <Button href={props.cih} variant="primary">Daha fazla</Button>
+        <Button  style={{
+    background: "#0f2027", // Koyu mavi ton
+    color: "#ffffff"}} href={props.cih} variant="primary">Daha fazla</Button>
       </Card.Body>
     </Card>
   );
