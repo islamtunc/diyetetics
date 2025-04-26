@@ -116,7 +116,7 @@ export default async function Layout({
           cursor: "pointer",
           zIndex: 1000, // Üstte görünmesi için
         }}
-        onClick={() => window.location.href = "tel:+905549765692"} // Telefon numarası
+        onClick={() => window.location.href = "tel:+905439161344"} // Telefon numarası
       >
         <Phone size={24} color="white" />
       </div>
@@ -139,7 +139,7 @@ export default async function Layout({
           cursor: "pointer",
           zIndex: 1000, // Üstte görünmesi için
         }}
-        onClick={() => window.open("https://wa.me/905549765692", "_blank")} // WhatsApp numarası
+        onClick={() => window.open("https://wa.me/905439161344", "_blank")} // WhatsApp numarası
       >
         <MessageCircle size={24} color="white" />
       </div>
