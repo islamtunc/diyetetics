@@ -20,11 +20,11 @@ export default async function Layout({
       {children}
       <br/> 
       <Row>
-        <Col><Alert variant="primary">.....</Alert></Col>
-        <Col><Alert variant="secondary">Mela Malperi</Alert></Col>
-        <Col><Alert variant="success">Mela Malperi</Alert></Col>
+        <Col><Alert variant="primary">Sağlıklı Beslenme</Alert></Col>
+        <Col><Alert variant="secondary">Spor</Alert></Col>
+        <Col><Alert variant="success">Beslenme ve Diyetetik</Alert></Col>
    
-        <Col><Alert variant="success">Mela Malperi</Alert></Col>
+        <Col><Alert variant="success">Kilo Verme</Alert></Col>
 
      </Row>   
       <Row>
