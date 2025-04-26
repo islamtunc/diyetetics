@@ -31,10 +31,10 @@ function ContainerFluidExample() {
         <Col>
         <Card style={{ width: '25rem' }}>
             <Card.Body>
-              <Card.Title>Başka ...</Card.Title>
+              <Card.Title>Merhaba</Card.Title>
               <Card.Text>
 
-<p>              Merhaba Ben diyetisyen rojda Musa sitemizin amacı sizlere güvenilir bilgi ve hizmet vermektir sağlıklı kilo alma,kilo verme ve birçok hastalık konusunda beslenme danışmanlığı hizmeti verme ve sağlıklı beslenmeyi bir yaşam tarzı haline getirmektir.           
+<p>               Ben diyetisyen rojda Musa sitemizin amacı sizlere güvenilir bilgi ve hizmet vermektir sağlıklı kilo alma,kilo verme ve birçok hastalık konusunda beslenme danışmanlığı hizmeti verme ve sağlıklı beslenmeyi bir yaşam tarzı haline getirmektir.           
 </p>
              <br></br> <p>Sitemizde alternatif tarifler,beslenme programları ve diyet seçenekleri detaylı bir şekilde size sunulacaktır sizlere en uygun diyet programını oluşturmak için lütfen iletişim seçeneklerinden bizimle iletişime geçiniz</p>
               </Card.Text>
