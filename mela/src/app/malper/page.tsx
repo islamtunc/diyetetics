@@ -16,10 +16,10 @@ function ContainerFluidExample() {
       <Row>
       <Col>   <Card style={{ width: '25rem' }}>
             <Card.Body>
-              <Card.Title>Özgeçmiş</Card.Title>
+              <Card.Title>hoşgeldiniz</Card.Title>
               <Card.Text>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam rerum laborum deserunt eveniet rem, doloribus tempore, molestias dolorum numquam voluptate magni commodi ab. Ad porro, culpa repellat voluptas repudiandae quos?
-           
+              Sitemize hoşgeldiniz doğru bilinen yanlışlardan kafanız mı karıştı? kilo vermekte zorlanıyor musunuz? Hastalığınız için nasıl beslenmeniz gerektiğini mi merak ediyorsunuz? Sağlıklı bir yaşam mı sürmek istiyorsunuz? O halde doğru adrestesiniz.
+              En güncel ve en güvenilir bilgilerle sağlık dolu bir yaşam için sitemizi takip edin.           
               </Card.Text>
             </Card.Body>
           </Card></Col>
