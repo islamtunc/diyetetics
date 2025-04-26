@@ -1,7 +1,7 @@
 // Bismillahirrahmanirrahim 
-
+// Elhamdulillahirabbulalemin
+// Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
 "use client";
-
 import InfiniteScrollContainer from "@/components/InfiniteScrollContainer";
 import Post from "@/components/posts/Post";
 import PostsLoadingSkeleton from "@/components/posts/PostsLoadingSkeleton";

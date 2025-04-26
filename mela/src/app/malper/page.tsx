@@ -1,29 +1,45 @@
-// Bismillahirahmanirahim
+// Bismillahirrahmanirahim
+// Elhamdulillahirabbulalemin
+// Esselatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
 
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
+import BasicExample from './components/mmslide';
+import { Alert } from 'react-bootstrap';
 
-
-import { Home, Car, Shirt, Building, Briefcase, Paintbrush } from 'lucide-react';
-import { Image } from 'react-bootstrap';
-import UncontrolledExample from './components/mmslide';
-import SearchField from '@/components/SearchField';
-import ForYouFeed from './mmavahi/ForYouFeed';
-
-export default function Page() {
+function ContainerFluidExample() {
   return (
-    <div className="flex flex-col gap-4">
+    <Container fluid>
+     
+      <Row>
+      <Image src="https://rumeysaaltay.com/wp-content/uploads/2019/09/dengeli-beslen-640x427.jpg" alt="..." fluid />
+        </Row>   
+  <br/>
 
+  
+      <Row>
 
-<br></br><br></br><br></br><br></br>
+        <Col><BasicExample nav="Beslenmeye Dair" nivis="açıklama buraya gelecek"cih="/malper/mmavahi" wene="https://rumeysaaltay.com/wp-content/uploads/2019/09/dengeli-beslen-640x427.jpg"/> </Col>
 
+        <Col><BasicExample nav="Blog Yazıları" nivis="açıklama buraya gelecek" cih="/malper/mmkargeh" wene="https://rumeysaaltay.com/wp-content/uploads/2019/09/dengeli-beslen-640x427.jpg"/> </Col>
 
-Amade dibe...
-<br></br>
+        <Col><BasicExample nav="Programlarımız" nivis="açıklama buraya gelecek" cih="/malper/mmhewcedari" wene="https://rumeysaaltay.com/wp-content/uploads/2019/09/dengeli-beslen-640x427.jpg"/> </Col>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rAJ4Yd_PjGY?si=fw6OIKWYFu7YF3Vr" ></iframe>
-    
+      </Row>
+      <br/>
+      <Row>
+      <Col><BasicExample nav="Yararlı Kaynaklar" nivis="açıklama buraya gelecek" cih="/malper/mmkedkar" wene="https://rumeysaaltay.com/wp-content/uploads/2019/09/dengeli-beslen-640x427.jpg"/> </Col>
+  
+      <Col><BasicExample nav="Galeri" nivis="açıklama buraya gelecek" cih="/malper/mmkinc" wene="https://rumeysaaltay.com/wp-content/uploads/2019/09/dengeli-beslen-640x427.jpg"/> </Col>
 
+      <Col><BasicExample nav="Hakkımda" nivis="açıklama buraya gelecek" cih="/malper/mmwesayit" wene="https://rumeysaaltay.com/wp-content/uploads/2019/09/dengeli-beslen-640x427.jpg"/> </Col>
 
-    <ForYouFeed/>
-    </div>
+      </Row>
+
+    </Container>
   );
 }
+
+export default ContainerFluidExample;
