@@ -1,5 +1,6 @@
-// Bismillahirahmanirahim 
-
+// Bismillahirrahmanirahim 
+// Elhamdulillahirabbulalemin
+// Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
 "use client";
 
 import { useSession } from "@/app/(main)/SessionProvider";
@@ -18,7 +19,7 @@ import { useSubmitPostMutation } from "./mutations";
 import "./styles.css";
 import useMediaUpload, { Attachment } from "./useMediaUpload";
 
-export default function PostEditor() {
+export default function BlogPostForm() {
   const { user } = useSession();
 
   const mutation = useSubmitPostMutation();
@@ -41,11 +42,10 @@ export default function PostEditor() {
   const editor = useEditor({
     extensions: [
       StarterKit.configure({
-        bold: false,
-        italic: false,
+       
       }),
       Placeholder.configure({
-        placeholder: "Selam aleykum,fermo...",
+        placeholder: "Blog yazınızı buraya yazın...",
       }),
     ],
   });
@@ -79,9 +79,15 @@ export default function PostEditor() {
 
   return (
     <div className="flex flex-col gap-5 rounded-2xl bg-card p-5 shadow-sm">
+      <h2 className="text-xl font-bold">Blog Yazısı Oluştur</h2>
       <div className="flex gap-5">
         <UserAvatar avatarUrl={user.avatarUrl} className="hidden sm:inline" />
         <div {...rootProps} className="w-full">
+          <input
+            type="text"
+            placeholder="Başlık"
+            className="w-full mb-3 rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+          />
           <EditorContent
             editor={editor}
             className={cn(
@@ -116,7 +122,7 @@ export default function PostEditor() {
           disabled={!input.trim() || isUploading}
           className="min-w-20"
         >
-          Parve bikin
+          Yayınla
         </LoadingButton>
       </div>
     </div>
