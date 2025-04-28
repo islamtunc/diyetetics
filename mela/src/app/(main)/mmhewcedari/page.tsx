@@ -25,10 +25,7 @@ export default function Home() {
           <TabsContent value="for-you">
             <ForYouFeed />
           </TabsContent>
-          <TabsContent value="following">
-
-      <SearchField/>
-          </TabsContent>
+        
     
 
 

@@ -18,17 +18,13 @@ export default function Home() {
         <Tabs defaultValue="for-you">
           <TabsList>
             <TabsTrigger value="for-you">Paylaşılanlar</TabsTrigger>
-            <TabsTrigger value="following">Kategoride Ara</TabsTrigger>
             <TabsTrigger value="mm">Yeni Gönderi Paylaş</TabsTrigger>
 
           </TabsList>
           <TabsContent value="for-you">
             <ForYouFeed />
           </TabsContent>
-          <TabsContent value="following">
-
-      <SearchField/>
-          </TabsContent>
+        
     
 
 
