@@ -1,6 +1,7 @@
 // Bismillahirrahmanirahim
 // Elhamdulillahirabbulalemin
 // Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
+"use client"
 import React from "react";
 import { Alert, Container, Row, Col, Card, Button } from "react-bootstrap";
 
