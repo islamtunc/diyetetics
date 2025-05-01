@@ -12,24 +12,29 @@ import mm from "../../../public/rjd.jpg";
 function ContainerFluidExample() {
   return (
     <Container fluid>
-     <br/>
+     <br/>  <br/>
       <Row>
-      <Col>   <Card style={{ width: '25rem' }}>
+      <Col>   <Card style={{ width: '25rem', height: '39rem',opacity: 0.7,left: '10px',textAlign: 'center'}}>
             <Card.Body>
               <Card.Title>hoşgeldiniz</Card.Title>
-              <Card.Text>
-              Sitemize hoşgeldiniz doğru bilinen yanlışlardan kafanız mı karıştı? kilo vermekte zorlanıyor musunuz? Hastalığınız için nasıl beslenmeniz gerektiğini mi merak ediyorsunuz? Sağlıklı bir yaşam mı sürmek istiyorsunuz? O halde doğru adrestesiniz.
-              En güncel ve en güvenilir bilgilerle sağlık dolu bir yaşam için sitemizi takip edin.           
+              <Card.Text><br></br>
+              Sitemize hoşgeldiniz<br></br> doğru bilinen yanlışlardan kafanız mı karıştı?<br></br><br></br> kilo vermekte zorlanıyor musunuz?<br></br> Hastalığınız için nasıl beslenmeniz gerektiğini mi merak ediyorsunuz? <br></br><br></br>Sağlıklı bir yaşam mı sürmek istiyorsunuz?<br></br> O halde doğru adrestesiniz.
+              <br></br> En güncel ve en güvenilir bilgilerle sağlık dolu bir yaşam için sitemizi takip edin.           
               </Card.Text>
             </Card.Body>
           </Card></Col>
         <Col>      <Image src={mm.src}     style={{
       border: "5px solid white", // Beyaz çerçeve
-      borderRadius: "10px", // Köşeleri yuvarlatmak için
+      borderRadius: "10px",
     }} alt="ROJDA MUSA" fluid />
         </Col>
+        
+        
+        
+        
+    
         <Col>
-        <Card style={{ width: '25rem' }}>
+        <Card style={{ width: '25rem', height: '39rem',opacity: 0.7, color  : 'black',textAlign: 'center'}}>   
             <Card.Body>
               <Card.Title>Merhaba</Card.Title>
               <Card.Text>
@@ -42,7 +47,7 @@ function ContainerFluidExample() {
           </Card>
         </Col>
         </Row>   
-  <br/>
+  
 
   
       <Row>
@@ -63,6 +68,7 @@ function ContainerFluidExample() {
       <Col><BasicExample nav="Hakkımda" nivis="açıklama buraya gelecek" cih="/malper/mmwesayit" wene="https://rumeysaaltay.com/wp-content/uploads/2019/09/dengeli-beslen-640x427.jpg"/> </Col>
 
       </Row>
+
 
     </Container>
   );
