@@ -25,7 +25,7 @@ function ContainerFluidExample() {
           </Card></Col>
         <Col>      <Image src={mm.src}     style={{
       border: "5px solid white", // Beyaz çerçeve
-      borderRadius: "10px",  marginTop: '10px', width: '25rem', height: '34rem'
+      borderRadius: "10px",  marginTop: '10px', width: '25rem', height: '32rem'
     }} alt="ROJDA MUSA" fluid />
         </Col>
         
