@@ -1,5 +1,6 @@
 // Bismillahirrahmanirrahim 
-
+// Elhamdulillahirabbulalemin
+// Ve salatu ve selamu ala resulina Muhammedin ve alihi ve sahbihi ecmain
 
 
 import { Toaster } from "@/components/ui/toaster";
