@@ -14,7 +14,7 @@ function ContainerFluidExample() {
     <Container fluid>
      <br/>  <br/>
       <Row>
-      <Col>   <Card style={{ width: '25rem', height: '37rem',opacity: 0.7,left: '10px',textAlign: 'center'}}>
+      <Col>   <Card style={{ width: '25rem', height: '37rem',opacity: 0.7,textAlign: 'center'}}>
             <Card.Body>
               <Card.Title>Hoşgeldiniz</Card.Title>
               <Card.Text><br></br>
