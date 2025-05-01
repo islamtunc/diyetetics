@@ -16,17 +16,17 @@ function Mmmnavbar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/malper">Anasayfa</Nav.Link>
-            <Nav.Link href="/malper/mmavahi">Beslenme Programlarım</Nav.Link>
+            <Nav.Link href="/malper/mmavahi">Sporcu Beslenmesi</Nav.Link>
 
-            <Nav.Link href="/malper/mmkargeh">Blog Yazıları</Nav.Link>
+            <Nav.Link href="/malper/mmkargeh">Hastalıklar ve Beslenme</Nav.Link>
 
-            <Nav.Link href="/malper/mmhewcedari">Programlar</Nav.Link>
+            <Nav.Link href="/malper/mmhewcedari">Çocuk ve Ergenlerde Beslenme</Nav.Link>
 
-            <Nav.Link href="/malper/mmwesayit">Hakkımızda </Nav.Link>
+            <Nav.Link href="/malper/mmwesayit">Diyet Çeşitleri </Nav.Link>
 
-<Nav.Link href="/malper/mmkedkar">Yararlı Kaynaklar</Nav.Link>
+<Nav.Link href="/malper/mmkedkar">Sağlıklı Tarifler</Nav.Link>
 
-<Nav.Link href="/malper/mmkinc">Galeri</Nav.Link>
+<Nav.Link href="/malper/mmkinc">Psikoloji ve Beslenme</Nav.Link>
 
           </Nav>
         </Navbar.Collapse>
