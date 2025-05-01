@@ -64,7 +64,7 @@ function ContainerFluidExample() {
 
         <Col><BasicExample nav="Psikoloji ve Beslenme" nivis=" zaman zaman duygu durumlarımız değişiklik gösterebilmektedir ve bu durumda beslenme alışkanlıklarımızda değişebilmekte ve sağlıksız bir beslenme çeşidine yönelmekteyiz bu duurmlarla nasıl başa çıkmalıyız detaylara yazılarımızdan ulasabilrsiniz" cih="/malper/mmkargeh" wene={mm5} /> </Col>
 
-        <Col><BasicExample nav="Diyet Çeşitleri" nivis="açıklama buraya gelecek" cih="/malper/mmhewcedari" wene={mm1}/> </Col>
+        <Col><BasicExample nav="Diyet Çeşitleri" nivis="Belirli hastalık ve beslenme tarzlarında yapılan diyet farklılık gösterebilmektedir bazen yağdan bazen karbonhidrattan ya da proteinden zengin beslenmeler öne çıkabilmektedir hangi hastalık durumunda hangi diyet çeşidini tercih etmeliyiz sorusu için detaylı bilgilere diyet çeşitleri yazılarımızdan ulaşabilirsiniz." cih="/malper/mmhewcedari" wene={mm1}/> </Col>
 
       </Row>
       <br/>
