@@ -14,9 +14,9 @@ function ContainerFluidExample() {
     <Container fluid>
      <br/>  <br/>
       <Row>
-      <Col>   <Card style={{ width: '25rem', height: '39rem',opacity: 0.7,left: '10px',textAlign: 'center'}}>
+      <Col>   <Card style={{ width: '25rem', height: '37rem',opacity: 0.7,left: '10px',textAlign: 'center'}}>
             <Card.Body>
-              <Card.Title>hoşgeldiniz</Card.Title>
+              <Card.Title>Hoşgeldiniz</Card.Title>
               <Card.Text><br></br>
               Sitemize hoşgeldiniz<br></br> doğru bilinen yanlışlardan kafanız mı karıştı?<br></br><br></br> kilo vermekte zorlanıyor musunuz?<br></br> Hastalığınız için nasıl beslenmeniz gerektiğini mi merak ediyorsunuz? <br></br><br></br>Sağlıklı bir yaşam mı sürmek istiyorsunuz?<br></br> O halde doğru adrestesiniz.
               <br></br> En güncel ve en güvenilir bilgilerle sağlık dolu bir yaşam için sitemizi takip edin.           
@@ -25,7 +25,7 @@ function ContainerFluidExample() {
           </Card></Col>
         <Col>      <Image src={mm.src}     style={{
       border: "5px solid white", // Beyaz çerçeve
-      borderRadius: "10px",
+      borderRadius: "10px",  marginTop: '10px', width: '25rem', height: '34rem'
     }} alt="ROJDA MUSA" fluid />
         </Col>
         
@@ -34,7 +34,7 @@ function ContainerFluidExample() {
         
     
         <Col>
-        <Card style={{ width: '25rem', height: '39rem',opacity: 0.7, color  : 'black',textAlign: 'center'}}>   
+        <Card style={{ width: '25rem', height: '37rem',opacity: 0.7, color  : 'black',textAlign: 'center'}}>   
             <Card.Body>
               <Card.Title>Merhaba</Card.Title>
               <Card.Text>
