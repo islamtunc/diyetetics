@@ -19,7 +19,7 @@ function ContainerFluidExample() {
             style={{
               width: "25rem",
               height: "32rem",
-              opacity: 0.7,
+              opacity: 0.97,
               textAlign: "center",
             }}
           >
@@ -65,7 +65,7 @@ function ContainerFluidExample() {
             style={{
               width: "25rem",
               height: "32rem",
-              opacity: 0.7,
+              opacity: 0.97,
               color: "black",
               textAlign: "center",
             }}
