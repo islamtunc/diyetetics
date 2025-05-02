@@ -28,40 +28,51 @@ function page() {
         }}
       >
         <Card.Body>
-          <Card.Title>Sporcu Beslenmesi</Card.Title>
+          <Card.Title>Diyet Çeşitleri</Card.Title>
 
           <Row className="g-4">
             {/* Sol Kolon */}
             <Col xs={12} md={6}>
               <Card style={{ textAlign: "center", height: "100%" }}>
                 <Card.Body>
-                  <Card.Title>Sporcularda beslenmenin önemi</Card.Title>
+                  <Card.Title>Popüler Diyet Türleri</Card.Title>
                   <Card.Text>
                     <br />
-                    Sporcularda beslenme, performansın artırılması, toparlanma
-                    sürecinin hızlandırılması ve genel sağlığın korunması
-                    açısından kritik bir rol oynamaktadır. Son dönem
-                    araştırmalar, beslenmenin sadece enerji alımı değil, aynı
-                    zamanda antrenman adaptasyonu, bağışıklık sistemi desteği ve
-                    zihinsel dayanıklılık üzerinde de etkili olduğunu
-                    göstermektedir.
+                    Diyet çeşitleri, bireylerin sağlık hedeflerine, yaşam
+                    tarzlarına ve beslenme ihtiyaçlarına göre farklılık
+                    göstermektedir. İşte en popüler diyet türlerinden bazıları:
                     <br />
                     <br />
-                    <strong>Makro ve Mikro Besinlerin Önemi</strong>
+                    <strong>1. Ketojenik Diyet</strong>
                     <br />
-                    Sporcuların enerji ve protein ihtiyaçları, sedanter
-                    bireylere göre daha fazladır. Bu nedenle karbonhidrat,
-                    protein ve yağ gibi makro besin ögelerinin dengeli alımı
-                    önemlidir. Ayrıca, vitamin ve mineral gibi mikro besin
-                    ögeleri de performans ve toparlanma süreçlerinde kritik rol
-                    oynar.
+                    Düşük karbonhidrat, yüksek yağ içeriği ile vücudu ketozise
+                    sokarak yağ yakımını hızlandırmayı hedefler.
+                    <br />
+                    <br />
+                    <strong>2. Akdeniz Diyeti</strong>
+                    <br />
+                    Zeytinyağı, sebze, meyve, tam tahıllar ve balık ağırlıklı
+                    beslenme ile kalp sağlığını destekler.
+                    <br />
+                    <br />
+                    <strong>3. Aralıklı Oruç</strong>
+                    <br />
+                    Belirli saatlerde yemek yeme ve diğer saatlerde oruç
+                    tutmayı içerir. Metabolizmayı hızlandırabilir.
+                    <br />
+                    <br />
+                    <strong>4. Vejetaryen ve Vegan Diyet</strong>
+                    <br />
+                    Hayvansal ürünlerin kısmen veya tamamen çıkarıldığı
+                    beslenme türleridir. Çevresel ve etik nedenlerle tercih
+                    edilir.
                     <br />
                     <br />
                     <strong>Sonuç</strong>
                     <br />
-                    Sporcularda beslenme, sadece fiziksel performansı değil,
-                    aynı zamanda genel sağlığı, zihinsel dayanıklılığı ve uzun
-                    vadeli başarıyı etkileyen temel bir faktördür.
+                    Diyet seçimi, bireyin sağlık durumu, yaşam tarzı ve
+                    hedeflerine göre yapılmalıdır. Her diyet türü, doğru
+                    uygulandığında sağlıklı bir yaşam tarzını destekleyebilir.
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -77,7 +88,7 @@ function page() {
                   width: "100%", // Mobil uyumlu genişlik
                   height: "auto", // Oranlı yükseklik
                 }}
-                alt="ROJDA MUSA"
+                alt="Diyet Çeşitleri"
                 fluid
               />
             </Col>

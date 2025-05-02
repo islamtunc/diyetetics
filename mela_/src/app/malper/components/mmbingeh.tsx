@@ -50,7 +50,7 @@ const Footer = () => (
 
     {/* Alt Bölüm */}
     <div className="text-center py-3"  style={{ borderTop: "1px solid #495057", marginTop: "20px" }}>
-    powered by  © {new Date().getFullYear()}<a href="https://yekazad.vercel.app">Yekazad Software Center</a> . Tüm hakları saklıdır.
+    powered by  © <a href="https://yekazad.vercel.app">Yekazad Software Center</a> . Tüm hakları saklıdır.
     </div>
   </footer>
 );

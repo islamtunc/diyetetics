@@ -28,40 +28,50 @@ function page() {
         }}
       >
         <Card.Body>
-          <Card.Title>Sporcu Beslenmesi</Card.Title>
+          <Card.Title>Çocuklarda ve Ergenlerde Beslenme</Card.Title>
 
           <Row className="g-4">
             {/* Sol Kolon */}
             <Col xs={12} md={6}>
               <Card style={{ textAlign: "center", height: "100%" }}>
                 <Card.Body>
-                  <Card.Title>Sporcularda beslenmenin önemi</Card.Title>
+                  <Card.Title>Sağlıklı Beslenmenin Önemi</Card.Title>
                   <Card.Text>
                     <br />
-                    Sporcularda beslenme, performansın artırılması, toparlanma
-                    sürecinin hızlandırılması ve genel sağlığın korunması
-                    açısından kritik bir rol oynamaktadır. Son dönem
-                    araştırmalar, beslenmenin sadece enerji alımı değil, aynı
-                    zamanda antrenman adaptasyonu, bağışıklık sistemi desteği ve
-                    zihinsel dayanıklılık üzerinde de etkili olduğunu
-                    göstermektedir.
+                    Çocukluk ve ergenlik dönemleri, büyüme ve gelişmenin en hızlı
+                    olduğu dönemlerdir. Bu süreçte sağlıklı beslenme, fiziksel
+                    büyüme, zihinsel gelişim ve bağışıklık sistemi için kritik
+                    bir rol oynar.
                     <br />
                     <br />
-                    <strong>Makro ve Mikro Besinlerin Önemi</strong>
+                    <strong>1. Dengeli Beslenme</strong>
                     <br />
-                    Sporcuların enerji ve protein ihtiyaçları, sedanter
-                    bireylere göre daha fazladır. Bu nedenle karbonhidrat,
-                    protein ve yağ gibi makro besin ögelerinin dengeli alımı
-                    önemlidir. Ayrıca, vitamin ve mineral gibi mikro besin
-                    ögeleri de performans ve toparlanma süreçlerinde kritik rol
-                    oynar.
+                    Çocukların ve ergenlerin günlük diyetlerinde karbonhidrat,
+                    protein, yağ, vitamin ve minerallerin dengeli bir şekilde
+                    bulunması gerekir. Özellikle kalsiyum ve D vitamini, kemik
+                    gelişimi için önemlidir.
+                    <br />
+                    <br />
+                    <strong>2. Fast Food ve Şeker Tüketimi</strong>
+                    <br />
+                    Fast food ve şekerli yiyeceklerin aşırı tüketimi, obezite ve
+                    diğer sağlık sorunlarına yol açabilir. Bu nedenle, bu tür
+                    yiyeceklerin tüketimi sınırlandırılmalıdır.
+                    <br />
+                    <br />
+                    <strong>3. Su Tüketimi</strong>
+                    <br />
+                    Çocuklar ve ergenler, yeterli miktarda su tüketmelidir.
+                    Su, vücudun düzgün çalışması ve toksinlerin atılması için
+                    gereklidir.
                     <br />
                     <br />
                     <strong>Sonuç</strong>
                     <br />
-                    Sporcularda beslenme, sadece fiziksel performansı değil,
-                    aynı zamanda genel sağlığı, zihinsel dayanıklılığı ve uzun
-                    vadeli başarıyı etkileyen temel bir faktördür.
+                    Sağlıklı beslenme alışkanlıkları, çocukların ve ergenlerin
+                    hem fiziksel hem de zihinsel gelişimlerini destekler. Bu
+                    alışkanlıklar, yaşam boyu sürecek sağlıklı bir yaşam tarzının
+                    temelini oluşturur.
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -70,14 +80,14 @@ function page() {
             {/* Sağ Kolon */}
             <Col xs={12} md={6}>
               <Image
-                src="https://iasbh.tmgrup.com.tr/a9e335/0/0/0/0/0/0?u=https://isbh.tmgrup.com.tr/sb/album/2021/12/11/tum-beslenmeniz-degisiyor-iste-saat-1600dan-sonra-asla-tuketmemeniz-gereken-o-besin-1639200626070.jpg&mw=752&mh=700"
+                src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGNoaWxkcmVufGVufDB8fHx8MTY4MzY5NzYxNQ&ixlib=rb-1.2.1&q=80&w=1080"
                 style={{
                   border: "5px solid white", // Beyaz çerçeve
                   borderRadius: "10px",
                   width: "100%", // Mobil uyumlu genişlik
                   height: "auto", // Oranlı yükseklik
                 }}
-                alt="ROJDA MUSA"
+                alt="Çocuklarda ve Ergenlerde Beslenme"
                 fluid
               />
             </Col>

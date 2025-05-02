@@ -28,40 +28,46 @@ function page() {
         }}
       >
         <Card.Body>
-          <Card.Title>Sporcu Beslenmesi</Card.Title>
+          <Card.Title>Sağlıklı Tarifler</Card.Title>
 
           <Row className="g-4">
             {/* Sol Kolon */}
             <Col xs={12} md={6}>
               <Card style={{ textAlign: "center", height: "100%" }}>
                 <Card.Body>
-                  <Card.Title>Sporcularda beslenmenin önemi</Card.Title>
+                  <Card.Title>Sağlıklı ve Lezzetli Tarifler</Card.Title>
                   <Card.Text>
                     <br />
-                    Sporcularda beslenme, performansın artırılması, toparlanma
-                    sürecinin hızlandırılması ve genel sağlığın korunması
-                    açısından kritik bir rol oynamaktadır. Son dönem
-                    araştırmalar, beslenmenin sadece enerji alımı değil, aynı
-                    zamanda antrenman adaptasyonu, bağışıklık sistemi desteği ve
-                    zihinsel dayanıklılık üzerinde de etkili olduğunu
-                    göstermektedir.
+                    Sağlıklı tarifler, hem lezzetli hem de besleyici yemekler
+                    hazırlamanıza olanak tanır. İşte sağlıklı bir yaşam tarzını
+                    destekleyen bazı tarif önerileri:
                     <br />
                     <br />
-                    <strong>Makro ve Mikro Besinlerin Önemi</strong>
+                    <strong>1. Avokadolu Tam Tahıllı Tost</strong>
                     <br />
-                    Sporcuların enerji ve protein ihtiyaçları, sedanter
-                    bireylere göre daha fazladır. Bu nedenle karbonhidrat,
-                    protein ve yağ gibi makro besin ögelerinin dengeli alımı
-                    önemlidir. Ayrıca, vitamin ve mineral gibi mikro besin
-                    ögeleri de performans ve toparlanma süreçlerinde kritik rol
-                    oynar.
+                    Tam tahıllı ekmek üzerine ezilmiş avokado, limon suyu ve
+                    biraz tuz ekleyerek hızlı ve sağlıklı bir kahvaltı
+                    hazırlayabilirsiniz.
+                    <br />
+                    <br />
+                    <strong>2. Izgara Sebzeler</strong>
+                    <br />
+                    Kabak, patlıcan, biber ve mantar gibi sebzeleri zeytinyağı
+                    ve baharatlarla marine edip ızgarada pişirin. Hem hafif hem
+                    de lezzetli bir öğün elde edebilirsiniz.
+                    <br />
+                    <br />
+                    <strong>3. Yoğurtlu Meyve Kasesi</strong>
+                    <br />
+                    Yoğurt, taze meyveler ve biraz granola ile sağlıklı bir
+                    tatlı veya atıştırmalık hazırlayabilirsiniz.
                     <br />
                     <br />
                     <strong>Sonuç</strong>
                     <br />
-                    Sporcularda beslenme, sadece fiziksel performansı değil,
-                    aynı zamanda genel sağlığı, zihinsel dayanıklılığı ve uzun
-                    vadeli başarıyı etkileyen temel bir faktördür.
+                    Sağlıklı tarifler, hem bedeninizi hem de ruhunuzu
+                    besleyebilir. Doğru malzemelerle hazırlanan yemekler, hem
+                    lezzetli hem de besleyici olabilir.
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -70,14 +76,14 @@ function page() {
             {/* Sağ Kolon */}
             <Col xs={12} md={6}>
               <Image
-                src="https://iasbh.tmgrup.com.tr/a9e335/0/0/0/0/0/0?u=https://isbh.tmgrup.com.tr/sb/album/2021/12/11/tum-beslenmeniz-degisiyor-iste-saat-1600dan-sonra-asla-tuketmemeniz-gereken-o-besin-1639200626070.jpg&mw=752&mh=700"
+                src="https://images.unsplash.com/photo-1512058564366-c9e3c8e5d1d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGhlYWx0aHklMjByZWNpcGVzfGVufDB8fHx8MTY4MzY5NzYxNQ&ixlib=rb-1.2.1&q=80&w=1080"
                 style={{
                   border: "5px solid white", // Beyaz çerçeve
                   borderRadius: "10px",
                   width: "100%", // Mobil uyumlu genişlik
                   height: "auto", // Oranlı yükseklik
                 }}
-                alt="ROJDA MUSA"
+                alt="Sağlıklı Tarifler"
                 fluid
               />
             </Col>
