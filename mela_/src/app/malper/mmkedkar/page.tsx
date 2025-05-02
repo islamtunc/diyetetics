@@ -76,7 +76,7 @@ function page() {
             {/* Sağ Kolon */}
             <Col xs={12} md={6}>
               <Image
-                src="https://images.unsplash.com/photo-1556912996-6a321d05f7c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGhlYWx0aHklMjByZWNpcGVzfGVufDB8fHx8MTY4MzY5NzYxNQ&ixlib=rb-1.2.1&q=80&w=1080"
+                src="https://avatars.mds.yandex.net/i?id=783fcc671d81f44c771e163bd824235b426c0cc8-8790138-images-thumbs&n=13"
                 style={{
                   border: "5px solid white", // Beyaz çerçeve
                   borderRadius: "10px",
