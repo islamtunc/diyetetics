@@ -83,7 +83,7 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title></Card.Title>
+              <Card.Title>Sğlıklı Tarifler</Card.Title>
               <Card.Text>Blog yazılarınızı yönetin ve düzenleyin.</Card.Text>
               <Button variant="primary" href="/mmkedkar">
                 Git
