@@ -47,7 +47,7 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Hakkımızda</Card.Title>
+              <Card.Title>Psikoloji ve Beslenme Sayfası</Card.Title>
               <Card.Text>Hakkımızda sayfasını düzenleyin veya görüntüleyin.</Card.Text>
               <Button variant="primary" href="/mmkinc">
                 Git
@@ -58,7 +58,7 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Beslenme Programları</Card.Title>
+              <Card.Title>Hastalıklar ve Beslenme Sayfası</Card.Title>
               <Card.Text>Beslenme programlarını yönetin.</Card.Text>
               <Button variant="primary" href="/mmkargeh">
                 Git
@@ -72,7 +72,7 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Programlar</Card.Title>
+              <Card.Title>Diyet Çeşitleri Sayfası</Card.Title>
               <Card.Text>Programlarınızı düzenleyin veya görüntüleyin.</Card.Text>
               <Button variant="primary" href="/mmwesayit">
                 Git
@@ -83,7 +83,7 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Blog Yazılarım</Card.Title>
+              <Card.Title></Card.Title>
               <Card.Text>Blog yazılarınızı yönetin ve düzenleyin.</Card.Text>
               <Button variant="primary" href="/mmkedkar">
                 Git
