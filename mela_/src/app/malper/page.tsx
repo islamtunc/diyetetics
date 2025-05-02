@@ -16,7 +16,7 @@ function ContainerFluidExample() {
     <Container fluid>
      <br/>  <br/>
       <Row>
-      <Col>   <Card style={{ width: '25rem', height: '32rem',opacity: 0.7,textAlign: 'center'}}>
+      <Col>   <Card style={{ width: '25rem', height: '32rem',opacity: 0.95,textAlign: 'center'}}>
             <Card.Body>
               <Card.Title>Hoşgeldiniz</Card.Title>
               <Card.Text> <br></br>
@@ -36,7 +36,7 @@ function ContainerFluidExample() {
         
     
         <Col>
-        <Card style={{ width: '25rem', height: '32rem',opacity: 0.7, color  : 'black',textAlign: 'center'}}>   
+        <Card style={{ width: '25rem', height: '32rem',opacity: 0.95, color  : 'black',textAlign: 'center'}}>   
             <Card.Body>
               <Card.Title>Merhaba</Card.Title>
               <Card.Text>
