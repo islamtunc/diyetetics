@@ -1,5 +1,7 @@
 // Bismillahirrahmanirahim
-
+// Elhamdulillahirabbulalemin
+// Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
+"use client";
 import { Dropdown } from "react-bootstrap";
 import Link from "next/link";
 import UserButton from "@/components/UserButton";

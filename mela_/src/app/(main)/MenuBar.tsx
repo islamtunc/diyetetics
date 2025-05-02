@@ -1,5 +1,6 @@
 // Bismillahirrahmanirrahim 
-
+// Elhamdulillahirabbulalemin
+// Esselatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
 
 
 import { validateRequest } from "@/auth";
