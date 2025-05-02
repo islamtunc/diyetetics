@@ -62,16 +62,16 @@ function ContainerFluidExample() {
 
         <Col><BasicExample nav="Hastalıklar ve Beslenme" nivis="Her hastalığın kendine özel beslenmesi bulunmaktadır ve sahip olunan hastalığa göre özel diyet içerikleri uygulanmalıdır. Hastalıklar ve Beslenme için detaylı bilgilere yazılarımızdan ulaşabilirsiniz."cih="/malper/mmavahi" wene="/hsbs.jpg"/> </Col>
 
-        <Col><BasicExample nav="Psikoloji ve Beslenme" nivis=" zaman zaman duygu durumlarımız değişiklik gösterebilmektedir ve bu durumda beslenme alışkanlıklarımızda değişebilmekte ve sağlıksız bir beslenme çeşidine yönelmekteyiz bu duurmlarla nasıl başa çıkmalıyız detaylara yazılarımızdan ulasabilrsiniz" cih="/malper/mmkargeh" wene={mm5} /> </Col>
+        <Col><BasicExample nav="Psikoloji ve Beslenme" nivis=" zaman zaman duygu durumlarımız değişiklik gösterebilmektedir ve bu durumda beslenme alışkanlıklarımızda değişebilmekte ve sağlıksız bir beslenme çeşidine yönelmekteyiz bu duurmlarla nasıl başa çıkmalıyız detaylara yazılarımızdan ulasabilrsiniz" cih="/malper/mmkargeh" wene="/psbs.jpg" /> </Col>
 
-        <Col><BasicExample nav="Diyet Çeşitleri" nivis="Belirli hastalık ve beslenme tarzlarında yapılan diyet farklılık gösterebilmektedir bazen yağdan bazen karbonhidrattan ya da proteinden zengin beslenmeler öne çıkabilmektedir hangi hastalık durumunda hangi diyet çeşidini tercih etmeliyiz sorusu için detaylı bilgilere diyet çeşitleri yazılarımızdan ulaşabilirsiniz." cih="/malper/mmhewcedari" wene={mm1}/> </Col>
+        <Col><BasicExample nav="Diyet Çeşitleri" nivis="Belirli hastalık ve beslenme tarzlarında yapılan diyet farklılık gösterebilmektedir bazen yağdan bazen karbonhidrattan ya da proteinden zengin beslenmeler öne çıkabilmektedir hangi hastalık durumunda hangi diyet çeşidini tercih etmeliyiz sorusu için detaylı bilgilere diyet çeşitleri yazılarımızdan ulaşabilirsiniz." cih="/malper/mmhewcedari" wene="/dy.jpg"/> </Col>
 
       </Row>
       <br/>
       <Row>
-      <Col><BasicExample nav="Sporcu Beslenmesi" nivis="Spor ve Beslenme birbirinden ayrılmaz bir ikilidir ve her spor çeşidinde beslenme farklılık gösterebilmektedir. Detaylı bilgilere  spor ve beslenme yazılarımızdan ulaşabilirsiniz" cih="/malper/mmkedkar" wene={mm7}/> </Col>
+      <Col><BasicExample nav="Sporcu Beslenmesi" nivis="Spor ve Beslenme birbirinden ayrılmaz bir ikilidir ve her spor çeşidinde beslenme farklılık gösterebilmektedir. Detaylı bilgilere  spor ve beslenme yazılarımızdan ulaşabilirsiniz" cih="/malper/mmkedkar" wene="spbs.jpg"/> </Col>
   
-      <Col><BasicExample nav="Çocuk ve Ergen" nivis="Her yaş kategorisi farklı bir beslenme programı içermektedir belirli yaşlarda alınan vitamin ve mineraller önem göstermektedir çocuk ve ergenlerde beslenmede detaylı bilgilere yazılarımızdan ulaşabilirsiniz." cih="/malper/mmkinc" wene={mm9}/> </Col>
+      <Col><BasicExample nav="Çocuk ve Ergen" nivis="Her yaş kategorisi farklı bir beslenme programı içermektedir belirli yaşlarda alınan vitamin ve mineraller önem göstermektedir çocuk ve ergenlerde beslenmede detaylı bilgilere yazılarımızdan ulaşabilirsiniz." cih="/malper/mmkinc" wene="ce.jpg"/> </Col>
 
       <Col><BasicExample nav="Sağlıklı Tarifler" nivis="yaptığımız öğün sayısı ve aldığımız kalori kadar yediğimiz öğünlerin besin içerikleri de önemlidir en sağlıklı beslenme tariflerine yazılarımızdan ulaşabilirsiniz." cih="/malper/mmwesayit" wene="https://rumeysaaltay.com/wp-content/uploads/2019/09/dengeli-beslen-640x427.jpg"/> </Col>
 
