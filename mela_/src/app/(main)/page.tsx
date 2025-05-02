@@ -36,7 +36,7 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Anasayfa</Card.Title>
+              <Card.Title>Sporcu Beslenmesi</Card.Title>
               <Card.Text>Admin panelinin ana sayfasına erişim sağlayın.</Card.Text>
               <Button variant="primary" href="/mmavahi">
                 Git
