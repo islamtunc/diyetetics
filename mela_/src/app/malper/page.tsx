@@ -11,12 +11,6 @@ import { Alert, Card } from 'react-bootstrap';
 import mm from "../../../public/rjd.jpg";
 
 
-
-import mm3 from '../../../public/hsbs.jpg';
-import mm1 from "../../../public/dy.jpg";
-import mm5 from '../../../public/psbs.jpg';
-import mm7 from '../../../public/spbs.jpg';
-import mm9 from '../../../public/ce.jpg';
 function ContainerFluidExample() {
   return (
     <Container fluid>

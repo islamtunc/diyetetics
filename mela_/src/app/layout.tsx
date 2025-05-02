@@ -28,7 +28,8 @@ export const metadata: Metadata = {
     template: "%s | DİYETİSYEN ROJDA MUSA",
     default: " DİYETİSYEN ROJDA MUSA",
   },
-  description: " Software Development",
+  description: " Diyetisyen Rojda Musa'nın kişisel web sitesi",
+  keywords: ["Diyetisyen", "Rojda Musa", "Kişisel Web Sitesi"],
 };
 
 export default function RootLayout({

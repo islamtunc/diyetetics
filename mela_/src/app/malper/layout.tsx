@@ -1,4 +1,4 @@
-// Bismillahirahmanirahim 
+// Bismillahirrahmanirahim 
 // Elhamdulillahirabbulalemin
 // Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
 "use client";
@@ -23,7 +23,12 @@ export default async function Layout({
         <Col>
           <Alert
             variant="info"
-            style={{ backgroundColor: "#17a2b8", color: "white" }}
+            style={{
+              backgroundColor: "#17a2b8",
+              color: "white",
+              fontSize: "0.9rem", // Daha küçük yazı boyutu
+              padding: "10px", // Daha az iç boşluk
+            }}
           >
             Sağlıklı Beslenme
           </Alert>
@@ -31,7 +36,12 @@ export default async function Layout({
         <Col>
           <Alert
             variant="warning"
-            style={{ backgroundColor: "#ffc107", color: "black" }}
+            style={{
+              backgroundColor: "#ffc107",
+              color: "black",
+              fontSize: "0.9rem",
+              padding: "10px",
+            }}
           >
             Spor
           </Alert>
@@ -39,7 +49,12 @@ export default async function Layout({
         <Col>
           <Alert
             variant="success"
-            style={{ backgroundColor: "#28a745", color: "white" }}
+            style={{
+              backgroundColor: "#28a745",
+              color: "white",
+              fontSize: "0.9rem",
+              padding: "10px",
+            }}
           >
             Beslenme ve Diyetetik
           </Alert>
@@ -47,7 +62,12 @@ export default async function Layout({
         <Col>
           <Alert
             variant="danger"
-            style={{ backgroundColor: "#dc3545", color: "white" }}
+            style={{
+              backgroundColor: "#dc3545",
+              color: "white",
+              fontSize: "0.9rem",
+              padding: "10px",
+            }}
           >
             Kilo Verme
           </Alert>
@@ -57,25 +77,40 @@ export default async function Layout({
         <Col>
           <Alert
             variant="primary"
-            style={{ backgroundColor: "#007bff", color: "white" }}
+            style={{
+              backgroundColor: "#007bff",
+              color: "white",
+              fontSize: "0.9rem",
+              padding: "10px",
+            }}
           >
-            ...
+            Sporcu Beslenmesi
           </Alert>
         </Col>
         <Col>
           <Alert
             variant="secondary"
-            style={{ backgroundColor: "#6c757d", color: "white" }}
+            style={{
+              backgroundColor: "#6c757d",
+              color: "white",
+              fontSize: "0.9rem",
+              padding: "10px",
+            }}
           >
-            Mela Malperi
+            Çocuk ve Ergen Beslenmesi
           </Alert>
         </Col>
         <Col>
           <Alert
             variant="dark"
-            style={{ backgroundColor: "#343a40", color: "white" }}
+            style={{
+              backgroundColor: "#343a40",
+              color: "white",
+              fontSize: "0.9rem",
+              padding: "10px",
+            }}
           >
-            Mela Malperi
+            Gebelikte Beslenme
           </Alert>
         </Col>
       </Row>
@@ -83,7 +118,12 @@ export default async function Layout({
         <Col>
           <Alert
             variant="light"
-            style={{ backgroundColor: "#f8f9fa", color: "black" }}
+            style={{
+              backgroundColor: "#f8f9fa",
+              color: "black",
+              fontSize: "0.9rem",
+              padding: "10px",
+            }}
           >
             Beden Kitle İndeksi
           </Alert>
@@ -91,9 +131,14 @@ export default async function Layout({
         <Col>
           <Alert
             variant="dark"
-            style={{ backgroundColor: "#343a40", color: "white" }}
+            style={{
+              backgroundColor: "#343a40",
+              color: "white",
+              fontSize: "0.9rem",
+              padding: "10px",
+            }}
           >
-            Besinler
+            Besin Değerleri
           </Alert>
         </Col>
       </Row>
