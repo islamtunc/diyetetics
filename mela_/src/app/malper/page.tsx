@@ -140,7 +140,7 @@ function ContainerFluidExample() {
             nav="Sağlıklı Tarifler"
             nivis="Yaptığımız öğün sayısı ve aldığımız kalori kadar yediğimiz öğünlerin besin içerikleri de önemlidir. En sağlıklı beslenme tariflerine yazılarımızdan ulaşabilirsiniz."
             cih="/malper/mmkedkar"
-            wene="https://rumeysaaltay.com/wp-content/uploads/2019/09/dengeli-beslen-640x427.jpg"
+            wene="/dy.jpg"
           />
         </Col>
       </Row>
