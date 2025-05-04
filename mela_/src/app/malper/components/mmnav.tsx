@@ -26,6 +26,8 @@ function Mmmnavbar() {
 <Nav.Link href="/malper/mmkedkar">Sağlıklı Tarifler</Nav.Link>
 
 <Nav.Link href="/malper/mmkinc">Psikoloji ve Beslenme</Nav.Link>
+<Nav.Link href="/malper/mmxwarin">Hesap Makinesi</Nav.Link>
+
 
           </Nav>
         </Navbar.Collapse>
