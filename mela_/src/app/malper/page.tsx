@@ -25,19 +25,16 @@ function ContainerFluidExample() {
             }}
           >
             <Card.Body>
-              <Card.Title>Hoşgeldiniz</Card.Title>
+              <Card.Title>Sağlıklı Yaşamın Yolculuğuna Hoş Geldiniz</Card.Title>
               <Card.Text>
-                <br></br>
-                Sitemize hoşgeldiniz
-                <br></br> doğru bilinen yanlışlardan kafanız mı karıştı?
-                <br></br>
-                <br></br> kilo vermekte zorlanıyor musunuz?
-                <br></br> Hastalığınız için nasıl beslenmeniz gerektiğini mi
-                merak ediyorsunuz? <br></br>
-                <br></br>Sağlıklı bir yaşam mı sürmek istiyorsunuz?
-                <br></br> O halde doğru adrestesiniz.
-                <br></br> En güncel ve en güvenilir bilgilerle sağlık dolu bir
-                yaşam için sitemizi takip edin.
+                <br />
+                Beslenme, sadece ne yediğimiz değil, nasıl hissettiğimizin de bir yansımasıdır.
+                <br />
+                <br />
+                Bilimsel temellere dayalı, kişiye özel beslenme planlarıyla hem bedeninizi hem de yaşam kalitenizi dönüştürmek mümkün.
+                <br />
+                <br />
+                Merak ettiğiniz ve doğru bildiğiniz beslenme ve sağlık bilgileri için sitemizi takip edin.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -70,18 +67,20 @@ function ContainerFluidExample() {
               <Card.Title>Merhaba</Card.Title>
               <Card.Text>
                 <p>
-                  Ben diyetisyen Rojda Musa. Sitemizin amacı sizlere güvenilir
-                  bilgi ve hizmet vermektir. Sağlıklı kilo alma, kilo verme ve
-                  birçok hastalık konusunda beslenme danışmanlığı hizmeti verme
-                  ve sağlıklı beslenmeyi bir yaşam tarzı haline getirmektir.
+                  Ben Diyetisyen Rojda Musa, bu yolculukta size rehberlik etmek
+                  için buradayım. Kilo yönetimi, hastalıklarda beslenme, sporcu
+                  beslenmesi ve sürdürülebilir yaşam tarzı değişiklikleriyle
+                  hedeflerinize ulaşmanız için yanınızdayım.
                 </p>
-                <br></br>{" "}
+                <br />
                 <p>
-                  Sitemizde alternatif tarifler, beslenme programları ve diyet
-                  seçenekleri detaylı bir şekilde size sunulacaktır. Sizlere en
-                  uygun diyet programını oluşturmak için lütfen iletişim
-                  seçeneklerinden bizimle iletişime geçiniz.
+                  Gerçek sonuçlar için güvenilir bilgi, samimi iletişim ve
+                  sürdürülebilir çözümler arıyorsanız doğru yerdesiniz. Online
+                  Diyet ve Beslenme danışmanlığı için iletişim seçeneklerinden
+                  bizimle iletişime geçiniz.
                 </p>
+                <br />
+                <p>Sağlıklı bir geleceğe birlikte adım atalım.</p>
               </Card.Text>
             </Card.Body>
           </Card>
