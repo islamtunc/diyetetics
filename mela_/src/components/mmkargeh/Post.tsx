@@ -1,5 +1,6 @@
 // Bismillahirrahmanirrahim 
-
+// Elhamdulillahirabbulalemin
+// es-salatu ve es-selamu alâ Resûlillah
 "use client";
 
 import { useSession } from "@/app/(main)/SessionProvider";
@@ -40,7 +41,7 @@ export default function Post({ post }: PostProps) {
               </Link>
             </UserTooltip>
             <Link
-              href={`/mmhewcedari/posts/${post.id}`}
+              href={`/malper/mmkargeh/posts/${post.id}`}
               className="block text-sm text-muted-foreground hover:underline"
               suppressHydrationWarning
             >

@@ -45,7 +45,7 @@ export default function Post({ post }: PostProps) {
         <div className="flex items-center gap-5">
        
         <Link
-              href={`/mmavahi/posts/${post.id}`}
+              href={`/malper/mmavahi/posts/${post.id}`}
               className="block text-sm text-muted-foreground hover:underline"
               suppressHydrationWarning
             >
