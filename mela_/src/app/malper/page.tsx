@@ -92,7 +92,7 @@ function ContainerFluidExample() {
           <BasicExample
             nav="Hastalıklar ve Beslenme"
             nivis="Her hastalığın kendine özel beslenmesi bulunmaktadır ve sahip olunan hastalığa göre özel diyet içerikleri uygulanmalıdır. Hastalıklar ve Beslenme için detaylı bilgilere yazılarımızdan ulaşabilirsiniz."
-            cih="/malper/mmkarheh"
+            cih="/malper/mmkargeh"
             wene="/hsbs.jpg"
           />
         </Col>
@@ -121,7 +121,7 @@ function ContainerFluidExample() {
           <BasicExample
             nav="Sporcu Beslenmesi"
             nivis="Spor ve Beslenme birbirinden ayrılmaz bir ikilidir ve her spor çeşidinde beslenme farklılık gösterebilmektedir. Detaylı bilgilere spor ve beslenme yazılarımızdan ulaşabilirsiniz."
-            cih="/malper/mmaavhi"
+            cih="/malper/mmavahi"
             wene="spbs.jpg"
           />
         </Col>
