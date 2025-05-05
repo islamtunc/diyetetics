@@ -126,10 +126,10 @@ export default function PostEditor() {
           onClick={onSubmit}
           loading={mutation.isPending}
           disabled={
-            !title.trim() ||
-            !description.trim() ||
-            !content.trim() ||
-            !category.trim() ||
+            !nav.trim() ||
+            !naverok.trim() ||
+            !sirove.trim() ||
+            !mmmcategory.trim() ||
             isUploading
           }
           className="min-w-20"
