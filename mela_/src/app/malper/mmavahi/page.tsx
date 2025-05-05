@@ -88,7 +88,7 @@ function page() {
 
       {/* Alert ve ForYouFeed Alt Kısma Taşındı */}
       <div style={{ marginTop: "20px", width: "100%" }}>
-        <Alert variant="info" className="text-center">
+        <Alert variant="info" className="text-center" >
           Diğer yazılar
         </Alert>
         <ForYouFeed />

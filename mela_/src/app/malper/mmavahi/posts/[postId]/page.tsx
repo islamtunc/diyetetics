@@ -1,5 +1,7 @@
 // Bismillahirrahmanirrahim
-
+// Elhamdulillahi Rabbil Alamin
+// Essalatu vesselamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
+"use client";
 import Linkify from "@/components/Linkify";
 import Post from "@/components/mmavahi/Post";
 import UserAvatar from "@/components/UserAvatar";
