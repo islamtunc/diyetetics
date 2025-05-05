@@ -21,9 +21,9 @@ const Footer = () => (
         <div className="col-md-4 mb-md-0 mb-3">
           <h5 className="text-uppercase font-weight-bold">İletişim</h5>
           <ul className="list-unstyled">
-            <li>Telefon: +90 555 555 5555</li>
-            <li>Email: info@diyetetics.com</li>
-            <li>Adres: İstanbul, Türkiye</li>
+            <li>Telefon: +90 543 916 13 44</li>
+            <li>Email: dytrojdamusaa@gmail/com</li>
+            <li>Adres: Antalya, Türkiye</li>
           </ul>
         </div>
 
