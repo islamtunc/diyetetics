@@ -85,8 +85,14 @@ function page() {
           </Row>
         </Card.Body>
       </Card>
-      <Alert>Diğer yazılar</Alert>
-      <ForYouFeed/>
+
+      {/* Alert ve ForYouFeed Alt Kısma Taşındı */}
+      <div style={{ marginTop: "20px", width: "100%" }}>
+        <Alert variant="info" className="text-center">
+          Diğer yazılar
+        </Alert>
+        <ForYouFeed />
+      </div>
     </div>
   );
 }
