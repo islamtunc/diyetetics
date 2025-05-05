@@ -1,3 +1,9 @@
+// Bismillahir Rahmanir Rahim
+// Elhamdulillahi Rabbil Alamin
+// Essalatu vesselamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
+
+
+
 import { Skeleton } from "../ui/skeleton";
 
 export default function PostsLoadingSkeleton() {

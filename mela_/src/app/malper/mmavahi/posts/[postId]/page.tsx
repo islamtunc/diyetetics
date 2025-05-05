@@ -51,3 +51,16 @@ export default async function Page({ params: { postId } }: PageProps) {
 interface UserInfoSidebarProps {
   user: UserData;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
