@@ -21,7 +21,7 @@ const getPost = cache(async (postId: string) => {
     where: {
       id: postId,
     },
-    include: getPostDataInclude(null), // Kullanıcı doğrulama kaldırıldı
+    include: getPostDataInclude(""), // Kullanıcı doğrulama kaldırıldı
   });
 
   if (!post) notFound();
