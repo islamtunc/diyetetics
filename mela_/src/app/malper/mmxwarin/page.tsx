@@ -7,7 +7,7 @@ import React, { useState } from "react";
 import { Card, Row, Col, Form, Button } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 
-function page() {
+function Mmmpage() {
   const [weight, setWeight] = useState<string>(""); // Kullanıcının kilosu
   const [height, setHeight] = useState<string>(""); // Kullanıcının boyu
   const [bmi, setBmi] = useState<number | null>(null); // Hesaplanan BMI değeri
@@ -137,4 +137,4 @@ function page() {
   );
 }
 
-export default page;
+export default Mmmpage;
