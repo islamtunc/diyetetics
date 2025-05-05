@@ -102,7 +102,13 @@ export default function PostEditor() {
 
        <div style={{display:"flex",flexDirection:"column"}}>
 
-
+       <input
+            type="text"
+            placeholder="Açıklama"
+            value={mmnav}
+            onChange={(e) => setTitle(e.target.value)}
+            className="w-full rounded-2xl bg-background px-5 py-3 mb-3"
+          />
 
 
 
@@ -113,7 +119,7 @@ export default function PostEditor() {
             type="text"
             placeholder="Açıklama"
             value={mmsirove}
-            onChange={(e) => setDescription(e.target.value)}
+            onChange={(e) => setContent(e.target.value)}
             className="w-full rounded-2xl bg-background px-5 py-3 mb-3"
           />
 
@@ -121,7 +127,7 @@ export default function PostEditor() {
             type="text"
             placeholder="Açıklama"
             value={mmnaverok}
-            onChange={(e) => setContent(e.target.value)}
+            onChange={(e) => setDescription(e.target.value)}
             className="w-full rounded-2xl bg-background px-5 py-3 mb-3"
           />
 
