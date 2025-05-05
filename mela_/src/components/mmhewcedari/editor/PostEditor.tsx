@@ -54,12 +54,17 @@ export default function PostEditor() {
 
 
 
-  const [selectedOption, setSelectedOption] = useState("mmal");
+  const [mmnav, setTitle] = useState("");
+  const [mmnaverok, setDescription] = useState(""); 
+  const [mmsirove, setContent] = useState("");
+  const [mmmcategory, setCategory] = useState("");
+  const [mmmtags, setTags] = useState("");
+
 
   function onSubmit() {
     mutation.mutate(
       {
-        content: selectedOption,
+        content: [mmnav, mmnaverok, mmsirove, mmmcategory, mmmtags],
         mediaIds: attachments.map((a) => a.mediaId).filter(Boolean) as string[],
        
       },
@@ -104,10 +109,21 @@ export default function PostEditor() {
 
 
 
-           <Input placeholder="Başlık"/>
+       <input
+            type="text"
+            placeholder="Açıklama"
+            value={mmsirove}
+            onChange={(e) => setDescription(e.target.value)}
+            className="w-full rounded-2xl bg-background px-5 py-3 mb-3"
+          />
 
-           <Input placeholder="Alt Başlık"/>
-
+<input
+            type="text"
+            placeholder="Açıklama"
+            value={mmnaverok}
+            onChange={(e) => setContent(e.target.value)}
+            className="w-full rounded-2xl bg-background px-5 py-3 mb-3"
+          />
 
 
           
@@ -125,16 +141,23 @@ export default function PostEditor() {
 
     
 
-          
-          <Input placeholder="Açıklaması"/>
+      <input
+            type="text"
+            placeholder="Açıklama"
+            value={mmmcategory}
+            onChange={(e) => setCategory(e.target.value)}
+            className="w-full rounded-2xl bg-background px-5 py-3 mb-3"
+          />
+  <input
+            type="text"
+            placeholder="Açıklama"
+            value={mmmtags}
+            onChange={(e) => setTags(e.target.value)}
+            className="w-full rounded-2xl bg-background px-5 py-3 mb-3"
+          />
 
 
 
-
-
-          <Input placeholder="Açıklama"/>
-
-<Input placeholder="Kaynakça"/>
       {!!attachments.length && (
         <AttachmentPreviews
           attachments={attachments}

@@ -1,5 +1,6 @@
-// Bismillahirrahmanirahim
-
+// Bismillahirahmanirahim 
+// Elhamdulillahirabbulalemin
+// Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain.
 "use client";
 
 import { useSession } from "@/app/(main)/SessionProvider";
@@ -7,10 +8,17 @@ import LoadingButton from "@/components/LoadingButton";
 import { Button } from "@/components/ui/button";
 import UserAvatar from "@/components/UserAvatar";
 import { cn } from "@/lib/utils";
-import { useRef, useState } from "react";
+import Placeholder from "@tiptap/extension-placeholder";
+import { EditorContent, useEditor } from "@tiptap/react";
+import StarterKit from "@tiptap/starter-kit";
+import { useDropzone } from "@uploadthing/react";
+import { ImageIcon, Loader2, X } from "lucide-react";
+import Image from "next/image";
+import { ClipboardEvent, useRef, useState } from "react";
 import { useSubmitPostMutation } from "./mutations";
 import "./styles.css";
 import useMediaUpload, { Attachment } from "./useMediaUpload";
+import { Input } from "@/components/ui/input";
 
 export default function PostEditor() {
   const { user } = useSession();
@@ -26,84 +34,129 @@ export default function PostEditor() {
     reset: resetMediaUploads,
   } = useMediaUpload();
 
-  const [nav, setTitle] = useState("");
-  const [naverok, setDescription] = useState("");
-  const [sirove, setContent] = useState("");
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    onDrop: startUpload,
+  });
+
+  const { onClick, ...rootProps } = getRootProps();
+
+  const editor = useEditor({
+    extensions: [
+      StarterKit.configure({
+        bold: false,
+        italic: false,
+      }),
+      Placeholder.configure({
+        placeholder: "Selam aleykum,fermo...",
+      }),
+    ],
+  });
+
+
+
+  const [mmnav, setTitle] = useState("");
+  const [mmnaverok, setDescription] = useState(""); 
+  const [mmsirove, setContent] = useState("");
   const [mmmcategory, setCategory] = useState("");
   const [mmmtags, setTags] = useState("");
+
 
   function onSubmit() {
     mutation.mutate(
       {
-       
-        content: [nav, naverok,sirove,mmmcategory,mmmtags].join("\n\n"),
-      // Etiketleri virgülle ayır
+        content: [mmnav, mmnaverok, mmsirove, mmmcategory, mmmtags],
         mediaIds: attachments.map((a) => a.mediaId).filter(Boolean) as string[],
+       
       },
       {
         onSuccess: () => {
-          setTitle("");
-          setDescription("");
-          setContent("");
-          setCategory("");
-          setTags("");
+          editor?.commands.clearContent();
           resetMediaUploads();
         },
-      }
+      },
     );
+  }
+
+  function onPaste(e: ClipboardEvent<HTMLInputElement>) {
+    const files = Array.from(e.clipboardData.items)
+      .filter((item) => item.kind === "file")
+      .map((item) => item.getAsFile()) as File[];
+    startUpload(files);
   }
 
   return (
     <div className="flex flex-col gap-5 rounded-2xl bg-card p-5 shadow-sm">
       <div className="flex gap-5">
         <UserAvatar avatarUrl={user.avatarUrl} className="hidden sm:inline" />
-        <div className="w-full">
-          {/* Başlık */}
-          <input
-            type="text"
-            placeholder="Başlık"
-            value={nav}
-            onChange={(e) => setTitle(e.target.value)}
-            className="w-full rounded-2xl bg-background px-5 py-3 mb-3"
-          />
+        <div {...rootProps} className="w-full">
+       <h5> Yeni Gönderi</h5>
 
-          {/* Açıklama */}
-          <input
+
+
+
+
+
+
+
+
+
+       <div style={{display:"flex",flexDirection:"column"}}>
+
+
+
+
+
+
+
+
+       <input
             type="text"
             placeholder="Açıklama"
-            value={naverok}
+            value={mmsirove}
             onChange={(e) => setDescription(e.target.value)}
             className="w-full rounded-2xl bg-background px-5 py-3 mb-3"
           />
 
-          {/* İçerik */}
-          <textarea
-            placeholder="İçerik"
-            value={sirove}
+<input
+            type="text"
+            placeholder="Açıklama"
+            value={mmnaverok}
             onChange={(e) => setContent(e.target.value)}
             className="w-full rounded-2xl bg-background px-5 py-3 mb-3"
-            rows={5}
           />
 
-          {/* Kategori */}
-          <input
+
+          
+
+
+    
+           </div>
+        
+        
+    
+        </div>
+        
+      </div>
+
+
+    
+
+      <input
             type="text"
-            placeholder="Kategori"
+            placeholder="Açıklama"
             value={mmmcategory}
             onChange={(e) => setCategory(e.target.value)}
             className="w-full rounded-2xl bg-background px-5 py-3 mb-3"
           />
-
-          {/* Etiketler */}
-          <input
+  <input
             type="text"
-            placeholder="Etiketler (virgülle ayırın)"
+            placeholder="Açıklama"
             value={mmmtags}
             onChange={(e) => setTags(e.target.value)}
-            className="w-full rounded-2xl bg-background px-5 py-3"
+            className="w-full rounded-2xl bg-background px-5 py-3 mb-3"
           />
-        </div>
-      </div>
+
+
 
       {!!attachments.length && (
         <AttachmentPreviews
@@ -111,11 +164,11 @@ export default function PostEditor() {
           removeAttachment={removeAttachment}
         />
       )}
-
       <div className="flex items-center justify-end gap-3">
         {isUploading && (
           <>
             <span className="text-sm">{uploadProgress ?? 0}%</span>
+            <Loader2 className="size-5 animate-spin text-primary" />
           </>
         )}
         <AddAttachmentsButton
@@ -125,16 +178,9 @@ export default function PostEditor() {
         <LoadingButton
           onClick={onSubmit}
           loading={mutation.isPending}
-          disabled={
-            !nav.trim() ||
-            !naverok.trim() ||
-            !sirove.trim() ||
-            !mmmcategory.trim() ||
-            isUploading
-          }
           className="min-w-20"
         >
-          Yayınla
+          Parve bikin
         </LoadingButton>
       </div>
     </div>
@@ -161,7 +207,7 @@ function AddAttachmentsButton({
         disabled={disabled}
         onClick={() => fileInputRef.current?.click()}
       >
-        <span>Dosya Ekle</span>
+        <ImageIcon size={20} />
       </Button>
       <input
         type="file"
@@ -191,7 +237,12 @@ function AttachmentPreviews({
   removeAttachment,
 }: AttachmentPreviewsProps) {
   return (
-    <div className="flex flex-col gap-3">
+    <div
+      className={cn(
+        "flex flex-col gap-3",
+        attachments.length > 1 && "sm:grid sm:grid-cols-2",
+      )}
+    >
       {attachments.map((attachment) => (
         <AttachmentPreview
           key={attachment.file.name}
@@ -215,11 +266,15 @@ function AttachmentPreview({
   const src = URL.createObjectURL(file);
 
   return (
-    <div className="relative mx-auto size-fit">
+    <div
+      className={cn("relative mx-auto size-fit", isUploading && "opacity-50")}
+    >
       {file.type.startsWith("image") ? (
-        <img
+        <Image
           src={src}
           alt="Attachment preview"
+          width={500}
+          height={500}
           className="size-fit max-h-[30rem] rounded-2xl"
         />
       ) : (
@@ -232,7 +287,7 @@ function AttachmentPreview({
           onClick={onRemoveClick}
           className="absolute right-3 top-3 rounded-full bg-foreground p-1.5 text-background transition-colors hover:bg-foreground/60"
         >
-          Kaldır
+          <X size={20} />
         </button>
       )}
     </div>

@@ -1,5 +1,6 @@
 // Bismillahirrahmanirrahim
-
+// Elhamdulillahirabbulalemin
+// Es-selatu vesselamu ala resulina Muhammedin ve ala alihi ve sahbihi ecmain
 "use server";
 
 import { validateRequest } from "@/auth";
@@ -8,7 +9,7 @@ import { getPostDataInclude } from "@/lib/types";
 import { createPostSchema } from "@/lib/validation";
 
 export async function submitPost(input: {
-  content: string;
+  content: string[];
   mediaIds: string[];
 }) {
   const { user } = await validateRequest();
