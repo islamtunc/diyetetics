@@ -4,8 +4,9 @@
 
 "use client";
 import React from "react";
-import { Card, Row, Col } from "react-bootstrap";
+import { Card, Row, Col, Alert } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
+import ForYouFeed from "./ForYouFeed";
 
 function page() {
   return (
@@ -84,6 +85,8 @@ function page() {
           </Row>
         </Card.Body>
       </Card>
+      <Alert>Diğer yazılar</Alert>
+      <ForYouFeed/>
     </div>
   );
 }
