@@ -3,7 +3,7 @@
 // Essalatu vesselamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
 
 import Linkify from "@/components/Linkify";
-import Post from "@/components/mmavahi/Post";
+import Post from "@/components/mmavahi/mmPost";
 import UserAvatar from "@/components/UserAvatar";
 import UserTooltip from "@/components/UserTooltip";
 import prisma from "@/lib/prisma";
