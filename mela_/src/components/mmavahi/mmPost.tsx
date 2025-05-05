@@ -110,5 +110,5 @@ function MediaPreview({ media }: MediaPreviewProps) {
   return <p className="text-destructive">Ev medya nabe</p>;
 }
 
-
+ 
 
