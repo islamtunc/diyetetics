@@ -18,7 +18,7 @@ export default function InfiniteScrollContainer({
   layout = "vertical", // Varsayılan düzen
 }: InfiniteScrollContainerProps) {
   const { ref } = useInView({
-    rootMargin: "200px",
+    rootMargin: "151px",
     onChange(inView) {
       if (inView) {
         onBottomReached();
