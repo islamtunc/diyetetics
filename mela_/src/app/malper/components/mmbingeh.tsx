@@ -12,8 +12,7 @@ const Footer = () => (
         <div className="col-md-4 mt-md-0 mt-3">
           <h5 className="text-uppercase font-weight-bold">Hakkımızda</h5>
           <p>
-            Diyetetics, sağlıklı yaşam ve beslenme konusunda size rehberlik eder.
-            Daha fazla bilgi için bizimle iletişime geçin.
+          Sağlıklı yaşam herkesin hakkı! Biz de bu yolda, size en uygun ve sürdürülebilir beslenme alışkanlıklarını kazandırmak için buradayız. Online diyetisyenlik hizmetimizle, zamandan ve mekândan bağımsız olarak size özel beslenme planları sunuyor; sağlığınızı destekleyen, bilimsel temellere dayanan danışmanlık hizmeti veriyoruz.
           </p>
         </div>
 
