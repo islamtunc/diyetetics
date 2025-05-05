@@ -26,17 +26,17 @@ export default function PostEditor() {
     reset: resetMediaUploads,
   } = useMediaUpload();
 
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [content, setContent] = useState("");
-  const [category, setCategory] = useState("");
-  const [tags, setTags] = useState("");
+  const [nav, setTitle] = useState("");
+  const [naverok, setDescription] = useState("");
+  const [sirove, setContent] = useState("");
+  const [mmmcategory, setCategory] = useState("");
+  const [mmmtags, setTags] = useState("");
 
   function onSubmit() {
     mutation.mutate(
       {
        
-        content: [description, title, content,category,tags].join("\n\n"),
+        content: [nav, naverok,sirove,mmmcategory,mmmtags].join("\n\n"),
       // Etiketleri virgülle ayır
         mediaIds: attachments.map((a) => a.mediaId).filter(Boolean) as string[],
       },
@@ -62,7 +62,7 @@ export default function PostEditor() {
           <input
             type="text"
             placeholder="Başlık"
-            value={title}
+            value={nav}
             onChange={(e) => setTitle(e.target.value)}
             className="w-full rounded-2xl bg-background px-5 py-3 mb-3"
           />
@@ -71,7 +71,7 @@ export default function PostEditor() {
           <input
             type="text"
             placeholder="Açıklama"
-            value={description}
+            value={naverok}
             onChange={(e) => setDescription(e.target.value)}
             className="w-full rounded-2xl bg-background px-5 py-3 mb-3"
           />
@@ -79,7 +79,7 @@ export default function PostEditor() {
           {/* İçerik */}
           <textarea
             placeholder="İçerik"
-            value={content}
+            value={sirove}
             onChange={(e) => setContent(e.target.value)}
             className="w-full rounded-2xl bg-background px-5 py-3 mb-3"
             rows={5}
@@ -89,7 +89,7 @@ export default function PostEditor() {
           <input
             type="text"
             placeholder="Kategori"
-            value={category}
+            value={mmmcategory}
             onChange={(e) => setCategory(e.target.value)}
             className="w-full rounded-2xl bg-background px-5 py-3 mb-3"
           />
@@ -98,7 +98,7 @@ export default function PostEditor() {
           <input
             type="text"
             placeholder="Etiketler (virgülle ayırın)"
-            value={tags}
+            value={mmmtags}
             onChange={(e) => setTags(e.target.value)}
             className="w-full rounded-2xl bg-background px-5 py-3"
           />
