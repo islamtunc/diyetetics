@@ -8,15 +8,42 @@ import { Card, Row, Col, Form, Button } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 
 function page() {
-  const [weight, setWeight] = useState("");
-  const [height, setHeight] = useState("");
-  const [bmi, setBmi] = useState<number | null>(null);
+  const [weight, setWeight] = useState<string>(""); // Kullanıcının kilosu
+  const [height, setHeight] = useState<string>(""); // Kullanıcının boyu
+  const [bmi, setBmi] = useState<number | null>(null); // Hesaplanan BMI değeri
+  const [category, setCategory] = useState<string>(""); // BMI kategorisi
+  const [recommendation, setRecommendation] = useState<string>(""); // Öneriler
 
   const calculateBMI = () => {
     if (weight && height) {
-      const heightInMeters = parseFloat(height) / 100; // Boyu metreye çevir
-      const bmiValue = parseFloat(weight) / (heightInMeters * heightInMeters);
-      setBmi(parseFloat(bmiValue.toFixed(2))); // BMI değerini 2 ondalık basamağa yuvarla
+      const weightValue = parseFloat(weight);
+      const heightValue = parseFloat(height) / 100; // Boyu metreye çevir
+      const bmiValue = weightValue / (heightValue * heightValue); // BMI formülü
+      const roundedBmi = parseFloat(bmiValue.toFixed(2)); // BMI değerini 2 ondalık basamağa yuvarla
+      setBmi(roundedBmi);
+
+      // BMI kategorisi ve öneriler
+      if (roundedBmi < 18.5) {
+        setCategory("Zayıf");
+        setRecommendation(
+          "Kilonuz düşük. Daha dengeli ve kalorisi yüksek besinler tüketerek kilo almayı hedefleyebilirsiniz."
+        );
+      } else if (roundedBmi >= 18.5 && roundedBmi <= 24.9) {
+        setCategory("Normal");
+        setRecommendation(
+          "Kilonuz ideal. Sağlıklı beslenmeye ve düzenli egzersize devam edin."
+        );
+      } else if (roundedBmi >= 25 && roundedBmi <= 29.9) {
+        setCategory("Fazla Kilolu");
+        setRecommendation(
+          "Kilonuz fazla. Dengeli bir diyet ve düzenli egzersizle kilo vermeyi hedefleyebilirsiniz."
+        );
+      } else {
+        setCategory("Obez");
+        setRecommendation(
+          "Kilonuz obezite sınırında. Bir diyetisyenle görüşerek sağlıklı bir kilo verme planı oluşturabilirsiniz."
+        );
+      }
     }
   };
 
@@ -40,7 +67,7 @@ function page() {
         }}
       >
         <Card.Body>
-          <Card.Title>Diyetisyenler için Hesap Makinesi</Card.Title>
+          <Card.Title>Hesap Makinesi</Card.Title>
 
           <Row className="g-4">
             {/* Sol Kolon */}
@@ -79,13 +106,9 @@ function page() {
                       <div>
                         <strong>BMI Değeriniz:</strong> {bmi}
                         <br />
-                        {bmi < 18.5
-                          ? "Zayıf"
-                          : bmi < 24.9
-                          ? "Normal"
-                          : bmi < 29.9
-                          ? "Fazla Kilolu"
-                          : "Obez"}
+                        <strong>Kategori:</strong> {category}
+                        <br />
+                        <strong>Öneri:</strong> {recommendation}
                       </div>
                     )}
                   </Card.Text>
