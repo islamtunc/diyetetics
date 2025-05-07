@@ -36,8 +36,10 @@ export default function Post({ post }: PostProps) {
       
       </div>
       <Linkify>
-        <div className="whitespace-pre-line break-words">{post.content[0]}</div>
-      </Linkify>
+  <div className="whitespace-pre-line break-words">
+    {JSON.parse(post.content).nav}
+  </div>
+</Linkify>
       {!!post.attachments.length && (
         <MediaPreviews attachments={post.attachments} />
       )}
@@ -50,7 +52,7 @@ export default function Post({ post }: PostProps) {
               className="block text-sm text-muted-foreground hover:underline"
               suppressHydrationWarning
             >
-            Continue 
+            Daha fazla oku
             </Link>
         </div>
       
