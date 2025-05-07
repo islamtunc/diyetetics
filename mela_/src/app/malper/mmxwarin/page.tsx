@@ -119,8 +119,11 @@ function Mmmpage() {
             {/* Sağ Kolon */}
             <Col xs={12} md={6}>
               <Image
-                src="https://i.pinimg.com/736x/e0/47/87/e04787721202bab7775024e57bdcfec7.jpg"
-                style={{
+
+
+
+src="https://st4.depositphotos.com/18753310/30840/v/950/depositphotos_308402596-stock-illustration-bmi-body-mass-index-vector.jpg"
+style={{
                   border: "5px solid white", // Beyaz çerçeve
                   borderRadius: "10px",
                   width: "100%", // Mobil uyumlu genişlik
