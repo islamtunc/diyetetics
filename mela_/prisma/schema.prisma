@@ -135,7 +135,7 @@ model Mmhewcedari {
 
 model Mmkinc {
   id          String  @id @default(cuid())
-  content     String
+  content     String[]
   userId      String
   user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
   attachments Media[]
@@ -152,7 +152,7 @@ model Mmkinc {
 
 model Mmkedkar {
   id          String  @id @default(cuid())
-  content     String
+  content     String[]
   userId      String
   user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
   attachments Media[]
@@ -169,7 +169,7 @@ model Mmkedkar {
 
 model Mmwesayit {
   id          String  @id @default(cuid())
-  content     String
+  content     String[]
   userId      String
   user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
   attachments Media[]
@@ -186,7 +186,7 @@ model Mmwesayit {
 
 model Mmkargeh {
   id          String  @id @default(cuid())
-  content     String
+  content     String[]
   userId      String
   user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
   attachments Media[]
