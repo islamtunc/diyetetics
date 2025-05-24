@@ -2,8 +2,6 @@
 // Elhamdullillahirabbulalemin
 //Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi, ecmain
 
-
-
 import { validateRequest } from "@/auth";
 import prisma from "@/lib/prisma";
 import { getPostDataInclude, PostsPage } from "@/lib/types";
@@ -29,7 +27,9 @@ export async function GET(req: NextRequest) {
         OR: [
           {
             content: {
-              search: searchQuery,
+              // Use 'has' if 'content' is a list, or 'equals' if it's a string; adjust as needed
+              has: q, // Use this if 'content' is a string array
+              // equals: q, // Uncomment if 'content' is a string
             },
           },
           {
@@ -67,3 +67,7 @@ export async function GET(req: NextRequest) {
     return Response.json({ error: "Internal server error" }, { status: 500 });
   }
 }
+
+
+// Allahumme salli ala Muhammedin ve ala alihi ve sahbihi ve sellim
+// Elhamdullillahirabbulalemin
