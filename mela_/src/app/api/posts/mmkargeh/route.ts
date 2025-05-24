@@ -29,7 +29,15 @@ export async function GET(req: NextRequest) {
     const nextCursor = posts.length > pageSize ? posts[pageSize].id : null;
 
     const data: PostsPage = {
-      posts: posts.slice(0, pageSize),
+      posts: posts.slice(0, pageSize).map((post: any) => ({
+        id: post.id,
+        content: Array.isArray(post.content) ? post.content : [post.content],
+        userId: post.userId,
+        createdAt: post.createdAt,
+        user: post.user,
+        attachments: post.attachments,
+        // add other fields as needed to match PostData
+      })),
       nextCursor,
     };
 
