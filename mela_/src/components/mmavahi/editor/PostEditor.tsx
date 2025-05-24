@@ -186,7 +186,7 @@ export default function PostEditor() {
           loading={mutation.isPending}
           className="min-w-20"
         >
-          Parve bikin
+          Yayınla
         </LoadingButton>
       </div>
     </div>

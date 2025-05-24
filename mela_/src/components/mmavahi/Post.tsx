@@ -35,9 +35,14 @@ export default function Post({ post }: PostProps) {
         </div>
       
       </div>
-      <Linkify>
+<Linkify>
   <div className="whitespace-pre-line break-words">
-    {JSON.parse(post.content).nav}
+    {post.content.map((line, idx) => (
+      <span key={idx}>
+        {line}
+        {idx !== post.content.length - 1 && <br />}
+      </span>
+    ))}
   </div>
 </Linkify>
       {!!post.attachments.length && (

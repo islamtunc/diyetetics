@@ -20,7 +20,7 @@ export async function submitPost(input: {
 
   const newPost = await prisma.mmavahi.create({
     data: {
-      content: content.join(" "), // Convert string[] to a single string
+      content, // Convert string[] to a single string
       userId: user.id,
       attachments: {
         connect: mediaIds.map((id) => ({ id })),

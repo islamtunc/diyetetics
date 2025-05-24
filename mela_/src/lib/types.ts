@@ -1,7 +1,5 @@
 // Bismillahirahmanirahim
 
-
-
 import { Prisma } from "@prisma/client";
 
 export function getUserDataSelect(loggedInUserId: string) {
@@ -12,8 +10,6 @@ export function getUserDataSelect(loggedInUserId: string) {
     avatarUrl: true,
     bio: true,
     createdAt: true,
-  
-
   } satisfies Prisma.UserSelect;
 }
 
@@ -27,8 +23,6 @@ export function getPostDataInclude(loggedInUserId: string) {
       select: getUserDataSelect(loggedInUserId),
     },
     attachments: true,
-
-
   } satisfies Prisma.PostInclude;
 }
 
@@ -68,7 +62,7 @@ export const notificationsInclude = {
   },
   post: {
     select: {
-      content: true,
+      content: true, // content artık string[] olacak
     },
   },
 } satisfies Prisma.NotificationInclude;
