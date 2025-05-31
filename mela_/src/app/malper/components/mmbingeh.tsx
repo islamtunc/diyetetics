@@ -23,6 +23,17 @@ const Footer = () => (
             <li>Telefon: +90 543 916 13 44</li>
             <li>Email: dytrojdamusaa@gmail.com</li>
             <li>Adres: Antalya, Türkiye</li>
+
+<br></br>
+<br></br>
+<br></br>
+
+
+             <a href="/login" style={{ color: "white" }}>
+         
+              <li>Kurumsal</li>
+            </a>             
+
           </ul>
         </div>
 
