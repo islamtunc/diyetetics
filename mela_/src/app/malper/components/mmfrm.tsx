@@ -12,10 +12,13 @@ function ContactForm() {
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form gönderim işlemleri burada yapılabilir (örneğin, bir API'ye gönderim)
-    console.log("Form Gönderildi:", { name, email, message });
+    await fetch("/api/contact-notification", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, message }),
+    });
     setSubmitted(true);
   };
 

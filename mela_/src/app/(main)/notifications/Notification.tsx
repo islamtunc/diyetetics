@@ -37,6 +37,7 @@ export default function Notification({ notification }: NotificationProps) {
 
   const { message, icon, href } = notificationTypeMap[notification.type];
 
+  // post.content as an array (string[])
   return (
     <Link href={href} className="block">
       <article
@@ -52,9 +53,14 @@ export default function Notification({ notification }: NotificationProps) {
             <span className="font-bold">{notification.issuer.displayName}</span>{" "}
             <span>{message}</span>
           </div>
-          {notification.post && (
+          {notification.post && notification.post.content && Array.isArray(notification.post.content) && (
             <div className="line-clamp-3 whitespace-pre-line text-muted-foreground">
-              {notification.post.content}
+              {notification.post.content.map((line: string, idx: number) => (
+                <span key={idx}>
+                  {line}
+                  {idx !== ((notification.post?.content?.length ?? 0) - 1) && <br />}
+                </span>
+              ))}
             </div>
           )}
         </div>

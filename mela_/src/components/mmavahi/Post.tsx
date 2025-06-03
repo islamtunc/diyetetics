@@ -1,7 +1,7 @@
 // Bismillahirrahmanirrahim 
 // Elhamdulillahirabbulalemin
 // Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
-
+// Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
 "use client";
 
 import { PostData } from "@/lib/types";

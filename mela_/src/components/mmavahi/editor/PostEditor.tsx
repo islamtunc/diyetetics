@@ -1,6 +1,7 @@
 // Bismillahirahmanirahim 
-// Elhamdulillahirabbulalemin
-// Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain.
+// ElHAMDULİLLAHİRABBULALEMİN
+// Es-selatu ve Es-selamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
+// Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
 "use client";
 
 import { useSession } from "@/app/(main)/SessionProvider";
@@ -18,10 +19,15 @@ import { ClipboardEvent, useRef, useState } from "react";
 import { useSubmitPostMutation } from "./mutations";
 import "./styles.css";
 import useMediaUpload, { Attachment } from "./useMediaUpload";
-import { Input } from "@/components/ui/input";
 
 export default function PostEditor() {
   const { user } = useSession();
+
+  // Emlak ilanı için ek alanlar
+  const [title, setTitle] = useState("");
+  const [price, setPrice] = useState("");
+  const [category, setCategory] = useState("satilik");
+  const [address, setAddress] = useState("");
 
   const mutation = useSubmitPostMutation();
 
@@ -47,29 +53,31 @@ export default function PostEditor() {
         italic: false,
       }),
       Placeholder.configure({
-        placeholder: "Selam aleykum,fermo...",
+        placeholder: "İlan açıklaması (ör: 3+1 daire, yeni tadilatlı, merkezi konum...)",
       }),
     ],
   });
 
-
-
-  const [mmnav, setTitle] = useState("");
-  const [mmnaverok, setDescription] = useState(""); 
-  const [mmsirove, setContent] = useState("");
-  const [mmmcategory, setCategory] = useState("");
-  const [mmmtags, setTags] = useState("");
-
+  const description =
+    editor?.getText({
+      blockSeparator: "\n",
+    }) || "";
 
   function onSubmit() {
     mutation.mutate(
       {
-        content: [mmnav, mmnaverok, mmsirove, mmmcategory, mmmtags],
+        content: description
+          .split("\n")
+          .map((line) => line.trim())
+          .filter((line) => line.length > 0), // her satırı ayrı array elemanı yapar
         mediaIds: attachments.map((a) => a.mediaId).filter(Boolean) as string[],
-       
       },
       {
         onSuccess: () => {
+          setTitle("");
+          setPrice("");
+          setCategory("satilik");
+          setAddress("");
           editor?.commands.clearContent();
           resetMediaUploads();
         },
@@ -88,82 +96,57 @@ export default function PostEditor() {
     <div className="flex flex-col gap-5 rounded-2xl bg-card p-5 shadow-sm">
       <div className="flex gap-5">
         <UserAvatar avatarUrl={user.avatarUrl} className="hidden sm:inline" />
-        <div {...rootProps} className="w-full">
-       <h5> Yeni Gönderi</h5>
-
-
-
-
-
-
-
-
-
-
-       <div style={{display:"flex",flexDirection:"column"}}>
-
-       <input
+        <div className="w-full space-y-3">
+          <input
             type="text"
-            placeholder="Açıklama"
-            value={mmnav}
-            onChange={(e) => setTitle(e.target.value)}
-            className="w-full rounded-2xl bg-background px-5 py-3 mb-3"
+            placeholder="İlan Başlığı"
+            className="w-full rounded-lg border px-4 py-2"
+            value={title}
+            onChange={e => setTitle(e.target.value)}
+            maxLength={100}
+            required
           />
-
-
-
-
-
-
-       <input
+          <div className="flex gap-3">
+            <input
+              type="number"
+              placeholder="Fiyat (₺)"
+              className="w-1/2 rounded-lg border px-4 py-2"
+              value={price}
+              onChange={e => setPrice(e.target.value)}
+              min={0}
+              required
+            />
+            <select
+              className="w-1/2 rounded-lg border px-4 py-2"
+              value={category}
+              onChange={e => setCategory(e.target.value)}
+            >
+              <option value="satilik">Satılık</option>
+              <option value="kiralik">Kiralık</option>
+            </select>
+          </div>
+          <input
             type="text"
-            placeholder="Açıklama"
-            value={mmsirove}
-            onChange={(e) => setContent(e.target.value)}
-            className="w-full rounded-2xl bg-background px-5 py-3 mb-3"
+            placeholder="Adres"
+            className="w-full rounded-lg border px-4 py-2"
+            value={address}
+            onChange={e => setAddress(e.target.value)}
+            maxLength={200}
+            required
           />
-
-<input
-            type="text"
-            placeholder="Açıklama"
-            value={mmnaverok}
-            onChange={(e) => setDescription(e.target.value)}
-            className="w-full rounded-2xl bg-background px-5 py-3 mb-3"
-          />
-
-
-          
-
-
-    
-           </div>
-        
-        
-    
         </div>
-        
       </div>
-
-
-    
-
-      <input
-            type="text"
-            placeholder="Açıklama"
-            value={mmmcategory}
-            onChange={(e) => setCategory(e.target.value)}
-            className="w-full rounded-2xl bg-background px-5 py-3 mb-3"
-          />
-  <input
-            type="text"
-            placeholder="Açıklama"
-            value={mmmtags}
-            onChange={(e) => setTags(e.target.value)}
-            className="w-full rounded-2xl bg-background px-5 py-3 mb-3"
-          />
-
-
-
+      <div {...rootProps} className="w-full">
+        <EditorContent
+          editor={editor}
+          className={cn(
+            "max-h-[20rem] w-full overflow-y-auto rounded-2xl bg-background px-5 py-3",
+            isDragActive && "outline-dashed",
+          )}
+          onPaste={onPaste}
+        />
+        <input {...getInputProps()} />
+      </div>
       {!!attachments.length && (
         <AttachmentPreviews
           attachments={attachments}
@@ -179,14 +162,21 @@ export default function PostEditor() {
         )}
         <AddAttachmentsButton
           onFilesSelected={startUpload}
-          disabled={isUploading || attachments.length >= 5}
+          disabled={isUploading || attachments.length >= 10}
         />
         <LoadingButton
           onClick={onSubmit}
           loading={mutation.isPending}
+          disabled={
+            !title.trim() ||
+            !price.trim() ||
+            !address.trim() ||
+            !description.trim() ||
+            isUploading
+          }
           className="min-w-20"
         >
-          Yayınla
+          İlanı Yayınla
         </LoadingButton>
       </div>
     </div>
