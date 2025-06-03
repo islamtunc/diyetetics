@@ -19,8 +19,8 @@ export async function submitPost(input: {
 
   const { content, mediaIds } = createPostSchema.parse(input);
 
-  // Ensure content is a string
-  const postContent = Array.isArray(content) ? content.join(" ") : content;
+  // Ensure content is an array of strings
+  const postContent = Array.isArray(content) ? content : [content];
 
   const newPost = await prisma.mmkargeh.create({
     data: {
