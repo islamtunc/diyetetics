@@ -1,3 +1,13 @@
+//Bismillahirrahmanirrahim 
+// Elhamdulillahirabbulalemin
+// Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
+//Suphanallah, Elhamdulillah, Allahu Ekber
+// Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
+
+
+
+
+
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
 
