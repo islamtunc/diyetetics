@@ -1,5 +1,7 @@
 //Bismillahirahmanirahim 
-
+// Elhamdulillahirabbilalemin
+// Es-selatu ve Es-selamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
+// Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
 
 
 import UserAvatar from "@/components/UserAvatar";
