@@ -1,7 +1,7 @@
 // Bismillahirrahmanirahim
 // Elhamdulillahirabbulalemin
 // Ve salatu ve selamu ala resulina Muhammedin ve alihi ve sahbihi ecmain
-
+// Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
 "use client";
 import React, { useState } from "react";
 import { Card, Row, Col, Form, Button } from "react-bootstrap";
