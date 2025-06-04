@@ -24,7 +24,7 @@ export default function Notification({ notification }: NotificationProps) {
     COMMENT: {
       message: `${notification.issuer.displayName} ji te re şîrove kir`,
       icon: <MessageCircle className="size-7 fill-primary text-primary" />,
-      href: `/posts/${notification.postId}`,
+      href: `/posts/${notification.recipientId}`,
     },
  
   };
