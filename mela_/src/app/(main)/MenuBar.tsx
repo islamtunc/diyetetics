@@ -22,7 +22,6 @@ export default async function MenuBar({ className }: MenuBarProps) {
   const [unreadNotificationsCount] = await Promise.all([
     prisma.notification.count({
       where: {
-        recipientId: user.id,
         read: false,
       },
     }),
