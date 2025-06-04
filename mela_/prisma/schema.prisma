@@ -40,7 +40,6 @@ model User {
   Mmhuner     Mmhuner[]
 
   Notification Notification[]
-  Notification Notification[]
 
   @@map("users")
 }
