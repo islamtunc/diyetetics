@@ -20,7 +20,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "No admin user found" }, { status: 404 });
   }
 
-  // Bildirimi kaydet
   await prisma.notification.create({
     data: {
       recipientId: admin.id,
