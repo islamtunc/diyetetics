@@ -22,10 +22,10 @@ export async function POST(req: NextRequest) {
 
   await prisma.notification.create({
     data: {
-      recipientId: admin.id,
-      issuerId: admin.id,
       type: "COMMENT",
       read: false,
+      recipient: { connect: { id: admin.id } }, // assuming recipient is a relation to User
+      issuer: { connect: { id: admin.id } } // replace with the actual issuer's id if available
     },
   });
 

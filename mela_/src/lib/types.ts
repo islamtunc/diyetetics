@@ -40,9 +40,7 @@ export interface PostsPage {
 
 export function getCommentDataInclude(loggedInUserId: string) {
   return {
-    user: {
-      select: getUserDataSelect(loggedInUserId),
-    },
+    // user alanı kaldırıldı, yorumlar anonim olacak
   } satisfies Prisma.CommentInclude;
 }
 
