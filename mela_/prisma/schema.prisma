@@ -70,7 +70,6 @@ model Post {
   user                User           @relation(fields: [userId], references: [id], onDelete: Cascade)
   attachments         Media[]
   bookmarks           Bookmark[]
-  linkedNotifications Notification[]
 
   createdAt DateTime @default(now())
 
@@ -101,7 +100,6 @@ model Mmhuner {
 
   bookmarks Bookmark[]
 
-  linkedNotifications Notification[]
   createdAt           DateTime       @default(now())
 
   @@map("mmhuner")
@@ -116,7 +114,6 @@ model Mmhewcedari {
 
   bookmarks Bookmark[]
 
-  linkedNotifications Notification[]
   createdAt           DateTime       @default(now())
 
   @@map("mmhewcedari")
@@ -131,7 +128,6 @@ model Mmkinc {
 
   bookmarks Bookmark[]
 
-  linkedNotifications Notification[]
   createdAt           DateTime       @default(now())
 
   @@map("mmkinc")
@@ -146,8 +142,6 @@ model Mmkedkar {
 
   bookmarks Bookmark[]
 
-  comments            Comment[]
-  linkedNotifications Notification[]
   createdAt           DateTime       @default(now())
 
   @@map("mmkedkar")
@@ -162,8 +156,6 @@ model Mmwesayit {
 
   bookmarks Bookmark[]
 
-  comments            Comment[]
-  linkedNotifications Notification[]
   createdAt           DateTime       @default(now())
 
   @@map("mmwesayit")
@@ -178,8 +170,6 @@ model Mmkargeh {
 
   bookmarks Bookmark[]
 
-  comments            Comment[]
-  linkedNotifications Notification[]
   createdAt           DateTime       @default(now())
 
   @@map("mmkargeh")
@@ -219,7 +209,6 @@ enum MediaType {
 model Comment {
   id      String @id @default(cuid())
   content String
-  postId  String
 
   createdAt     DateTime     @default(now())
 
@@ -257,28 +246,12 @@ model Notification {
   id          String           @id @default(cuid())
   recipientId String
   recipient   User             @relation("Recipient", fields: [recipientId], references: [id], onDelete: Cascade)
-  issuerId    String
-  issuer      User             @relation("Issuer", fields: [issuerId], references: [id], onDelete: Cascade)
-  postId      String?
-  post        Post?            @relation(fields: [postId], references: [id], onDelete: Cascade)
+ 
   type        NotificationType
   read        Boolean          @default(false)
 
   createdAt     DateTime     @default(now())
-  Mmavahi       Mmavahi?     @relation(fields: [mmavahiId], references: [id])
-  mmavahiId     String?
-  Mmhewcedari   Mmhewcedari? @relation(fields: [mmhewcedariId], references: [id])
-  mmhewcedariId String?
-  Mmkinc        Mmkinc?      @relation(fields: [mmkincId], references: [id])
-  mmkincId      String?
-  Mmkedkar      Mmkedkar?    @relation(fields: [mmkedkarId], references: [id])
-  mmkedkarId    String?
-  Mmwesayit     Mmwesayit?   @relation(fields: [mmwesayitId], references: [id])
-  mmwesayitId   String?
-  Mmkargeh      Mmkargeh?    @relation(fields: [mmkargehId], references: [id])
-  mmkargehId    String?
-  Mmhuner       Mmhuner?     @relation(fields: [mmhunerId], references: [id])
-  mmhunerId     String?
+ 
 
   @@map("notifications")
 }

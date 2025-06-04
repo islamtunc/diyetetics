@@ -69,6 +69,7 @@ export const notificationsInclude = {
   },
 } satisfies Prisma.NotificationInclude;
 
+// (Removed like and follow related types or includes as requested)
 export type NotificationData = Prisma.NotificationGetPayload<{
   include: typeof notificationsInclude;
 }>;

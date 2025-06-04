@@ -16,7 +16,7 @@ interface NotificationProps {
 }
 
 export default function Notification({ notification }: NotificationProps) {
-  const notificationTypeMap: Record<
+  const notificationtypeMap: Record<
     NotificationType,
     { message: string; icon: JSX.Element; href: string }
   > = {
@@ -29,7 +29,7 @@ export default function Notification({ notification }: NotificationProps) {
  
   };
 
-  const { message, icon, href } = notificationTypeMap[notification.type];
+  const { message, icon, href } = notificationtypeMap[notification.type];
 
   // post.content as an array (string[])
   return (
