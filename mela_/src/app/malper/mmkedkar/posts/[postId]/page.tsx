@@ -6,7 +6,6 @@
 
 
 import { validateRequest } from "@/auth";
-import FollowButton from "@/components/FollowButton";
 import Linkify from "@/components/Linkify";
 import Post from "@/components/posts/Post";
 import UserAvatar from "@/components/UserAvatar";
