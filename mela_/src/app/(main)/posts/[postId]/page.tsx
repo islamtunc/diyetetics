@@ -1,10 +1,12 @@
 // Bismillahirahmanirahim 
+// Elhamdulillahirabbilalemin
+// Es-selatu ve Es-selamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
+// Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
 
 
 
 
 import { validateRequest } from "@/auth";
-import FollowButton from "@/components/FollowButton";
 import Linkify from "@/components/Linkify";
 import Post from "@/components/posts/Post";
 import UserAvatar from "@/components/UserAvatar";
@@ -23,10 +25,16 @@ interface PageProps {
 
 const getPost = cache(async (postId: string, loggedInUserId: string) => {
   const post = await prisma.post.findUnique({
-    where: {
-      id: postId,
+    where: { id: postId },
+    include: {
+      ...getPostDataInclude(loggedInUserId),
+      comments: {
+        include: {
+          user: true,
+        },
+        orderBy: { createdAt: "asc" },
+      },
     },
-    include: getPostDataInclude(loggedInUserId),
   });
 
   if (!post) notFound();
@@ -65,6 +73,27 @@ export default async function Page({ params: { postId } }: PageProps) {
     <main className="flex w-full min-w-0 gap-5">
       <div className="w-full min-w-0 space-y-5">
         <Post post={post} />
+        {/* Yorumlar */}
+        <section className="mt-8">
+          <h2 className="text-lg font-bold mb-4">Yorumlar</h2>
+          {post.comments.length === 0 && (
+            <div className="text-muted-foreground">Henüz yorum yok.</div>
+          )}
+          <ul className="space-y-4">
+            {post.comments.map((comment) => (
+              <li key={comment.id} className="rounded bg-muted p-3">
+                <div className="flex items-center gap-2 mb-1">
+                  {/* <UserAvatar avatarUrl={comment.user.avatarUrl} size={24} /> */}
+                  <span className="font-semibold">Anonim</span>
+                  <span className="text-xs text-muted-foreground">
+                    {new Date(comment.createdAt).toLocaleString()}
+                  </span>
+                </div>
+                <div className="whitespace-pre-line">{comment.content}</div>
+              </li>
+            ))}
+          </ul>
+        </section>
       </div>
       <div className="sticky top-[5.25rem] hidden h-fit w-80 flex-none lg:block">
         <Suspense fallback={<Loader2 className="mx-auto animate-spin" />}>

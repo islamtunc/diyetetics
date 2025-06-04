@@ -1,5 +1,7 @@
 // Bismillahirahmanirahim
-
+// Elhamdulillahirabbilalemin
+// Es-selatu ve Es-selamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
+// Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
 import { Prisma } from "@prisma/client";
 
 export function getUserDataSelect(loggedInUserId: string) {
@@ -76,24 +78,13 @@ export interface NotificationsPage {
   nextCursor: string | null;
 }
 
-export interface FollowerInfo {
-  followers: number;
-  isFollowedByUser: boolean;
-}
 
-export interface LikeInfo {
-  likes: number;
-  isLikedByUser: boolean;
-}
+
 
 export interface BookmarkInfo {
   isBookmarkedByUser: boolean;
 }
 
 export interface NotificationCountInfo {
-  unreadCount: number;
-}
-
-export interface MessageCountInfo {
   unreadCount: number;
 }
