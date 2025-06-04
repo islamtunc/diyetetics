@@ -3,11 +3,10 @@
 
 
 import { validateRequest } from "@/auth";
-import FollowerCount from "@/components/FollowerCount";
 import Linkify from "@/components/Linkify";
 import UserAvatar from "@/components/UserAvatar";
 import prisma from "@/lib/prisma";
-import { FollowerInfo, getUserDataSelect, UserData } from "@/lib/types";
+import {  getUserDataSelect, UserData } from "@/lib/types";
 import { formatNumber } from "@/lib/utils";
 import { formatDate } from "date-fns";
 import { Metadata } from "next";
