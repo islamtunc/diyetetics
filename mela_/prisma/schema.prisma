@@ -1,6 +1,7 @@
 // Bismillahirrahmanirahim
 // Elhamdullillahirabbulalemin
 //Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi, ecmain
+// Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
 
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
@@ -29,8 +30,6 @@ model User {
   posts                 Post[]
   mmavahi               Mmavahi[]
   bookmarks             Bookmark[]
-  receivedNotifications Notification[] @relation("Recipient")
-  issuedNotifications   Notification[] @relation("Issuer")
 
   createdAt   DateTime      @default(now())
   Mmhewcedari Mmhewcedari[]
@@ -85,7 +84,6 @@ model Mmavahi {
 
   bookmarks Bookmark[]
 
-  linkedNotifications Notification[]
   createdAt           DateTime       @default(now())
 
   @@map("mmavahi")
@@ -244,8 +242,6 @@ model Bookmark {
 
 model Notification {
   id          String           @id @default(cuid())
-  recipientId String
-  recipient   User             @relation("Recipient", fields: [recipientId], references: [id], onDelete: Cascade)
  
   type        NotificationType
   read        Boolean          @default(false)
