@@ -39,7 +39,9 @@ model User {
   Mmkargeh    Mmkargeh[]
   Mmhuner     Mmhuner[]
 
-  Notification Notification[]
+  // Bildirim ilişkileri EKLENDİ:
+  receivedNotifications Notification[] @relation("Recipient")
+  issuedNotifications   Notification[] @relation("Issuer")
 
   @@map("users")
 }
