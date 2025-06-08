@@ -2,7 +2,7 @@
 // Elhamdulillahirabbilalemin
 // Es-selatu ve Es-selamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
 // Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
-
+"use client";
 
 import UserAvatar from "@/components/UserAvatar";
 import { NotificationData } from "@/lib/types";
@@ -24,8 +24,9 @@ export default function Notification({ notification }: NotificationProps) {
     COMMENT: {
       message: `${notification.issuer.displayName} ji te re şîrove kir`,
       icon: <MessageCircle className="size-7 fill-primary text-primary" />,
-      href: `/posts/${notification.recipientId}`,
+      href: `/posts/${notification.postId}`,
     },
+  
  
   };
 
