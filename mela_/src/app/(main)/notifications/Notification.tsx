@@ -16,19 +16,22 @@ interface NotificationProps {
 }
 
 export default function Notification({ notification }: NotificationProps) {
-  const notificationtypeMap: Record<
-    NotificationType,
-    { message: string; icon: JSX.Element; href: string }
-  > = {
-  
-    COMMENT: {
-      message: `${notification.issuer.displayName} ji te re şîrove kir`,
-      icon: <MessageCircle className="size-7 fill-primary text-primary" />,
-      href: `/posts/${notification.postId}`,
-    },
-  
  
-  };
+const notificationtypeMap: Record<
+  NotificationType,
+  { message: string; icon: JSX.Element; href: string }
+> = {
+  COMMENT: {
+    message: `${notification.issuer.displayName} ji te re şîrove kir`,
+    icon: <MessageCircle className="size-7 fill-primary text-primary" />,
+    href: `/posts/${notification.postId}`,
+  },
+  LIKE: {
+    message: `${notification.issuer.displayName} liked your post`,
+    icon: <Heart className="size-7 fill-primary text-primary" />,
+    href: `/posts/${notification.postId}`,
+  },
+};
 
   const { message, icon, href } = notificationtypeMap[notification.type];
 
