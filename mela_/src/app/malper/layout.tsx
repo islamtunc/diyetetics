@@ -8,7 +8,7 @@ import Mmmnavbar from "./components/mmnav";
 import "bootstrap/dist/css/bootstrap.css";
 import Footer from "./components/mmbingeh";
 import { Phone, MessageCircle } from "lucide-react"; // Telefon ve WhatsApp ikonları için lucide-react kullanımı
-import ContactForm from "./components/mmfrm";
+
 import Mmmpage from "./mmxwarin/page";
 
 export default async function Layout({
@@ -25,7 +25,7 @@ export default async function Layout({
 
        <Mmmpage />
       <br />
-      <ContactForm />
+      
       <Row>
         <Col>
           <Alert
