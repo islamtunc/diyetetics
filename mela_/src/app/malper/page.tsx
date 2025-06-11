@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import BasicExample from "./components/mmslide";
 import { Alert, Card } from "react-bootstrap";
-import mm from "../../../public/rjd.jpg";
+import mmmmm from "../../../public/rjd.jpg";
 
 function ContainerFluidExample() {
   return (
@@ -40,7 +40,7 @@ function ContainerFluidExample() {
           </Card>
         </Col>
         <Col xs={12} md={4} className="mb-4 d-flex justify-content-center">
-       
+       <Image src={mmmmm}/>
         </Col>
         <Col xs={12} md={4} className="mb-4">
           <Card
