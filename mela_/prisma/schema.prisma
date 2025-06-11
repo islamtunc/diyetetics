@@ -37,7 +37,7 @@ model User {
   Mmkedkar    Mmkedkar[]
   Mmwesayit   Mmwesayit[]
   Mmkargeh    Mmkargeh[]
-  
+  Mmhuner     Mmhuner[]
   @@map("users")
 }
 
