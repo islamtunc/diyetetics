@@ -81,7 +81,7 @@ function ContainerFluidExample() {
             nav="Hastalıklar ve Beslenme"
             nivis="Her hastalığın kendine özel beslenmesi bulunmaktadır ve sahip olunan hastalığa göre özel diyet içerikleri uygulanmalıdır. Hastalıklar ve Beslenme için detaylı bilgilere yazılarımızdan ulaşabilirsiniz."
             cih="/malper/mmkargeh"
-            wene=""
+            wene="/hsbs.jpg"
           />
         </Col>
 
@@ -90,7 +90,7 @@ function ContainerFluidExample() {
             nav="Psikoloji ve Beslenme"
             nivis="Zaman zaman duygu durumlarımız değişiklik gösterebilmektedir ve bu durumda beslenme alışkanlıklarımızda değişebilmekte ve sağlıksız bir beslenme çeşidine yönelmekteyiz. Bu durumlarla nasıl başa çıkmalıyız? Detaylara yazılarımızdan ulaşabilirsiniz."
             cih="/malper/mmkinc"
-            wene=""
+            wene="/psbs.jpg"
           />
         </Col>
 
@@ -99,7 +99,7 @@ function ContainerFluidExample() {
             nav="Diyet Çeşitleri"
             nivis="Belirli hastalık ve beslenme tarzlarında yapılan diyet farklılık gösterebilmektedir. Bazen yağdan, bazen karbonhidrattan ya da proteinden zengin beslenmeler öne çıkabilmektedir. Hangi hastalık durumunda hangi diyet çeşidini tercih etmeliyiz sorusu için detaylı bilgilere diyet çeşitleri yazılarımızdan ulaşabilirsiniz."
             cih="/malper/mmwesayit"
-            wene="/"
+            wene="/dy.jpg"
           />
         </Col>
       </Row>
@@ -110,7 +110,7 @@ function ContainerFluidExample() {
             nav="Sporcu Beslenmesi"
             nivis="Spor ve Beslenme birbirinden ayrılmaz bir ikilidir ve her spor çeşidinde beslenme farklılık gösterebilmektedir. Detaylı bilgilere spor ve beslenme yazılarımızdan ulaşabilirsiniz."
             cih="/malper/mmavahi"
-            wene=""
+            wene="/spbs.jpg"
           />
         </Col>
 
@@ -119,7 +119,7 @@ function ContainerFluidExample() {
             nav="Çocuk ve Ergen"
             nivis="Her yaş kategorisi farklı bir beslenme programı içermektedir. Belirli yaşlarda alınan vitamin ve mineraller önem göstermektedir. Çocuk ve ergenlerde beslenmede detaylı bilgilere yazılarımızdan ulaşabilirsiniz."
             cih="/malper/mmhewcedari"
-            wene=""
+            wene="/ce.jpg"
           />
         </Col>
 
@@ -128,7 +128,7 @@ function ContainerFluidExample() {
             nav="Sağlıklı Tarifler"
             nivis="Yaptığımız öğün sayısı ve aldığımız kalori kadar yediğimiz öğünlerin besin içerikleri de önemlidir. En sağlıklı beslenme tariflerine yazılarımızdan ulaşabilirsiniz."
             cih="/malper/mmkedkar"
-            wene=""
+            wene="/psbs.jpg"
           />
         </Col>
       </Row>
