@@ -26,7 +26,7 @@ export default async function Layout({
 
        <Mmmpage />
       <br />
-      
+        <ContactForm/>
       <Row>
         <Col>
           <Alert
@@ -150,7 +150,7 @@ export default async function Layout({
           </Alert>
         </Col>
       </Row>
-       <ContactForm/>
+     
       <Footer />
       {/* Sabit Telefon İkonu */}
       <div
