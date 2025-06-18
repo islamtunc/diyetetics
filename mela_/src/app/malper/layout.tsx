@@ -10,6 +10,7 @@ import Footer from "./components/mmbingeh";
 import { Phone, MessageCircle } from "lucide-react"; // Telefon ve WhatsApp ikonları için lucide-react kullanımı
 
 import Mmmpage from "./mmxwarin/page";
+import ContactForm from "./components/mmfrm";
 
 export default async function Layout({
   children,
@@ -195,6 +196,7 @@ export default async function Layout({
       >
         <MessageCircle size={24} color="white" />
       </div>
+      <ContactForm/>
     </div>
   );
 }    
