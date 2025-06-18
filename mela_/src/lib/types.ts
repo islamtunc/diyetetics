@@ -38,53 +38,49 @@ export interface PostsPage {
   nextCursor: string | null;
 }
 
-export function getCommentDataInclude(loggedInUserId: string) {
-  return {
-    // user alanı kaldırıldı, yorumlar anonim olacak
-  } satisfies Prisma.CommentInclude;
-}
+// Yorum (Comment) ile ilgili tüm tip ve fonksiyonları kaldırın
 
-export type CommentData = Prisma.CommentGetPayload<{
-  include: ReturnType<typeof getCommentDataInclude>;
-}>;
+// export function getCommentDataInclude(loggedInUserId: string) {
+//   return {
+//     // user alanı kaldırıldı, yorumlar anonim olacak
+//   } satisfies Prisma.CommentInclude;
+// }
 
-export interface CommentsPage {
-  comments: CommentData[];
-  previousCursor: string | null;
-}
+// export type CommentData = Prisma.CommentGetPayload<{
+//   include: ReturnType<typeof getCommentDataInclude>;
+// }>;
 
-export const notificationsInclude = {
-  issuer: {
-    select: {
-      username: true,
-      displayName: true,
-      avatarUrl: true,
-    },
-  },
-  post: {
-    select: {
-      content: true, // content artık string[] olacak
-    },
-  },
-} satisfies Prisma.NotificationInclude;
+// export interface CommentsPage {
+//   comments: CommentData[];
+//   previousCursor: string | null;
+// }
 
-// (Removed like and follow related types or includes as requested)
-export type NotificationData = Prisma.NotificationGetPayload<{
-  include: typeof notificationsInclude;
-}>;
+// Bildirim (Notification) ile ilgili tüm tip ve fonksiyonları kaldırın
 
-export interface NotificationsPage {
-  notifications: NotificationData[];
-  nextCursor: string | null;
-}
+// export const notificationsInclude = {
+//   issuer: {
+//     select: {
+//       username: true,
+//       displayName: true,
+//       avatarUrl: true,
+//     },
+//   },
+//   post: {
+//     select: {
+//       content: true, // content artık string[] olacak
+//     },
+//   },
+// } satisfies Prisma.NotificationInclude;
 
+// export type NotificationData = Prisma.NotificationGetPayload<{
+//   include: typeof notificationsInclude;
+// }>;
 
-
+// export interface NotificationsPage {
+//   notifications: NotificationData[];
+//   nextCursor: string | null;
+// }
 
 export interface BookmarkInfo {
   isBookmarkedByUser: boolean;
-}
-
-export interface NotificationCountInfo {
-  unreadCount: number;
 }
