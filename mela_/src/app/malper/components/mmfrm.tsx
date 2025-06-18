@@ -1,7 +1,9 @@
 // Bismillahirrahmanirahim
 // Elhamdulillahirabbulalemin
 // Ese-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
-
+// La ilahe illallah
+// Allahu Ekber, Allahu Ekber, Allahu Ekber, La ilahe illallah
+// Subhanallah, Elhamdulillah, Allahu Ekber
 import React, { useState } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 
