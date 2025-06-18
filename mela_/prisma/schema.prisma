@@ -192,15 +192,6 @@ enum MediaType {
   VIDEO
 }
 
-model Comment {
-  id      String @id @default(cuid())
-  content String
-
-  createdAt     DateTime     @default(now())
-
-  @@map("comments")
-}
-
 model Bookmark {
   id     String @id @default(cuid())
   userId String
@@ -223,5 +214,4 @@ model Bookmark {
   mmkargehId    String?
   Mmhuner       Mmhuner?     @relation(fields: [mmhunerId], references: [id])
   mmhunerId     String?
-
 }
