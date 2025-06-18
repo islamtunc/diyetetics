@@ -26,7 +26,19 @@ export default async function Layout({
 
        <Mmmpage />
       <br />
-        <ContactForm/>
+      <Row>
+
+
+
+
+
+        
+
+        <Col>
+          <ContactForm />
+        </Col>
+      </Row>
+       
       <Row>
         <Col>
           <Alert
