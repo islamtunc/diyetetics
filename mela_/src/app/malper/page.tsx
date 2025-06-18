@@ -99,7 +99,7 @@ function ContainerFluidExample() {
             nav="Diyet Çeşitleri"
             nivis="Belirli hastalık ve beslenme tarzlarında yapılan diyet farklılık gösterebilmektedir. Bazen yağdan, bazen karbonhidrattan ya da proteinden zengin beslenmeler öne çıkabilmektedir. Hangi hastalık durumunda hangi diyet çeşidini tercih etmeliyiz sorusu için detaylı bilgilere diyet çeşitleri yazılarımızdan ulaşabilirsiniz."
             cih="/malper/mmwesayit"
-            wene="/dy.jpg"
+            wene="/mmdy.jpg"
           />
         </Col>
       </Row>
