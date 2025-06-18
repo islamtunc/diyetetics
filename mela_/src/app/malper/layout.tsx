@@ -150,6 +150,7 @@ export default async function Layout({
           </Alert>
         </Col>
       </Row>
+       <ContactForm/>
       <Footer />
       {/* Sabit Telefon İkonu */}
       <div
@@ -196,7 +197,7 @@ export default async function Layout({
       >
         <MessageCircle size={24} color="white" />
       </div>
-      <ContactForm/>
+     
     </div>
   );
 }    
