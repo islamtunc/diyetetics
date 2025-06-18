@@ -34,7 +34,7 @@ export default async function Layout({
 
         
 
-        <Col>
+        <Col style={{ margin: "0 auto", maxWidth: "600px" }}>
           <ContactForm />
         </Col>
       </Row>
