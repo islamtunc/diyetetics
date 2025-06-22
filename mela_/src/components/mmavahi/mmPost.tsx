@@ -18,7 +18,7 @@ interface PostProps {
   post: PostData;
 }
 
-export default function Post({ post }: PostProps) {
+export default function MmmPost({ post }: PostProps) {
 
 
   return (

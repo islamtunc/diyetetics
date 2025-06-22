@@ -2,6 +2,10 @@
 // ElHAMDULİLLAHİRABBULALEMİN
 // Es-selatu ve Es-selamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
 // Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
+//SuphanAllah, Elhamdulillah, Allahu Ekber
+
+
+
 "use client";
 
 import { useSession } from "@/app/(main)/SessionProvider";
@@ -22,11 +26,7 @@ import useMediaUpload, { Attachment } from "./useMediaUpload";
 
 export default function PostEditor() {
   const { user } = useSession();
-
-  // Emlak ilanı için ek alanlar
   const [title, setTitle] = useState("");
-  const [price, setPrice] = useState("");
-  const [category, setCategory] = useState("satilik");
   const [address, setAddress] = useState("");
 
   const mutation = useSubmitPostMutation();
@@ -48,48 +48,43 @@ export default function PostEditor() {
 
   const editor = useEditor({
     extensions: [
-      StarterKit.configure({
-        bold: false,
-        italic: false,
-      }),
-      Placeholder.configure({
-        placeholder: "İlan açıklaması (ör: 3+1 daire, yeni tadilatlı, merkezi konum...)",
-      }),
+      StarterKit.configure({ bold: false, italic: false }),
+      Placeholder.configure({ placeholder: "Yazınızı buraya yazın..." }),
     ],
   });
 
   const description =
-    editor?.getText({
-      blockSeparator: "\n",
-    }) || "";
-
-  function onSubmit() {
-    mutation.mutate(
-      {
-        content: description
-          .split("\n")
-          .map((line) => line.trim())
-          .filter((line) => line.length > 0), // her satırı ayrı array elemanı yapar
-        mediaIds: attachments.map((a) => a.mediaId).filter(Boolean) as string[],
-      },
-      {
-        onSuccess: () => {
-          setTitle("");
-          setPrice("");
-          setCategory("satilik");
-          setAddress("");
-          editor?.commands.clearContent();
-          resetMediaUploads();
-        },
-      },
-    );
-  }
+    editor?.getText({ blockSeparator: "\n" }) || "";
 
   function onPaste(e: ClipboardEvent<HTMLInputElement>) {
     const files = Array.from(e.clipboardData.items)
       .filter((item) => item.kind === "file")
       .map((item) => item.getAsFile()) as File[];
     startUpload(files);
+  }
+
+  function onSubmit() {
+    mutation.mutate(
+      {
+        content: [
+          title.trim(),
+          address.trim(),
+          ...description
+            .split("\n")
+            .map((line) => line.trim())
+            .filter((line) => line.length > 0),
+        ],
+        mediaIds: attachments.map((a) => a.mediaId).filter(Boolean) as string[],
+      },
+      {
+        onSuccess: () => {
+          setTitle("");
+          setAddress("");
+          editor?.commands.clearContent();
+          resetMediaUploads();
+        },
+      }
+    );
   }
 
   return (
@@ -99,38 +94,19 @@ export default function PostEditor() {
         <div className="w-full space-y-3">
           <input
             type="text"
-            placeholder="İlan Başlığı"
+            placeholder="Yazı Başlığı"
             className="w-full rounded-lg border px-4 py-2"
             value={title}
-            onChange={e => setTitle(e.target.value)}
+            onChange={(e) => setTitle(e.target.value)}
             maxLength={100}
             required
           />
-          <div className="flex gap-3">
-            <input
-              type="number"
-              placeholder="Fiyat (₺)"
-              className="w-1/2 rounded-lg border px-4 py-2"
-              value={price}
-              onChange={e => setPrice(e.target.value)}
-              min={0}
-              required
-            />
-            <select
-              className="w-1/2 rounded-lg border px-4 py-2"
-              value={category}
-              onChange={e => setCategory(e.target.value)}
-            >
-              <option value="satilik">Satılık</option>
-              <option value="kiralik">Kiralık</option>
-            </select>
-          </div>
           <input
             type="text"
-            placeholder="Adres"
+            placeholder="Konu"
             className="w-full rounded-lg border px-4 py-2"
             value={address}
-            onChange={e => setAddress(e.target.value)}
+            onChange={(e) => setAddress(e.target.value)}
             maxLength={200}
             required
           />
@@ -168,30 +144,24 @@ export default function PostEditor() {
           onClick={onSubmit}
           loading={mutation.isPending}
           disabled={
-            !title.trim() ||
-            !price.trim() ||
-            !address.trim() ||
-            !description.trim() ||
-            isUploading
+            !title.trim() || !address.trim() || !description.trim() || isUploading
           }
           className="min-w-20"
         >
-          İlanı Yayınla
+          Gönderiyi Yayınla
         </LoadingButton>
       </div>
     </div>
   );
 }
 
-interface AddAttachmentsButtonProps {
-  onFilesSelected: (files: File[]) => void;
-  disabled: boolean;
-}
-
 function AddAttachmentsButton({
   onFilesSelected,
   disabled,
-}: AddAttachmentsButtonProps) {
+}: {
+  onFilesSelected: (files: File[]) => void;
+  disabled: boolean;
+}) {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   return (
@@ -223,20 +193,18 @@ function AddAttachmentsButton({
   );
 }
 
-interface AttachmentPreviewsProps {
-  attachments: Attachment[];
-  removeAttachment: (fileName: string) => void;
-}
-
 function AttachmentPreviews({
   attachments,
   removeAttachment,
-}: AttachmentPreviewsProps) {
+}: {
+  attachments: Attachment[];
+  removeAttachment: (fileName: string) => void;
+}) {
   return (
     <div
       className={cn(
         "flex flex-col gap-3",
-        attachments.length > 1 && "sm:grid sm:grid-cols-2",
+        attachments.length > 1 && "sm:grid sm:grid-cols-2"
       )}
     >
       {attachments.map((attachment) => (
@@ -250,21 +218,17 @@ function AttachmentPreviews({
   );
 }
 
-interface AttachmentPreviewProps {
-  attachment: Attachment;
-  onRemoveClick: () => void;
-}
-
 function AttachmentPreview({
   attachment: { file, mediaId, isUploading },
   onRemoveClick,
-}: AttachmentPreviewProps) {
+}: {
+  attachment: Attachment;
+  onRemoveClick: () => void;
+}) {
   const src = URL.createObjectURL(file);
 
   return (
-    <div
-      className={cn("relative mx-auto size-fit", isUploading && "opacity-50")}
-    >
+    <div className={cn("relative mx-auto size-fit", isUploading && "opacity-50")}>
       {file.type.startsWith("image") ? (
         <Image
           src={src}
@@ -281,7 +245,7 @@ function AttachmentPreview({
       {!isUploading && (
         <button
           onClick={onRemoveClick}
-          className="absolute right-3 top-3 rounded-full bg-foreground p-1.5 text-background transition-colors hover:bg-foreground/60"
+          className="absolute right-3 top-3 rounded-full bg-foreground p-1.5 text-background hover:bg-foreground/60"
         >
           <X size={20} />
         </button>

@@ -21,6 +21,8 @@ interface PostProps {
 export default function Post({ post }: PostProps) {
 
 
+
+
   return (
     <article className="group/post space-y-3 rounded-2xl bg-card p-5 shadow-sm">
       <div className="flex justify-between gap-3">
@@ -37,12 +39,7 @@ export default function Post({ post }: PostProps) {
       </div>
 <Linkify>
   <div className="whitespace-pre-line break-words">
-    {post.content.map((line, idx) => (
-      <span key={idx}>
-        {line}
-        {idx !== post.content.length - 1 && <br />}
-      </span>
-    ))}
+    {post.content[0]}
   </div>
 </Linkify>
       {!!post.attachments.length && (

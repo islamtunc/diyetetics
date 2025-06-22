@@ -1,6 +1,9 @@
 // Bismillahirrahmanirahim
 // Elhamdulillahirabbulalemin
 // Esselatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
+// Allah u Ekber
+// La ilahe illallah Muhammedur Resulullah
+// SUBHANALLAHI WA BIHAMDIHI SUBHANALLAHIL AZIM
 "use client";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
