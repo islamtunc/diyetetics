@@ -36,56 +36,57 @@ export default function Navbar() {
         {/* Menü Öğeleri */}
         <nav
           className={`
-            flex-col lg:flex-row flex items-start lg:items-center gap-3 lg:gap-5
+            flex-col lg:flex-row flex items-center gap-3 lg:gap-5
             fixed lg:static top-16 left-0 w-full lg:w-auto bg-card lg:bg-transparent z-20
             transition-all duration-200
             ${menuOpen ? "flex" : "hidden lg:flex"}
           `}
         >
-          <Link href="/dashboard" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-5 py-2 lg:p-0">
+          <Link href="/dashboard" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-5 py-2 lg:p-0 text-center">
             Dashboard
           </Link>
-          <Link href="/users" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-5 py-2 lg:p-0">
+          <Link href="/users" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-5 py-2 lg:p-0 text-center">
             Kullanıcılar
           </Link>
 
-          {/* Blog Dropdown */}
-          <Dropdown>
-            <Dropdown.Toggle variant="link" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-0">
-              Blog
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item as={Link} href="/posts">
-                Blog Yazıları
-              </Dropdown.Item>
-              <Dropdown.Item as={Link} href="/posts/new">
-                Yeni Blog Yazısı
-              </Dropdown.Item>
-              <Dropdown.Item as={Link} href="/categories">
-                Kategoriler
-              </Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
+          {/* Blog ve Ayarlar Dropdownlarını mobilde ortala */}
+          <div className="w-full flex flex-col items-center">
+            <Dropdown>
+              <Dropdown.Toggle variant="link" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-0 text-center">
+                Blog
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item as={Link} href="/posts">
+                  Blog Yazıları
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} href="/posts/new">
+                  Yeni Blog Yazısı
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} href="/categories">
+                  Kategoriler
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
 
-          {/* Ayarlar Dropdown */}
-          <Dropdown>
-            <Dropdown.Toggle variant="link" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-0">
-              Ayarlar
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item as={Link} href="/settings/profile">
-                Profil Ayarları
-              </Dropdown.Item>
-              <Dropdown.Item as={Link} href="/settings/security">
-                Güvenlik Ayarları
-              </Dropdown.Item>
-              <Dropdown.Item as={Link} href="/settings/notifications">
-                Bildirim Ayarları
-              </Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
+            <Dropdown>
+              <Dropdown.Toggle variant="link" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-0 mt-2 text-center">
+                Ayarlar
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item as={Link} href="/settings/profile">
+                  Profil Ayarları
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} href="/settings/security">
+                  Güvenlik Ayarları
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} href="/settings/notifications">
+                  Bildirim Ayarları
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
 
-          <Link href="/reports" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-5 py-2 lg:p-0">
+          <Link href="/reports" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-5 py-2 lg:p-0 text-center">
             Raporlar
           </Link>
         </nav>
