@@ -20,20 +20,13 @@ interface PostProps {
 
 export default function MmmPost({ post }: PostProps) {
 
-
   return (
-    <article className="group/post space-y-3 rounded-2xl bg-card p-5 shadow-sm">
+    <article className="group/post space-y-3 rounded-2xl bg-card p-5 shadow-sm text-black">
       <div className="flex justify-between gap-3">
         <div className="flex flex-wrap gap-3">
-           
-       
           <div>
-            
-          
-         
           </div>
         </div>
-      
       </div>
       <Linkify>
         <div className="whitespace-pre-line break-words">{post.content}</div>
@@ -44,16 +37,13 @@ export default function MmmPost({ post }: PostProps) {
       <hr className="text-muted-foreground" />
       <div className="flex justify-between gap-5">
         <div className="flex items-center gap-5">
-       
-        <Link
-              href={`/malper/mmavahi/posts/${post.id}`}
-              className="block text-sm text-muted-foreground hover:underline"
-              suppressHydrationWarning
-            >
-            
-            </Link>
+          <Link
+            href={`/malper/mmavahi/posts/${post.id}`}
+            className="block text-sm text-muted-foreground hover:underline"
+            suppressHydrationWarning
+          >
+          </Link>
         </div>
-      
       </div>
     </article>
   );
@@ -110,5 +100,5 @@ function MediaPreview({ media }: MediaPreviewProps) {
   return <p className="text-destructive">Ev medya nabe</p>;
 }
 
- 
+
 
