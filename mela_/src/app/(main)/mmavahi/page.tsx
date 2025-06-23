@@ -12,14 +12,14 @@ import { Alert } from "react-bootstrap";
 
 export default function Home() {
   return (
-    <main className="flex w-full min-w-0 gap-5">
+    <main className="flex w-full min-w-0 gap-5 p-">
       <div className="w-full min-w-0 space-y-5">
 
-      <Alert>Site Anasayfası</Alert>
+      <Alert variant="success"> Sporcu Beslenmesi Sayfası</Alert>
         <Tabs defaultValue="mm">
           <TabsList>
             <TabsTrigger value="for-you">Paylaşılanlar</TabsTrigger>
-            <TabsTrigger value="mm">Yeni Gönderi Paylaş</TabsTrigger>
+            <TabsTrigger value="mm">Yeni Gönderi </TabsTrigger>
 
           </TabsList>
           <TabsContent value="for-you">

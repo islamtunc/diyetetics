@@ -88,8 +88,8 @@ export default function PostEditor() {
   }
 
   return (
-    <div className="flex flex-col gap-5 rounded-2xl bg-card p-5 shadow-sm text-black">
-      <div className="flex gap-5">
+    <div className="flex flex-col gap-5 rounded-2xl bg-card p-3 sm:p-5 shadow-sm text-black w-full max-w-2xl mx-auto">
+      <div className="flex flex-col sm:flex-row gap-3 sm:gap-5">
         <UserAvatar avatarUrl={user.avatarUrl} className="hidden sm:inline" />
         <div className="w-full space-y-3">
           <input
@@ -116,7 +116,7 @@ export default function PostEditor() {
         <EditorContent
           editor={editor}
           className={cn(
-            "max-h-[20rem] w-full overflow-y-auto rounded-2xl bg-background px-5 py-3 text-black",
+            "max-h-[20rem] w-full overflow-y-auto rounded-2xl bg-background px-3 py-3 text-black",
             isDragActive && "outline-dashed",
           )}
           onPaste={onPaste}
@@ -129,7 +129,7 @@ export default function PostEditor() {
           removeAttachment={removeAttachment}
         />
       )}
-      <div className="flex items-center justify-end gap-3">
+      <div className="flex flex-col sm:flex-row items-center justify-end gap-3">
         {isUploading && (
           <>
             <span className="text-sm">{uploadProgress ?? 0}%</span>
@@ -148,7 +148,7 @@ export default function PostEditor() {
           }
           className="min-w-20"
         >
-          Gönderiyi Yayınla
+           Yayınla
         </LoadingButton>
       </div>
     </div>

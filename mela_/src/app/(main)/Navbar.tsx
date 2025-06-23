@@ -1,12 +1,21 @@
 // Bismillahirrahmanirahim
 // Elhamdulillahirabbulalemin
 // Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
+// La ilahe illallah, Muhammedur Resulullah
+// Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
+// Subhanallah, Elhamdulillah, Allahu Ekber
+// Allah U Ekber ve lillahi'l-hamd
+
 "use client";
+import { useState } from "react";
 import { Dropdown } from "react-bootstrap";
 import Link from "next/link";
 import UserButton from "@/components/UserButton";
+import { FaBars } from "react-icons/fa";
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-10 bg-card shadow-sm">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-5 px-5 py-3">
@@ -15,18 +24,34 @@ export default function Navbar() {
           Yekazad Yazılım
         </Link>
 
+        {/* Mobil Menü Butonu */}
+        <button
+          className="lg:hidden p-2 rounded text-primary"
+          onClick={() => setMenuOpen((v) => !v)}
+          aria-label="Menüyü Aç/Kapat"
+        >
+          <FaBars size={22} />
+        </button>
+
         {/* Menü Öğeleri */}
-        <nav className="flex items-center gap-5">
-          <Link href="/dashboard" className="text-sm font-medium text-secondary hover:text-primary">
+        <nav
+          className={`
+            flex-col lg:flex-row flex items-start lg:items-center gap-3 lg:gap-5
+            fixed lg:static top-16 left-0 w-full lg:w-auto bg-card lg:bg-transparent z-20
+            transition-all duration-200
+            ${menuOpen ? "flex" : "hidden lg:flex"}
+          `}
+        >
+          <Link href="/dashboard" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-5 py-2 lg:p-0">
             Dashboard
           </Link>
-          <Link href="/users" className="text-sm font-medium text-secondary hover:text-primary">
+          <Link href="/users" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-5 py-2 lg:p-0">
             Kullanıcılar
           </Link>
 
           {/* Blog Dropdown */}
           <Dropdown>
-            <Dropdown.Toggle variant="link" className="text-sm font-medium text-secondary hover:text-primary">
+            <Dropdown.Toggle variant="link" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-0">
               Blog
             </Dropdown.Toggle>
             <Dropdown.Menu>
@@ -44,7 +69,7 @@ export default function Navbar() {
 
           {/* Ayarlar Dropdown */}
           <Dropdown>
-            <Dropdown.Toggle variant="link" className="text-sm font-medium text-secondary hover:text-primary">
+            <Dropdown.Toggle variant="link" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-0">
               Ayarlar
             </Dropdown.Toggle>
             <Dropdown.Menu>
@@ -60,13 +85,15 @@ export default function Navbar() {
             </Dropdown.Menu>
           </Dropdown>
 
-          <Link href="/reports" className="text-sm font-medium text-secondary hover:text-primary">
+          <Link href="/reports" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-5 py-2 lg:p-0">
             Raporlar
           </Link>
         </nav>
 
         {/* Kullanıcı Butonu */}
-        <UserButton className="sm:ms-auto" />
+        <div className="sm:ms-auto">
+          <UserButton />
+        </div>
       </div>
     </header>
   );
