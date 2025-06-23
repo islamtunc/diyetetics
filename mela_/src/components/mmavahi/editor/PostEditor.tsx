@@ -88,7 +88,7 @@ export default function PostEditor() {
   }
 
   return (
-    <div className="flex flex-col gap-5 rounded-2xl bg-card p-5 shadow-sm">
+    <div className="flex flex-col gap-5 rounded-2xl bg-card p-5 shadow-sm text-black">
       <div className="flex gap-5">
         <UserAvatar avatarUrl={user.avatarUrl} className="hidden sm:inline" />
         <div className="w-full space-y-3">
@@ -116,7 +116,7 @@ export default function PostEditor() {
         <EditorContent
           editor={editor}
           className={cn(
-            "max-h-[20rem] w-full overflow-y-auto rounded-2xl bg-background px-5 py-3",
+            "max-h-[20rem] w-full overflow-y-auto rounded-2xl bg-background px-5 py-3 text-black",
             isDragActive && "outline-dashed",
           )}
           onPaste={onPaste}
