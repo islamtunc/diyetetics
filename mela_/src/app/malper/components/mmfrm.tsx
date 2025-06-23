@@ -24,10 +24,12 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form style={{ maxWidth: "600px", margin: "0 auto", backgroundColor: "#f8f9fa" ,color: "#495057"}} onSubmit={handleSubmit}>
       {submitted && <Alert variant="success">Mesajınız iletildi!</Alert>}
+      <br></br>
+      <h2 className="mb-4 text-center">İletişim Formu</h2>
       <Form.Group className="mb-3" controlId="formName">
-        <Form.Label>Adınız</Form.Label>
+        <Form.Label style={{ color: "#495057" }}>Adınız</Form.Label>
         <Form.Control
           type="text"
           name="name"
@@ -57,9 +59,22 @@ const ContactForm: React.FC = () => {
           required
         />
       </Form.Group>
-      <Button variant="primary" type="submit">
-        Gönder
-      </Button>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <Button style={{ backgroundColor: "#28a745", borderColor: "#28a745" }} variant="success" type="submit">
+          Gönder
+        </Button>
+
+        <br></br>
+      </div>
+
+
+      <br></br>
+
+
+
+      <p className="text-center" style={{ color: "#6c757d" }}>
+        Bize ulaşmak için lütfen yukarıdaki formu doldurun.
+      </p>
     </Form>
   );
 };
