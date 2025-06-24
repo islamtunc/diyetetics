@@ -2,7 +2,7 @@
 // ElHAMDULİLLAHİRABBULALEMİN
 // Es-selatu ve Es-selamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
 // Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
-//SuphanAllah, Elhamdulillah, Allahu Ekber
+// SuphanAllah, Elhamdulillah, Allahu Ekber
 
 
 
@@ -48,7 +48,7 @@ export default function PostEditor() {
 
   const editor = useEditor({
     extensions: [
-      StarterKit.configure({ bold: false, italic: false }),
+      StarterKit.configure({ bold: {}, italic: false }), // bold'u etkinleştir, italic'i devre dışı bırak
       Placeholder.configure({ placeholder: "Yazınızı buraya yazın..." }),
     ],
   });
@@ -116,7 +116,7 @@ export default function PostEditor() {
         <EditorContent
           editor={editor}
           className={cn(
-            "max-h-[20rem] w-full overflow-y-auto rounded-2xl bg-background px-3 py-3 text-black",
+            "max-h-[20rem] w-full overflow-y-auto rounded-2xl bg-background px-3 py-3 text-black prose prose-green", // prose ekle
             isDragActive && "outline-dashed",
           )}
           onPaste={onPaste}

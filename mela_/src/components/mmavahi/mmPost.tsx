@@ -29,7 +29,31 @@ export default function MmmPost({ post }: PostProps) {
         </div>
       </div>
       <Linkify>
-        <div className="whitespace-pre-line break-words">{post.content}</div>
+        <div className="space-y-3">
+          {Array.isArray(post.content)
+            ? post.content.map((line: string, i: number) => {
+                if (i === 0)
+                  return (
+                    <h2 key={i} className="text-xl font-bold mb-1">
+                      {line}
+                    </h2>
+                  );
+                if (i === 1)
+                  return (
+                    <div key={i} className="text-green-700 font-semibold mb-2">
+                      {line}
+                    </div>
+                  );
+                return (
+                  <p key={i} className="text-base whitespace-pre-line">
+                    {line}
+                  </p>
+                );
+              })
+            : (
+              <p className="text-base whitespace-pre-line">{post.content}</p>
+            )}
+        </div>
       </Linkify>
       {!!post.attachments.length && (
         <MediaPreviews attachments={post.attachments} />
