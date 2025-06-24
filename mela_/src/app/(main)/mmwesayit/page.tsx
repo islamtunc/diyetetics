@@ -2,7 +2,7 @@
 
 
 
-import PostEditor from "@/components/mmkargeh/editor/PostEditor";
+import PostEditor from "@/components/mmwesayit/editor/PostEditor";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import ForYouFeed from "./ForYouFeed";
@@ -15,7 +15,7 @@ export default function Home() {
     <main className="flex w-full min-w-0 gap-5 p-">
       <div className="w-full min-w-0 space-y-5">
 
-      <Alert variant="success"> Hastalıklar ve Beslenmesi Sayfası</Alert>
+      <Alert variant="success"> Diyet Çeşitleri Sayfası</Alert>
         <Tabs defaultValue="mm">
           <TabsList>
             <TabsTrigger value="for-you">Paylaşılanlar</TabsTrigger>

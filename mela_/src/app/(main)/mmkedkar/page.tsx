@@ -1,8 +1,13 @@
 // Bismillahirrahmanirrahim
-
-
-
-import PostEditor from "@/components/mmavahi/editor/PostEditor";
+// Elhamdulillahi Rabbil Alamin
+// Ve salatu ve selamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
+// Allah ümmetimizi korusun, birlik ve beraberliğimizi daim eylesin.
+// Allah bizleri doğru yoldan ayırmasın, İslam'ı en güzel şekilde yaşamayı nasip etsin.
+// Allah bizleri Kur'an ve Sünnet'e bağlı, salih ameller işleyen kullarından eylesin.
+// Allah bizleri Peygamber Efendimiz'in (s.a.v) izinden giden, O'na layık bir ümmet eylesin.
+// SuphanAllah velhamdulillah, Allahu Ekber.
+// La ilahe illallah, Muhammedur Resulullah.
+import PostEditor from "@/components/mmkedkar/editor/PostEditor";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import ForYouFeed from "./ForYouFeed";
@@ -15,7 +20,7 @@ export default function Home() {
     <main className="flex w-full min-w-0 gap-5 p-">
       <div className="w-full min-w-0 space-y-5">
 
-      <Alert variant="success"> Sporcu Beslenmesi Sayfası</Alert>
+      <Alert variant="success"> Sağlıklı Tarifler Sayfası</Alert>
         <Tabs defaultValue="mm">
           <TabsList>
             <TabsTrigger value="for-you">Paylaşılanlar</TabsTrigger>
