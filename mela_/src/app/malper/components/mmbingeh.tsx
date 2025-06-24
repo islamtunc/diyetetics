@@ -1,6 +1,10 @@
 // Bismillahirrahmanirrahim
 // Elhamdulillahirabbulalemin
 // Esselatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
+// Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
+// Subhanallah, Elhamdulillah, Allahu Ekber
+// La ilahe illallah, Muhammedur Resulullah
+// Allah U Ekber ve lillahi'l-hamd
 import React from "react";
 import { Facebook, Twitter, Instagram, Mail } from "lucide-react"; // Sosyal medya ikonları için lucide-react kullanımı
 
@@ -50,7 +54,7 @@ const Footer = () => (
             <a href="https://www.instagram.com/p/DJ1vTH_ohLh/" target="_blank" rel="noopener noreferrer" style={{ color: "white" }}>
               <Instagram size={24} />
             </a>
-            <a href="mailto:info@diyetetics.com" style={{ color: "white" }}>
+            <a href="mailto:dytrojdamusaa@gmail.com" style={{ color: "white" }}>
               <Mail size={24} />
             </a>
           </div>

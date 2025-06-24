@@ -15,12 +15,23 @@ const ContactForm: React.FC = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Burada backend'e gönderme işlemi yapılabilir
-    console.log(form);
-    setSubmitted(true);
-    setForm({ name: "", email: "", message: "" });
+    try {
+      const response = await fetch("/api/mmmpeyam", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (response.ok) {
+        setSubmitted(true);
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        alert("Mesaj gönderilemedi.");
+      }
+    } catch {
+      alert("Sunucuya ulaşılamıyor.");
+    }
   };
 
   return (

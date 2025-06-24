@@ -215,3 +215,11 @@ model Bookmark {
   Mmhuner       Mmhuner?     @relation(fields: [mmhunerId], references: [id])
   mmhunerId     String?
 }
+
+model Mmmpeyam {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  message   String
+  createdAt DateTime @default(now())
+}
