@@ -1,5 +1,9 @@
-
-
+// Bismillahirrahmanirrahim
+// Elhamdulillahi Rabbil Alamin
+// Ve salatu ve selamu ala Resulina Muhammedin ve ala alihi ve sah
+// La ilahe illallah, Muhammedur Resulullah
+// SuphanAllah velhamdulillah, Allahu Ekber
+// Allah ümmetimizi korusun, birlik ve beraberliğimizi daim eylesin.
 
 
 import { useSession } from "@/app/(main)/SessionProvider";
@@ -64,14 +68,14 @@ export function useSubmitPostMutation() {
       });
 
       toast({
-        description: "Post created",
+        description: "gönderi yayınlandı",
       });
     },
     onError(error) {
       console.error(error);
       toast({
         variant: "destructive",
-        description: "Failed to post. Please try again.",
+        description: "Sorun çıktı tekrar deneyin devam ederse yekazad SC ile iletişime geçin.",
       });
     },
   });
