@@ -1,4 +1,8 @@
 // Bismillahirrahmanirrahim 
+// Elhamdulillahi Rabbil Alamin
+// Essalatu vesselamu ala Resulina Muhammedin ve ala alihi ve sahb
+// La ilahe illallah, Muhammedur Resulullah
+// SuphanAllah velhamdulillah, Allahu Ekber
 
 "use client";
 
@@ -23,7 +27,7 @@ export default function ForYouFeed() {
     queryFn: ({ pageParam }) =>
       kyInstance
         .get(
-          "/api/posts/mmavahi",
+          "/api/posts/mmkedkar",
           pageParam ? { searchParams: { cursor: pageParam } } : {},
         )
         .json<PostsPage>(),

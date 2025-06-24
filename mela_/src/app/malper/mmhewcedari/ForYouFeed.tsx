@@ -1,9 +1,13 @@
 // Bismillahirrahmanirrahim 
+// Elhamdulillahi Rabbil Alamin
+// Essalatu vesselamu ala Resulina Muhammedin ve ala alihi ve sahb
+// La ilahe illallah, Muhammedur Resulullah
+// SuphanAllah velhamdulillah, Allahu Ekber
 
 "use client";
 
 import InfiniteScrollContainer from "@/components/InfiniteScrollContainer";
-import Post from "@/components/mmavahi/Post";
+import Post from "@/components/mmhewcedari/Post";
 import PostsLoadingSkeleton from "@/components/mmavahi/PostsLoadingSkeleton";
 import kyInstance from "@/lib/ky";
 import { PostsPage } from "@/lib/types";

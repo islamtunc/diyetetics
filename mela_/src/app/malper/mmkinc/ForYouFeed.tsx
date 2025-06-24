@@ -7,7 +7,7 @@
 "use client";
 
 import InfiniteScrollContainer from "@/components/InfiniteScrollContainer";
-import Post from "@/components/mmavahi/Post";
+import Post from "@/components/mmkinc/Post";
 import PostsLoadingSkeleton from "@/components/mmavahi/PostsLoadingSkeleton";
 import kyInstance from "@/lib/ky";
 import { PostsPage } from "@/lib/types";
