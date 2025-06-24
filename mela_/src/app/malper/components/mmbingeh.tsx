@@ -44,10 +44,10 @@ const Footer = () => (
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style={{ color: "white" }}>
               <Facebook size={24} />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style={{ color: "white" }}>
+            <a href="https://x.com/RojdaMusa" style={{ color: "white" }}>
               <Twitter size={24} />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{ color: "white" }}>
+            <a href="https://www.instagram.com/p/DJ1vTH_ohLh/" target="_blank" rel="noopener noreferrer" style={{ color: "white" }}>
               <Instagram size={24} />
             </a>
             <a href="mailto:info@diyetetics.com" style={{ color: "white" }}>
