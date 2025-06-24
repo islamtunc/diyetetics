@@ -146,3 +146,17 @@ a:active {
 .text-info {
   color: hsl(var(--primary)) !important;
 }
+
+/* Bootstrap'ın varsayılan butonunu yeşil yap */
+.btn-primary {
+  background-color: hsl(var(--primary)) !important;
+  border-color: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: hsl(var(--primary) / 0.85) !important;
+  border-color: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+}

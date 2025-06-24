@@ -37,7 +37,7 @@ function AdminPage() {
           <Card>
             <Card.Body>
               <Card.Title>Sporcu Beslenmesi</Card.Title>
-              <Card.Text>Admin panelinin ana sayfasına erişim sağlayın.</Card.Text>
+              <Card.Text>Sporcu beslenmesi sayfasını düzenleyin veya görüntüleyin.</Card.Text>
               <Button variant="primary" href="/mmavahi">
                 Git
               </Button>
@@ -95,7 +95,7 @@ function AdminPage() {
           <Card>
             <Card.Body>
               <Card.Title>Site</Card.Title>
-              <Card.Text>Site ayarlarını düzenleyin veya görüntüleyin.</Card.Text>
+              <Card.Text>Siteyi görüntüleyin.</Card.Text>
               <Button variant="primary" href="/malper">
                 Git
               </Button>
