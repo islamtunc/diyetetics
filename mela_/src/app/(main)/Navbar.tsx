@@ -7,7 +7,7 @@
 // Allah U Ekber ve lillahi'l-hamd
 
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Dropdown } from "react-bootstrap";
 import Link from "next/link";
 import UserButton from "@/components/UserButton";
@@ -15,6 +15,19 @@ import { FaBars } from "react-icons/fa";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
+
+  // Menü dışına tıklanınca kapat
+  useEffect(() => {
+    if (!menuOpen) return;
+    function handleClick(e: MouseEvent) {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setMenuOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [menuOpen]);
 
   return (
     <header className="sticky top-0 z-10 bg-card shadow-sm">
@@ -26,7 +39,7 @@ export default function Navbar() {
 
         {/* Mobil Menü Butonu */}
         <button
-          className="lg:hidden p-2 rounded text-primary"
+          className="lg:hidden p-2 rounded text-green-500"
           onClick={() => setMenuOpen((v) => !v)}
           aria-label="Menüyü Aç/Kapat"
         >
@@ -35,6 +48,7 @@ export default function Navbar() {
 
         {/* Menü Öğeleri */}
         <nav
+          ref={navRef}
           className={`
             flex-col lg:flex-row flex items-center gap-3 lg:gap-5
             fixed lg:static top-16 left-0 w-full lg:w-auto bg-card lg:bg-transparent z-20
@@ -42,10 +56,18 @@ export default function Navbar() {
             ${menuOpen ? "flex" : "hidden lg:flex"}
           `}
         >
-          <Link href="/dashboard" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-5 py-2 lg:p-0 text-center">
+          <Link
+            href="/dashboard"
+            className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-5 py-2 lg:p-0 text-center"
+            onClick={() => setMenuOpen(false)}
+          >
             Dashboard
           </Link>
-          <Link href="/users" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-5 py-2 lg:p-0 text-center">
+          <Link
+            href="/users"
+            className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-5 py-2 lg:p-0 text-center"
+            onClick={() => setMenuOpen(false)}
+          >
             Kullanıcılar
           </Link>
 
@@ -55,7 +77,11 @@ export default function Navbar() {
               <Dropdown.Toggle variant="link" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-0 text-center">
                 Blog
               </Dropdown.Toggle>
-              <Dropdown.Menu>
+              <Dropdown.Menu
+                onClick={() => {
+                  if (window.innerWidth < 1024) setMenuOpen(false);
+                }}
+              >
                 <Dropdown.Item as={Link} href="/posts">
                   Blog Yazıları
                 </Dropdown.Item>
@@ -72,7 +98,11 @@ export default function Navbar() {
               <Dropdown.Toggle variant="link" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-0 mt-2 text-center">
                 Ayarlar
               </Dropdown.Toggle>
-              <Dropdown.Menu>
+              <Dropdown.Menu
+                onClick={() => {
+                  if (window.innerWidth < 1024) setMenuOpen(false);
+                }}
+              >
                 <Dropdown.Item as={Link} href="/settings/profile">
                   Profil Ayarları
                 </Dropdown.Item>
@@ -86,7 +116,11 @@ export default function Navbar() {
             </Dropdown>
           </div>
 
-          <Link href="/reports" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-5 py-2 lg:p-0 text-center">
+          <Link
+            href="/reports"
+            className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-5 py-2 lg:p-0 text-center"
+            onClick={() => setMenuOpen(false)}
+          >
             Raporlar
           </Link>
         </nav>
