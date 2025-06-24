@@ -48,7 +48,7 @@ function AdminPage() {
           <Card>
             <Card.Body>
               <Card.Title>Psikoloji ve Beslenme Sayfası</Card.Title>
-              <Card.Text>Hakkımızda sayfasını düzenleyin veya görüntüleyin.</Card.Text>
+              <Card.Text>Psikoloji beslenmesi sayfasını düzenleyin veya görüntüleyin.</Card.Text>
               <Button variant="primary" href="/mmkinc">
                 Git
               </Button>
