@@ -31,11 +31,12 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-10 bg-card shadow-sm">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-5 px-5 py-3">
+      <div
+        ref={navRef}
+        className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-5 px-5 py-3"
+      >
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold text-primary">
-          Yekazad Yazılım
-        </Link>
+       
 
         {/* Mobil Menü Butonu */}
         <button
@@ -48,7 +49,6 @@ export default function Navbar() {
 
         {/* Menü Öğeleri */}
         <nav
-          ref={navRef}
           className={`
             flex-col lg:flex-row flex items-center gap-3 lg:gap-5
             fixed lg:static top-16 left-0 w-full lg:w-auto bg-card lg:bg-transparent z-20
@@ -125,10 +125,16 @@ export default function Navbar() {
           </Link>
         </nav>
 
+         <Link href="/" className="text-2xl font-bold text-primary">
+          Yekazad SC
+        </Link>
         {/* Kullanıcı Butonu */}
         <div className="sm:ms-auto">
           <UserButton />
         </div>
+
+
+
       </div>
     </header>
   );

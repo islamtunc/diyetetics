@@ -30,11 +30,14 @@ export default async function Layout({
         style={{ backgroundColor: "#22c55e" /* Tailwind'in green-500 tonu, beyazla uyumlu canlı bir yeşil */ }}
       >
         <Navbar />
-        <div className="mx-auto flex w-full max-w-7xl grow gap-5 p-5">
-          <MenuBar className="sticky top-[5.25rem] hidden h-fit flex-none space-y-3 rounded-2xl bg-card px-3 py-5 shadow-sm sm:block lg:px-5 xl:w-80" />
-          {children}
+        <div className="mx-auto flex w-full max-w-7xl grow flex-row gap-2 p-2">
+          <MenuBar className="sticky top-[5.25rem] hidden h-fit flex-none space-y-3 rounded-2xl bg-card px-2 py-3 shadow-sm sm:block lg:px-3 xl:w-80" />
+          <div className="flex-1 flex flex-col">
+            {children}
+          </div>
+          <MenuBar className="sticky top-[5.25rem] hidden h-fit flex-none space-y-3 rounded-2xl bg-card px-2 py-3 shadow-sm sm:block lg:px-3 xl:w-80" />
         </div>
-        <MenuBar className="sticky bottom-0 flex w-full justify-center gap-5 border-t bg-card p-3 sm:hidden" />
+        <MenuBar className="sticky bottom-0 flex w-full justify-center gap-2 border-t bg-card p-2 sm:hidden" />
       </div>
     </SessionProvider>
   );
