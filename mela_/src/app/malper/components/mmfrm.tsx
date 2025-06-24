@@ -24,32 +24,69 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <Form style={{ maxWidth: "600px", margin: "0 auto", backgroundColor: "#f8f9fa" ,color: "#495057"}} onSubmit={handleSubmit}>
-      {submitted && <Alert variant="success">Mesajınız iletildi!</Alert>}
-      <br></br>
-      <h2 className="mb-4 text-center">İletişim Formu</h2>
+    <Form
+      style={{
+        maxWidth: "500px",
+        margin: "40px auto",
+        background: "#fff",
+        color: "#495057",
+        borderRadius: "18px",
+        boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.15)",
+        padding: "32px 28px",
+        border: "1px solid #e9ecef",
+      }}
+      onSubmit={handleSubmit}
+    >
+      {submitted && (
+        <Alert variant="success" style={{ borderRadius: "12px", textAlign: "center" }}>
+          Mesajınız iletildi!
+        </Alert>
+      )}
+      <h2
+        className="mb-4 text-center"
+        style={{
+          fontWeight: 700,
+          color: "#28a745",
+          letterSpacing: "1px",
+          fontSize: "2rem",
+        }}
+      >
+        İletişim Formu
+      </h2>
       <Form.Group className="mb-3" controlId="formName">
-        <Form.Label style={{ color: "#495057" }}>Adınız</Form.Label>
+        <Form.Label style={{ color: "#495057", fontWeight: 500 }}>Adınız</Form.Label>
         <Form.Control
           type="text"
           name="name"
           value={form.name}
           onChange={handleChange}
           required
+          style={{
+            borderRadius: "10px",
+            border: "1px solid #ced4da",
+            boxShadow: "none",
+            transition: "border-color 0.2s",
+          }}
         />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formEmail">
-        <Form.Label>E-posta</Form.Label>
+        <Form.Label style={{ color: "#495057", fontWeight: 500 }}>E-posta</Form.Label>
         <Form.Control
           type="email"
           name="email"
           value={form.email}
           onChange={handleChange}
           required
+          style={{
+            borderRadius: "10px",
+            border: "1px solid #ced4da",
+            boxShadow: "none",
+            transition: "border-color 0.2s",
+          }}
         />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formMessage">
-        <Form.Label>Mesajınız</Form.Label>
+        <Form.Label style={{ color: "#495057", fontWeight: 500 }}>Mesajınız</Form.Label>
         <Form.Control
           as="textarea"
           rows={4}
@@ -57,22 +94,35 @@ const ContactForm: React.FC = () => {
           value={form.message}
           onChange={handleChange}
           required
+          style={{
+            borderRadius: "10px",
+            border: "1px solid #ced4da",
+            boxShadow: "none",
+            resize: "vertical",
+            transition: "border-color 0.2s",
+          }}
         />
       </Form.Group>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <Button style={{ backgroundColor: "#28a745", borderColor: "#28a745" }} variant="success" type="submit">
+        <Button
+          style={{
+            backgroundColor: "#28a745",
+            borderColor: "#28a745",
+            borderRadius: "8px",
+            padding: "10px 36px",
+            fontWeight: 600,
+            fontSize: "1.1rem",
+            letterSpacing: "1px",
+            boxShadow: "0 2px 8px rgba(40,167,69,0.08)",
+            transition: "background 0.2s, box-shadow 0.2s",
+          }}
+          variant="success"
+          type="submit"
+        >
           Gönder
         </Button>
-
-        <br></br>
       </div>
-
-
-      <br></br>
-
-
-
-      <p className="text-center" style={{ color: "#6c757d" }}>
+      <p className="text-center mt-4" style={{ color: "#6c757d", fontSize: "1rem" }}>
         Bize ulaşmak için lütfen yukarıdaki formu doldurun.
       </p>
     </Form>
