@@ -1,3 +1,10 @@
+// Bismillahirrahmanirahim
+// Elhamdu lillahi rabbil alamin
+// Esselatu vesselamu ala rasulillah ve ala alihi ve sahbihi ecmain
+// La ilahe illallah
+// Subhanallah, Elhamdulillah, Allahu Ekber
+
+
 "use server";
 
 import { validateRequest } from "@/auth";

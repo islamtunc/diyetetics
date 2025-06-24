@@ -21,7 +21,7 @@ export async function submitPost(input: {
 
   const { content, mediaIds } = createPostSchema.parse(input);
 
-  const newPost = await prisma.mmavahi.create({
+  const newPost = await prisma.mmkinc.create({
     data: {
       content, // Convert string[] to a single string
       userId: user.id,

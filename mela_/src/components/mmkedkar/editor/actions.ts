@@ -1,8 +1,6 @@
 // Bismillahirrahmanirrahim
-// Elhamdulillahirabbilalemin
-// Es-selatu ve Es-selamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
-// Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
-
+// Elhamdulillahirabbulalemin
+// Es-selatu vesselamu ala resulina Muhammedin ve ala alihi ve sahbihi ecmain
 "use server";
 
 import { validateRequest } from "@/auth";
@@ -11,7 +9,7 @@ import { getPostDataInclude } from "@/lib/types";
 import { createPostSchema } from "@/lib/validation";
 
 export async function submitPost(input: {
-  content: string;
+  content: string[];
   mediaIds: string[];
 }) {
   const { user } = await validateRequest();
@@ -20,9 +18,9 @@ export async function submitPost(input: {
 
   const { content, mediaIds } = createPostSchema.parse(input);
 
-  const newPost = await prisma.mmkedkar.create({
+  const newPost = await prisma.mmavahi.create({
     data: {
-      content,
+      content, // Convert string[] to a single string
       userId: user.id,
       attachments: {
         connect: mediaIds.map((id) => ({ id })),

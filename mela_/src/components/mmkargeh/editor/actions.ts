@@ -1,7 +1,6 @@
-
-
-
-
+// Bismillahirrahmanirrahim
+// Elhamdulillahirabbulalemin
+// Es-selatu vesselamu ala resulina Muhammedin ve ala alihi ve sahbihi ecmain
 "use server";
 
 import { validateRequest } from "@/auth";
@@ -10,7 +9,7 @@ import { getPostDataInclude } from "@/lib/types";
 import { createPostSchema } from "@/lib/validation";
 
 export async function submitPost(input: {
-  content: string;
+  content: string[];
   mediaIds: string[];
 }) {
   const { user } = await validateRequest();
@@ -19,12 +18,9 @@ export async function submitPost(input: {
 
   const { content, mediaIds } = createPostSchema.parse(input);
 
-  // Ensure content is an array of strings
-  const postContent = Array.isArray(content) ? content : [content];
-
-  const newPost = await prisma.mmkargeh.create({
+  const newPost = await prisma.mmavahi.create({
     data: {
-      content: postContent,
+      content, // Convert string[] to a single string
       userId: user.id,
       attachments: {
         connect: mediaIds.map((id) => ({ id })),

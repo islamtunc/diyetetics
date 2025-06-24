@@ -1,4 +1,10 @@
 // Bismillahirahmanirahim 
+// ElHAMDULİLLAHİRABBULALEMİN
+// Es-selatu ve Es-selamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
+// Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
+// SuphanAllah, Elhamdulillah, Allahu Ekber
+
+
 
 "use client";
 
@@ -17,10 +23,11 @@ import { ClipboardEvent, useRef, useState } from "react";
 import { useSubmitPostMutation } from "./mutations";
 import "./styles.css";
 import useMediaUpload, { Attachment } from "./useMediaUpload";
-import { Input } from "@/components/ui/input";
 
 export default function PostEditor() {
   const { user } = useSession();
+  const [title, setTitle] = useState("");
+  const [address, setAddress] = useState("");
 
   const mutation = useSubmitPostMutation();
 
@@ -41,35 +48,13 @@ export default function PostEditor() {
 
   const editor = useEditor({
     extensions: [
-      StarterKit.configure({
-        bold: false,
-        italic: false,
-      }),
-      Placeholder.configure({
-        placeholder: "Selam aleykum,fermo...",
-      }),
+      StarterKit.configure({ bold: {}, italic: false }), // bold'u etkinleştir, italic'i devre dışı bırak
+      Placeholder.configure({ placeholder: "Yazınızı buraya yazın..." }),
     ],
   });
 
-
-
-  const [selectedOption, setSelectedOption] = useState("mmal");
-
-  function onSubmit() {
-    mutation.mutate(
-      {
-        content: selectedOption,
-        mediaIds: attachments.map((a) => a.mediaId).filter(Boolean) as string[],
-       
-      },
-      {
-        onSuccess: () => {
-          editor?.commands.clearContent();
-          resetMediaUploads();
-        },
-      },
-    );
-  }
+  const description =
+    editor?.getText({ blockSeparator: "\n" }) || "";
 
   function onPaste(e: ClipboardEvent<HTMLInputElement>) {
     const files = Array.from(e.clipboardData.items)
@@ -78,69 +63,73 @@ export default function PostEditor() {
     startUpload(files);
   }
 
+  function onSubmit() {
+    mutation.mutate(
+      {
+        content: [
+          title.trim(),
+          address.trim(),
+          ...description
+            .split("\n")
+            .map((line) => line.trim())
+            .filter((line) => line.length > 0),
+        ],
+        mediaIds: attachments.map((a) => a.mediaId).filter(Boolean) as string[],
+      },
+      {
+        onSuccess: () => {
+          setTitle("");
+          setAddress("");
+          editor?.commands.clearContent();
+          resetMediaUploads();
+        },
+      }
+    );
+  }
+
   return (
-    <div className="flex flex-col gap-5 rounded-2xl bg-card p-5 shadow-sm">
-      <div className="flex gap-5">
+    <div className="flex flex-col gap-5 rounded-2xl bg-card p-3 sm:p-5 shadow-sm text-black w-full max-w-2xl mx-auto">
+      <div className="flex flex-col sm:flex-row gap-3 sm:gap-5">
         <UserAvatar avatarUrl={user.avatarUrl} className="hidden sm:inline" />
-        <div {...rootProps} className="w-full">
-       <h5> Yeni Blog Yazısı</h5>
-
-
-
-
-
-
-
-
-
-
-       <div style={{display:"flex",flexDirection:"column"}}>
-
-
-
-
-
-
-
-
-           <Input placeholder="Başlık"/>
-
-           <Input placeholder="Alt Başlık"/>
-
-
-
-          
-
-
-    
-           </div>
-        
-        
-    
+        <div className="w-full space-y-3">
+          <input
+            type="text"
+            placeholder="Yazı Başlığı"
+            className="w-full rounded-lg border px-4 py-2"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            maxLength={100}
+            required
+          />
+          <input
+            type="text"
+            placeholder="Konu"
+            className="w-full rounded-lg border px-4 py-2"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+            maxLength={200}
+            required
+          />
         </div>
-        
       </div>
-
-
-    
-
-          
-          <Input placeholder="Açıklaması"/>
-
-
-
-
-
-          <Input placeholder="Açıklama"/>
-
-<Input placeholder="Kaynakça"/>
+      <div {...rootProps} className="w-full">
+        <EditorContent
+          editor={editor}
+          className={cn(
+            "max-h-[20rem] w-full overflow-y-auto rounded-2xl bg-background px-3 py-3 text-black prose prose-green", // prose ekle
+            isDragActive && "outline-dashed",
+          )}
+          onPaste={onPaste}
+        />
+        <input {...getInputProps()} />
+      </div>
       {!!attachments.length && (
         <AttachmentPreviews
           attachments={attachments}
           removeAttachment={removeAttachment}
         />
       )}
-      <div className="flex items-center justify-end gap-3">
+      <div className="flex flex-col sm:flex-row items-center justify-end gap-3">
         {isUploading && (
           <>
             <span className="text-sm">{uploadProgress ?? 0}%</span>
@@ -149,29 +138,30 @@ export default function PostEditor() {
         )}
         <AddAttachmentsButton
           onFilesSelected={startUpload}
-          disabled={isUploading || attachments.length >= 5}
+          disabled={isUploading || attachments.length >= 10}
         />
         <LoadingButton
           onClick={onSubmit}
           loading={mutation.isPending}
+          disabled={
+            !title.trim() || !address.trim() || !description.trim() || isUploading
+          }
           className="min-w-20"
         >
-          Parve bikin
+           Yayınla
         </LoadingButton>
       </div>
     </div>
   );
 }
 
-interface AddAttachmentsButtonProps {
-  onFilesSelected: (files: File[]) => void;
-  disabled: boolean;
-}
-
 function AddAttachmentsButton({
   onFilesSelected,
   disabled,
-}: AddAttachmentsButtonProps) {
+}: {
+  onFilesSelected: (files: File[]) => void;
+  disabled: boolean;
+}) {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   return (
@@ -203,20 +193,18 @@ function AddAttachmentsButton({
   );
 }
 
-interface AttachmentPreviewsProps {
-  attachments: Attachment[];
-  removeAttachment: (fileName: string) => void;
-}
-
 function AttachmentPreviews({
   attachments,
   removeAttachment,
-}: AttachmentPreviewsProps) {
+}: {
+  attachments: Attachment[];
+  removeAttachment: (fileName: string) => void;
+}) {
   return (
     <div
       className={cn(
         "flex flex-col gap-3",
-        attachments.length > 1 && "sm:grid sm:grid-cols-2",
+        attachments.length > 1 && "sm:grid sm:grid-cols-2"
       )}
     >
       {attachments.map((attachment) => (
@@ -230,21 +218,17 @@ function AttachmentPreviews({
   );
 }
 
-interface AttachmentPreviewProps {
-  attachment: Attachment;
-  onRemoveClick: () => void;
-}
-
 function AttachmentPreview({
   attachment: { file, mediaId, isUploading },
   onRemoveClick,
-}: AttachmentPreviewProps) {
+}: {
+  attachment: Attachment;
+  onRemoveClick: () => void;
+}) {
   const src = URL.createObjectURL(file);
 
   return (
-    <div
-      className={cn("relative mx-auto size-fit", isUploading && "opacity-50")}
-    >
+    <div className={cn("relative mx-auto size-fit", isUploading && "opacity-50")}>
       {file.type.startsWith("image") ? (
         <Image
           src={src}
@@ -261,7 +245,7 @@ function AttachmentPreview({
       {!isUploading && (
         <button
           onClick={onRemoveClick}
-          className="absolute right-3 top-3 rounded-full bg-foreground p-1.5 text-background transition-colors hover:bg-foreground/60"
+          className="absolute right-3 top-3 rounded-full bg-foreground p-1.5 text-background hover:bg-foreground/60"
         >
           <X size={20} />
         </button>
