@@ -1,4 +1,9 @@
 // Bismillahirrahmanirahim
+// Bismillahirahmanirahim
+// Elhamdulillahirabbilalemin
+// Es-selatu ve Es-selamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
+// Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
+// Süphanallah, Elhamdulillah, Allahu Ekber
 
 
 
@@ -21,13 +26,7 @@ const nextConfig = {
   },
   serverExternalPackages: ["@node-rs/argon2"],
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "utfs.io",
-        pathname: `/a/${process.env.NEXT_PUBLIC_UPLOADTHING_APP_ID}/*`,
-      },
-    ],
+    domains: ['utfs.io'],
   },
   rewrites: () => {
     return [
