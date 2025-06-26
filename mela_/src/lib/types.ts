@@ -3,6 +3,11 @@
 // Es-selatu ve Es-selamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
 // Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
 // Süphanallah, Elhamdulillah, Allahu Ekber
+// La ilahe illallah, Muhammedur Resulullah
+// Elhamdulillahi Rabbil Alamin
+// SubhanAllah ul AZim, Elhamdulillahi Rabbil Alamin
+// Estağfurullah El Azim, Elhamdulillahi Rabbil Alamin
+
 import { Prisma } from "@prisma/client";
 
 export function getUserDataSelect(loggedInUserId: string) {

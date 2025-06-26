@@ -1,5 +1,10 @@
 //Bismillahirrahmanirrahim 
+// Elhamdulillahirabbulalemin
+// Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
+// Suphanallah, Elhamdulillah, Allahu Ekber
+// Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
 
+// Elhamdulillahirabbulalemin
 
 
 
@@ -10,6 +15,8 @@ import { useState } from "react";
 export interface Attachment {
   file: File;
   mediaId?: string;
+  url?: string;
+  type?: string;
   isUploading: boolean;
 }
 
@@ -51,6 +58,8 @@ export default function useMediaUpload() {
           return {
             ...a,
             mediaId: uploadResult.serverData.mediaId,
+            url: uploadResult.serverData.url,      // sunucudan dönen url
+            type: uploadResult.serverData.type,    // sunucudan dönen type (IMAGE/VIDEO)
             isUploading: false,
           };
         }),

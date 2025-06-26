@@ -1,6 +1,10 @@
 // Bismillahirrahmanirrahim
 // Elhamdulillahirabbulalemin
 // Es-selatu vesselamu ala resulina Muhammedin ve ala alihi ve sahbihi ecmain
+// La ilahe illallah, Muhammedur Resulullah
+// SuphanAllah velhamdulillah, Allahu Ekber
+// Allah ümmetimizi korusun, birlik ve beraberliğimizi daim eylesin.
+
 "use server";
 
 import { validateRequest } from "@/auth";

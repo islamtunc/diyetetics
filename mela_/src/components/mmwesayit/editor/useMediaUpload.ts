@@ -1,3 +1,15 @@
+// Bismillahi Rahmani Rahim
+// Elhamdulillahi Rabbil Alamin
+// Essalatu vesselamu ala Resulina Muhammedin ve ala alihi ve sahb
+// La ilahe illallah, Muhammedur Resulullah
+// SuphanAllah velhamdulillah, Allahu Ekber 
+// Elhamdulillahi Rabbil Alamin
+
+// Elhamdulillahi Rabbil Alamin
+// Estağfirullah El Azim
+// Elhamdulillahi Rabbil Alamin
+
+
 import { useToast } from "@/components/ui/use-toast";
 import { useUploadThing } from "@/lib/uploadthing";
 import { useState } from "react";
