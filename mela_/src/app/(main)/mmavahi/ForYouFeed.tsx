@@ -54,9 +54,16 @@ export default function ForYouFeed() {
       // Sayfayı yenile veya veriyi tekrar çek
       window.location.reload();
     },
-    onError: () => {
+    onError: (error: any) => {
+      let message = "Silme işlemi başarısız";
+      if (error?.response?.data?.error) {
+        message = error.response.data.error;
+      } else if (error?.response?.status === 404) {
+        message = "Gönderi zaten silinmiş veya bulunamadı.";
+      }
+      console.error("Silme hatası:", error);
       toast({
-        description: "Silme işlemi başarısız",
+        description: message,
         variant: "destructive",
       });
     },
@@ -93,7 +100,10 @@ export default function ForYouFeed() {
             <Button
               variant="outline-danger"
               size="sm"
-              onClick={() => deleteMutation.mutate(post.id)}
+              onClick={() => {
+                console.log("Silinecek post id:", post.id);
+                deleteMutation.mutate(post.id);
+              }}
               disabled={deleteMutation.isPending}
             >
               Sil

@@ -13,9 +13,13 @@ export async function DELETE(
 ) {
   const { postId } = params;
   try {
-    await prisma.post.delete({ where: { id: postId } });
+    await prisma.mmavahi.delete({ where: { id: postId } });
     return NextResponse.json({ success: true });
-  } catch (e) {
+  } catch (e: any) {
+    console.error("Silme hatası:", e);
+    if (e.code === 'P2025') {
+      return NextResponse.json({ error: "Gönderi zaten silinmiş veya bulunamadı." }, { status: 404 });
+    }
     return NextResponse.json({ error: "Silinemedi" }, { status: 500 });
   }
 }

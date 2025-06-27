@@ -1,4 +1,9 @@
 // Bismillahirrahmanirrahim
+// Elhamdulillahi Rabbil Alamin
+// Essalatu vesselamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
+// Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
+// Subhanallah, Elhamdulillah, Allahu Ekber
+
 
 
 
@@ -16,31 +21,20 @@ export default function Home() {
       <div className="w-full min-w-0 space-y-5">
 
       <Alert variant="success"> Sporcu Beslenmesi Sayfası</Alert>
-        <Tabs defaultValue="mm">
+        <Tabs defaultValue="for-you">
           <TabsList>
             <TabsTrigger value="for-you">Paylaşılanlar</TabsTrigger>
-            <TabsTrigger value="mm">Yeni Gönderi </TabsTrigger>
-
+            <TabsTrigger value="mm">Yeni Gönderi</TabsTrigger>
+          
           </TabsList>
           <TabsContent value="for-you">
             <ForYouFeed />
           </TabsContent>
-          <TabsContent value="following">
-
-      <SearchField/>
+         
+          <TabsContent value="mm">
+            <PostEditor />
           </TabsContent>
-    
-
-
-
-
-
-        <TabsContent value="mm">
-
-  <PostEditor />
-
-    </TabsContent>
-    </Tabs>
+        </Tabs>
       </div>
     </main>
   );
