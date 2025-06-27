@@ -40,9 +40,7 @@ export default function Post({ post }: PostProps) {
           {post.content[0]}
         </div>
       </Linkify>
-      {!!post.attachments.length && (
-        <MediaPreviews attachments={post.attachments} />
-      )}
+    
       <hr className="text-muted-foreground" />
       <div className="flex justify-between gap-5">
         <div className="flex items-center gap-5">
