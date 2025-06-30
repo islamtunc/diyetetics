@@ -44,7 +44,7 @@ export default async function MessagesPage() {
           >
             <div style={{ fontWeight: 600, color: "#28a745" }}>{msg.name}</div>
             <div style={{ color: "#6c757d", fontSize: 14 }}>{msg.email}</div>
-            <div style={{ marginTop: 8 }}>{msg.message}</div>
+            <div style={{ marginTop: 8 ,color:"black"}}>{msg.message}</div>
             <div style={{ marginTop: 8, fontSize: 12, color: "#adb5bd" }}>
               {msg.createdAt ? new Date(msg.createdAt).toLocaleString() : ""}
             </div>
