@@ -14,16 +14,25 @@ import { Card } from 'react-bootstrap';
 
 export default function layout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
-    
-    
-      {children}
-      <Card style={{ marginTop: "20px", width: "100%", maxWidth: "700px", textAlign: "center", padding: "19px" }}>
+    <div className="flex flex-col items-center w-full px-2 sm:px-4 md:px-0">
+      <div className="w-full max-w-2xl flex-1">{children}
+      <Card
+        style={{
+          marginTop: "20px",
+          width: "100%",
+          maxWidth: "700px",
+          textAlign: "center",
+          padding: "19px",
+        }}
+        className="w-full max-w-2xl mx-auto"
+      >
         <Card.Title>Diğer Yazılar</Card.Title>
         <Card.Body>
           <ForYouFeed />
         </Card.Body>
       </Card>
+
+      </div>
     </div>
-  )
+  );
 }
