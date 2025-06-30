@@ -131,7 +131,7 @@ function ContainerFluidExample() {
             nav="Sağlıklı Tarifler"
             nivis="Yaptığımız öğün sayısı ve aldığımız kalori kadar yediğimiz öğünlerin besin içerikleri de önemlidir. En sağlıklı beslenme tariflerine yazılarımızdan ulaşabilirsiniz."
             cih="/malper/mmkedkar"
-            wene="/psbs.jpg"
+            wene="/dy.jpg"
           />
         </Col>
       </Row>
