@@ -8,29 +8,9 @@ import { Alert, Container, Row, Col, Card, Button } from "react-bootstrap";
 function AdminPage() {
   return (
     <Container fluid style={{ background: "#f8f9fa", minHeight: "100vh", padding: "20px" }}>
-      <Row>
-        <Col>
-          <Alert variant="success" style={{ textAlign: "center", fontSize: "18px" }}>
-            Selam Aleykum dear Customer or Developer, Welcome to Admin Panel
-          </Alert>
-        </Col>
-      </Row>
+      
 
-      <Row className="mb-4">
-        <Col>
-          <Alert
-            style={{
-              background: "green",
-              color: "white",
-              textAlign: "center",
-              fontSize: "16px",
-            }}
-          >
-            Sernameye name nameye Allah <br />
-            Be namaye nameye kemi wi Wallah
-          </Alert>
-        </Col>
-      </Row>
+    
 
       <Row>
         <Col md={4} className="mb-3">
