@@ -20,7 +20,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
         style={{
           marginTop: "20px",
           width: "100%",
-          maxWidth: "500px",
+          maxWidth: "700px",
           textAlign: "center",
           padding: "19px",
         }}
@@ -31,6 +31,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
           <ForYouFeed />
         </Card.Body>
       </Card>
+
       </div>
     </div>
   );
