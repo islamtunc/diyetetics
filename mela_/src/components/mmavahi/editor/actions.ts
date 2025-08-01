@@ -1,6 +1,7 @@
 // Bismillahirrahmanirrahim
 // Elhamdulillahirabbulalemin
 // Es-selatu vesselamu ala resulina Muhammedin ve ala alihi ve sahbihi ecmain
+// La ilahe illAllah u vahdehu la şerike leh ,lehul mulku lehul hamdu
 "use server";
 
 import { validateRequest } from "@/auth";
