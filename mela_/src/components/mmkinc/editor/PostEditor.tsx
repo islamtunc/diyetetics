@@ -2,9 +2,18 @@
 // ElHAMDULİLLAHİRABBULALEMİN
 // Es-selatu ve Es-selamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
 // Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
-//SuphanAllah, Elhamdulillah, Allahu Ekber
+// SuphanAllah, Elhamdulillah, Allahu Ekber
 
-
+// Bismillahirahmanirahim 
+// ElHAMDULİLLAHİRABBULALEMİN
+// Es-selatu ve Es-selamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
+// Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
+// SuphanAllah, Elhamdulillah, Allahu Ekber
+// La ilahe illallah, Muhammedur Resulullah
+// Elhamdulillahi Rabbil Alamin
+// Estağfirullah El Azim
+// Elhamdulillahi Rabbil Alamin
+// La ilahe illallah, Muhammedur Resulullah
 
 "use client";
 
@@ -23,6 +32,9 @@ import { ClipboardEvent, useRef, useState } from "react";
 import { useSubmitPostMutation } from "./mutations";
 import "./styles.css";
 import useMediaUpload, { Attachment } from "./useMediaUpload";
+import { TextStyle } from "@tiptap/extension-text-style";
+import Color from "@tiptap/extension-color";
+import Heading from "@tiptap/extension-heading";
 
 export default function PostEditor() {
   const { user } = useSession();
@@ -48,8 +60,11 @@ export default function PostEditor() {
 
   const editor = useEditor({
     extensions: [
-      StarterKit.configure({ bold: false, italic: false }),
+      StarterKit.configure({ bold: {}, italic: false }),
       Placeholder.configure({ placeholder: "Yazınızı buraya yazın..." }),
+      TextStyle,
+      Color,
+      Heading.configure({ levels: [1, 2, 3] }), // Başlık seviyeleri
     ],
   });
 
@@ -89,34 +104,66 @@ export default function PostEditor() {
 
   return (
     <div className="flex flex-col gap-5 rounded-2xl bg-card p-3 sm:p-5 shadow-sm text-black w-full max-w-2xl mx-auto">
-      <div className="flex flex-col sm:flex-row gap-3 sm:gap-5">
-        <UserAvatar avatarUrl={user.avatarUrl} className="hidden sm:inline" />
-        <div className="w-full space-y-3">
-          <input
-            type="text"
-            placeholder="Yazı Başlığı"
-            className="w-full rounded-lg border px-4 py-2"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            maxLength={100}
-            required
-          />
-          <input
-            type="text"
-            placeholder="Konu"
-            className="w-full rounded-lg border px-4 py-2"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
-            maxLength={200}
-            required
-          />
-        </div>
+      {/* Başlık ve Adres inputları */}
+      <input
+        type="text"
+        placeholder="Başlık"
+        value={title}
+        onChange={e => setTitle(e.target.value)}
+        className="border rounded px-3 py-2 mb-2"
+      />
+      <input
+        type="text"
+        placeholder="Adres"
+        value={address}
+        onChange={e => setAddress(e.target.value)}
+        className="border rounded px-3 py-2 mb-2"
+      />
+      {/* Renk ve başlık araç çubuğu */}
+      <div className="flex gap-2 mb-2">
+        <select
+          onChange={e => {
+            editor?.chain().focus().setColor(e.target.value).run();
+          }}
+          defaultValue=""
+          className="border rounded px-2 py-1"
+        >
+          <option value="">Renk seç</option>
+          <option value="#000000">Siyah</option>
+          <option value="#e11d48">Kırmızı</option>
+          <option value="#16a34a">Yeşil</option>
+          <option value="#2563eb">Mavi</option>
+          <option value="#f59e42">Turuncu</option>
+          <option value="#fbbf24">Sarı</option>
+          <option value="#a21caf">Mor</option>
+        </select>
+        <button
+          type="button"
+          className="border rounded px-2 py-1"
+          onClick={() => editor?.chain().focus().toggleHeading({ level: 1 }).run()}
+        >
+          H1
+        </button>
+        <button
+          type="button"
+          className="border rounded px-2 py-1"
+          onClick={() => editor?.chain().focus().toggleHeading({ level: 2 }).run()}
+        >
+          H2
+        </button>
+        <button
+          type="button"
+          className="border rounded px-2 py-1"
+          onClick={() => editor?.chain().focus().toggleHeading({ level: 3 }).run()}
+        >
+          H3
+        </button>
       </div>
       <div {...rootProps} className="w-full">
         <EditorContent
           editor={editor}
           className={cn(
-            "max-h-[20rem] w-full overflow-y-auto rounded-2xl bg-background px-3 py-3 text-black",
+            "max-h-[20rem] w-full overflow-y-auto rounded-2xl bg-background px-3 py-3 text-black prose prose-green", // prose ekle
             isDragActive && "outline-dashed",
           )}
           onPaste={onPaste}

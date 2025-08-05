@@ -95,6 +95,21 @@ export default function PostEditor() {
 
   return (
     <div className="flex flex-col gap-5 rounded-2xl bg-card p-3 sm:p-5 shadow-sm text-black w-full max-w-2xl mx-auto">
+      {/* Başlık ve Adres inputları */}
+      <input
+        type="text"
+        placeholder="Başlık"
+        value={title}
+        onChange={e => setTitle(e.target.value)}
+        className="border rounded px-3 py-2 mb-2"
+      />
+      <input
+        type="text"
+        placeholder="Adres"
+        value={address}
+        onChange={e => setAddress(e.target.value)}
+        className="border rounded px-3 py-2 mb-2"
+      />
       {/* Renk ve başlık araç çubuğu */}
       <div className="flex gap-2 mb-2">
         <select
